@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Home" title="Home"  description="">
+    <siteMapNode url="" title="Employee"  description="">
+        <siteMapNode url="~/HR/HREmployeeBasicOverview.aspx" title="HR Overview"  description="" />
+        <siteMapNode url="~/HR/HREmployeeNoticeTemplate.aspx" title="Notice Template"  description="Migrate To Project Cost" />
+        <siteMapNode url="~/HR/HREmployeeNoticeOperation.aspx" title="Employee Notice"  description="BOQ History" />
+        <siteMapNode url="~/MD/MDSalarySession.aspx" title="Salary Session"  description="Salary Session" />
+        
+        <!--<siteMapNode url="~/HR/HRMemberLeaveAccount.aspx" title="HRMemberLeaveAccount.aspx"  description="Migrate To Project Cost" />
+        <siteMapNode url="~/HR/HRMemberLeaveOpeningBalance.aspx" title="HRMemberLeaveOpeningBalance.aspx"  description="BOQ Posting" />
+        <siteMapNode url="~/HR/HRWorkingDay.aspx" title="HRWorkingDay.aspx"  description="BOQ Print" />-->
+    </siteMapNode>
+    </siteMapNode>
+</siteMap>

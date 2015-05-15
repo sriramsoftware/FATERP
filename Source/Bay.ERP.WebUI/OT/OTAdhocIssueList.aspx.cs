@@ -1,0 +1,71 @@
+// Copyright and All Rights Reserved by
+// TalentPlus Software Inc, USA; 
+// Delphi Solutions Ltd., Bangladesh,
+// TalentPlus Software FZ LLC, UAE; 
+// TalentPlus Systems India Pvt Ltd., India. 
+//
+// Faisal Alam, faisal@talentPlusSoft.con
+// ©2006 – 2010.
+//
+// Code Generate Time - 28-Dec-2011, 07:18:54
+
+
+
+
+using System;
+using Bay.ERP.Common.Helper;
+using Bay.ERP.Common.Shared;
+
+namespace Bay.ERP.Web.UI
+{
+    public partial class OTAdhocIssueListPage : BasePage
+    {
+        #region Veriables
+
+        #endregion
+
+        #region Properties
+
+        public override string UniqueKey
+        {
+            get
+            {
+                return "OTAdhocIssueListEntity_Page";
+            }
+        }
+
+        public override string WebUserControlPaths
+        {
+            get
+            {
+                return "~/Controls/OT/OTAdhocIssueList.ascx;";
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+
+
+        #endregion
+
+        #region Events
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            base.Page.Title = String.Concat("Adhoc Issue List", " - ", base.Page.Title);
+
+            ucOTAdhocIssueListEntity.ContentHolderPageUrl = "~/OT/OTAdhocIssueList.aspx";
+            ucOTAdhocIssueListEntity.PageAPType = MasterDataConstants.IssuePageType.ADHOC_ISSUE;
+
+
+            if (!IsPostBack)
+            {
+
+            }
+        }
+
+        #endregion
+    }
+}

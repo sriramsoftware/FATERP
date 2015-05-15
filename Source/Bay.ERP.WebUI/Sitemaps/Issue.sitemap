@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Home" title="Home"  description="">
+    <siteMapNode url="" title="Issue"  description="Issue">
+        <siteMapNode url="~/OT/OTIssueEditor.aspx" title="Issue Info"  description="Issue Info" />
+        <siteMapNode url="~/OT/OTIssueUploadInfo.aspx" title="Issue Uploads"  description="Issue Uploads" />
+        <siteMapNode url="~/OT/OTIssueAssignedResource.aspx" title="Issue Resources"  description="Issue Resources" />
+        <siteMapNode url="~/OT/OTIssueWatchList.aspx" title="Issue Watch List"  description="Issue Watch List" />
+    </siteMapNode>
+    </siteMapNode>
+</siteMap>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Home" title="Home"  description="">
+    <siteMapNode url="" title="Vendor"  description="Vendor">
+        <siteMapNode url="~/PRM/PRMSupplierEditor.aspx" title="Vendor Info"  description="Vendor Info" />
+        <siteMapNode url="~/PRM/PRMSupplierAddressInfo.aspx" title="Address Info"  description="Address Info" />
+        <siteMapNode url="~/PRM/PRMSupplierContactPerson.aspx" title="Contact Person"  description="Contact Person" />
+        <siteMapNode url="~/PRM/PRMSupplierBrandMap.aspx" title="Brand Map"  description="Brand Map" />
+        <siteMapNode url="~/PRM/PRMSupplierItemCategoryMap.aspx" title="Item Category Map"  description="Item Category Map" />
+        <siteMapNode url="~/PRM/PRMVendorBankAccountMap.aspx" title="Bank Account Map"  description="Bank Account Map" />
+        <siteMapNode url="~/PRM/PRMVendorAccountMap.aspx" title="Account Map"  description="Account Map" />
+    </siteMapNode>
+    </siteMapNode>
+</siteMap>

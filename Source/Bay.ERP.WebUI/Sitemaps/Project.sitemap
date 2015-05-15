@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Home" title="Home"  description="">
+        <siteMapNode url="" title="Project"  description="Project">
+            <siteMapNode url="~/BD/BDProjectEditor.aspx" title="Project Info"  description="Project Info" />
+            <siteMapNode url="~/CM/CMProjectMilestoneView.aspx" title="Milestone View"  description="Project Milestone View" />
+            <siteMapNode url="~/BD/BDProjectOtherInfo.aspx" title="Project OtherInfo"  description="Project OtherInfo" />
+            <siteMapNode url="~/BD/BDProjectAddressInfo.aspx" title="Project AddressInfo"  description="Project AddressInfo" />
+            <siteMapNode url="~/BD/BDProjectAssignedPerson.aspx" title="Assigned Role"  description="Project Assigned Person" />
+            <siteMapNode url="~/BD/BDProjectFloor.aspx" title="Project Floor Info"  description="Project Floor Info" />
+            <siteMapNode url="~/BD/BDProjectInfoTabView.aspx" title="Project Overview"  description="Project Tab View" />
+        </siteMapNode>
+        <siteMapNode url="" title="BOQ" description="BOQ">
+            <siteMapNode url="~/PRM/PRMPreBOQInfo.aspx" title="Create or Update BOQ"  description="Project BOQ Info" />
+            <siteMapNode url="~/PRM/PRMPreBOQSetup.aspx" title="BOQ Template Setup"  description="Project BOQ Setup" />
+            <siteMapNode url="~/PRM/PRMPreBOQDetail.aspx" title="BOQ Posting"  description="BOQ Posting" />
+            <siteMapNode url="~/PRM/PRMPreBOQDetailPrintVersion.aspx" title="BOQ Print"  description="BOQ Print" />
+            <siteMapNode url="~/PRM/PRMPreBOQDetailHistory.aspx" title="BOQ History"  description="BOQ History" />
+            <siteMapNode url="~/PRM/PRMPreBOQToBOQMigration.aspx" title="Migrate To Project Cost"  description="Migrate To Project Cost" />
+        </siteMapNode>
+        <siteMapNode url="" title="Project Cost" description="Project Cost">
+            <siteMapNode url="~/PRM/PRMBOQ.aspx " title="Update Project Cost Info"  description="Update Project Cost Info" />
+            <siteMapNode url="~/PRM/PRMBOQSetup.aspx" title="Project Cost Template Modify"  description="Project Cost Setup" />
+            <siteMapNode url="~/PRM/PRMBOQDetail.aspx" title="Project Cost Posting"  description="Project Cost Posting" />
+            <siteMapNode url="~/PRM/PRMBOQDetailHistory.aspx" title="Project Cost History"  description="Project Cost History" />
+        </siteMapNode>
+        <siteMapNode url="" title="Project History"  description="Project History">
+            <siteMapNode url="~/BD/BDProjectHistory.aspx" title="Project History"  description="Project History" />
+            <siteMapNode url="~/Reports/ReportViewer.aspx" title="Project History Report"  description="Project History Report" />
+        </siteMapNode>
+        <siteMapNode url="" title="Project Setup Info"  description="Project Setup Info">
+            <siteMapNode url="~/BD/BDProjectCollectedDocumentInfo.aspx" title="Project Documents"  description="Project Documents" />
+            
+        </siteMapNode>
+        <siteMapNode url="" title="Project Setup"  description="Project Setup">
+            <siteMapNode url="~/BD/BDProjectCollectedDocumentSetup.aspx" title="Document Setup"  description="Project Document Setup" />
+            
+            <!--<siteMapNode url="~/BD/BDProjectRequisitionMaster.aspx" title="Master Requisition"  description="Master Requisition" />-->
+            <!--<siteMapNode url="~/BD/BDProjectRequisitionListMaster.aspx" title="Requisition List"  description="Requisition List" />-->
+            <siteMapNode url="~/CM/CMProjectScheduleTemplateIssue.aspx" title="Project Schedule Setup"  description="Project Schedule Setup" />
+            <siteMapNode url="~/BD/BDProjectIssue.aspx" title="Issue Treeview"  description="Project Issue Treeview" />
+            <siteMapNode url="~/BD/BDProjectMilestoneSetup.aspx" title="Milestone Setup"  description="Project Milestone Setup" />
+            <!--<siteMapNode url="~/Reports/ReportViewer.aspx" title="Item Report"  description="Item Report" />-->
+            <siteMapNode url="~/CM/CMProjectMilestone.aspx" title="Project Milestone"  description="Project Milestone" />
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>

@@ -1,0 +1,57 @@
+// Copyright and All Rights Reserved by
+// TalentPlus Software Inc, USA; 
+// Delphi Solutions Ltd., Bangladesh,
+// TalentPlus Software FZ LLC, UAE; 
+// TalentPlus Systems India Pvt Ltd., India. 
+//
+// Faisal Alam, faisal@talentPlusSoft.con
+// ©2006 – 2010.
+//
+// Code Generate Time - 30-Nov-2011, 01:41:28
+
+
+
+
+using System;
+using System.Data;
+using System.Data.Common;
+using System.Collections;
+using System.Collections.Generic;
+using Microsoft.Practices.EnterpriseLibrary.Data;
+
+using Bay.ERP.Common.BusinessEntities;
+
+namespace Bay.ERP.DataAccess
+{
+    internal sealed class MDProjectCollectedDocumentStatusBuilder : IEntityBuilder<MDProjectCollectedDocumentStatusEntity>
+    {
+        IList<MDProjectCollectedDocumentStatusEntity> IEntityBuilder<MDProjectCollectedDocumentStatusEntity>.BuildEntities(IDataReader reader)
+        {
+            List<MDProjectCollectedDocumentStatusEntity> MDProjectCollectedDocumentStatusEntityList = new List<MDProjectCollectedDocumentStatusEntity>();
+
+            while (reader.Read())
+            {
+                MDProjectCollectedDocumentStatusEntityList.Add(((IEntityBuilder<MDProjectCollectedDocumentStatusEntity>)this).BuildEntity(reader));
+            }
+
+            return (MDProjectCollectedDocumentStatusEntityList.Count > 0) ? MDProjectCollectedDocumentStatusEntityList : null;
+        }
+
+        MDProjectCollectedDocumentStatusEntity IEntityBuilder<MDProjectCollectedDocumentStatusEntity>.BuildEntity(IDataReader reader)
+        {
+            const Int32 FLD_PROJECTCOLLECTEDDOCUMENTSTATUSID = 0;
+            const Int32 FLD_NAME = 1;
+            const Int32 FLD_DESCRIPTION = 2;
+            const Int32 FLD_ISREMOVED = 3;
+
+            MDProjectCollectedDocumentStatusEntity mDProjectCollectedDocumentStatusEntity = new MDProjectCollectedDocumentStatusEntity();
+
+            mDProjectCollectedDocumentStatusEntity.ProjectCollectedDocumentStatusID = reader.GetInt64(FLD_PROJECTCOLLECTEDDOCUMENTSTATUSID);
+            mDProjectCollectedDocumentStatusEntity.Name = reader.GetString(FLD_NAME);
+            if (reader.IsDBNull(FLD_DESCRIPTION)) { mDProjectCollectedDocumentStatusEntity.Description = String.Empty; } else { mDProjectCollectedDocumentStatusEntity.Description = reader.GetString(FLD_DESCRIPTION); }
+            mDProjectCollectedDocumentStatusEntity.IsRemoved = reader.GetBoolean(FLD_ISREMOVED);
+
+            return mDProjectCollectedDocumentStatusEntity;
+        }
+    }
+}

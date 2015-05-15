@@ -1,0 +1,60 @@
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.dll
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.pdb
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.dll
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.pdb
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.csprojResolveAssemblyReference.cache
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.dll
+D:\Mizan\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.pdb
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.dll
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.pdb
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.dll
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.pdb
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.csprojResolveAssemblyReference.cache
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.dll
+D:\Mizan\Desktop\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.pdb
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.dll
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.pdb
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.dll
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.pdb
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\ResolveAssemblyReference.cache
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.dll
+E:\Source\For Razu vaia\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.pdb
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.dll
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.pdb
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.dll
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.pdb
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\ResolveAssemblyReference.cache
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.dll
+E:\Raju\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.pdb
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.dll
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.pdb
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.dll
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.pdb
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\ResolveAssemblyReference.cache
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.dll
+E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.pdb

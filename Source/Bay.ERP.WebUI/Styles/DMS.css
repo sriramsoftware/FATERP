@@ -1,0 +1,98 @@
+ 
+
+ .DMStable 
+ {
+      margin: 5px;
+      padding:2px; 
+      margin-top: 20px;
+      border-collapse: collapse;
+      width:90%;
+ }
+ 
+.DMStd
+{
+     padding: .1em; 
+     border-bottom: 1px #ccc solid;
+     font-size : 10pt; 
+     height:40px;
+} 
+
+a
+{
+    
+}
+
+.DefaultNodeStyle
+{
+        color:#453380;
+        font-family:Tahoma;
+    font-size:10pt;
+    font-weight:normal;
+        vertical-align:middle;
+        border:none;
+        padding-left:2px;
+        padding-right:2px;
+        background-color:transparent;
+}
+
+.SelectedNodeStyle
+{
+        font: 10pt Tahoma; 
+        vertical-align:middle;
+        border:1px solid #6699cc;
+        background-color:#ccddee;
+        padding-right:2px;
+        padding-left:2px;
+}
+
+.tree td div
+{
+   height: 100% !important
+}
+
+body
+{
+    line-height:1.5em;
+}
+
+.button-primary {
+    background-color: #D14836;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #D14836);
+    border: 1px solid transparent;
+    color: #CFCFCF;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    width:120px;
+    height:30px;
+}
+
+.button-primary:Hover {
+    background-color: #FFFFFF;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #D14836);
+    border: 1px solid transparent;
+    color: #FFFFFF;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    width:120px;
+    height:30px;
+}
+
+.Panel-button {
+    background-color: #F5F5F5;
+    background-image: -moz-linear-gradient(center top , #F5F5F5, #F1F1F1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #444444;
+    height:25px;
+}
+
+.Panel-button:Hover {
+    background-color: #F8F8F8;
+    background-image: -moz-linear-gradient(center top , #F8F8F8, #F1F1F1);
+    border: 1px solid #C6C6C6;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    color: #292929;
+    height:25px;
+}
+
+ 

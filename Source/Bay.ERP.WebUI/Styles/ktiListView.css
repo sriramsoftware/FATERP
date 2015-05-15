@@ -1,0 +1,223 @@
+﻿
+.lv-c
+{
+    border: 1px solid #DDDDDD;
+    font-size: 10px;
+    color: #333333;    
+    width: auto;
+    height: auto;
+    overflow: auto;
+}
+table.lv
+{
+    border: 0px solid Red;
+    font-size: 10px;
+    color: #333333;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;    
+    empty-cells: show;
+    table-layout: fixed;
+ }
+
+table.lv tr.h
+{
+    height: 20px;    
+    background-image: url('../Images/CustomListView/Default/ListView-Header.png');
+    background-repeat:repeat-x;
+    vertical-align:middle;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+table.lv tr.h td.rp, tr.r td.rp, tr.ar td.rp
+{
+    width: 25px;
+}
+
+table.lv tr.h td.rpb, tr.r td.rpb, tr.ar td.rpb
+{
+    width: 100%;
+}
+
+table.lv tr.h td.hi
+{
+    width: 100px;
+    padding-right: 15px;
+    padding-top: 2px; 
+    font-size: 11px;
+    padding-bottom: 2px;
+}
+
+table.lv tr.h td.his
+{
+    width: 40px;
+    padding-right: 15px;
+    padding-top: 2px; 
+    font-size: 11px;
+    padding-bottom: 2px;
+}
+
+table.lv tr.r
+{
+    height: 20px;
+    background-color: #ffffff;    
+}
+    
+table.lv tr.ar
+{
+    height: 20px;
+    background-color: #f2f2f2;    
+}
+
+.edr
+{
+    height: 20px;
+    background-color: #f2f2f2;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+table.lv tr.r td.i, tr.ar td.i
+{   
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.lv-Container
+{
+    border: 1px solid #828282;
+    font-size: 10px;
+    color: #333333;
+}
+    
+.lv-HeaderContainer
+{
+    min-height: 25px;
+    background-image: url('../Images/CustomListView/Default/ListView-Header.png');
+    background-repeat:repeat-x;
+    border-bottom: 1px solid #828282;
+}
+    
+
+    
+.lv-Row
+{
+    clear: both;    
+    min-height: 20px;
+    background-color: #ffffff;
+    overflow: auto;
+}
+    
+.lv-AlternetRow
+{
+    clear: both;    
+    min-height: 20px;
+    background-color: #f2f2f2;
+    overflow: auto;
+}
+    
+    /*may be not using*/
+.lv-HeaderItem
+{
+    float: left;
+    width: 100px;
+    padding-right: 15px;
+    padding-top: 5px; 
+    font-size: 11px;
+    padding-bottom: 7px;
+}
+
+.lv-HeaderItemPadding
+{
+    float: left;
+    width: 25px;   
+}
+        
+.lv-RowItem
+{
+    float: left;
+    width: 100px;    
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.lv-RowItemPadding
+{
+    float: left;
+    width: 25px;
+}
+
+.lv-PagerItem
+{
+    
+    width: 22px;
+    height: 22px;
+    
+	text-indent: -99999px;
+}
+
+.lv-PagerItemNumeric
+{    
+    border: 0px solid;
+    background-color: transparent;
+    height: 22px;    
+    vertical-align:top;
+    font-size: 11px;    
+    padding-left: 2px;
+    padding-right: 1px;    
+}
+
+.lv-PagerItemNumericHover
+{    
+    background-image: url('../Images/CustomListView/Default/ListView-Pager-Num-Bg.png');
+}
+
+.lv-PagerItemNumericCurrent
+{
+    height: 22px;   
+    vertical-align:super;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;  
+    padding-bottom: 2px;
+    background-image: url('../Images/CustomListView/Default/ListView-Pager-Num-Curr-Bg.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.lv-PagerCount
+{    
+    padding-top: 4px;
+    font-size: 10px;
+    color: #8a8a8a;
+    float:right;
+}
+
+.lv-PagerCount span
+{
+    color: #4c4e54;
+}
+
+.lv-FooterContainer
+{
+    min-height: 32px;
+    background-color: #eeeeee;
+    border-top: 1px solid #DDDDDD;
+}
+
+.lv-Footer
+{    
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;     
+    padding-bottom: 5px;
+    vertical-align: top;  
+}  

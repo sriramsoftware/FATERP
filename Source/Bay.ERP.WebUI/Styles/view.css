@@ -1,0 +1,76 @@
+
+
+body {
+	margin: 5px;
+	padding: 0;
+	background: none;
+	font-family: 'Abel', sans-serif;
+	font-size: 10pt;
+	color: #646464;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-family: 'Abel', sans-serif;
+	font-weight: 200;
+	color: #222222;
+}
+
+p, ol, ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+p, ol {
+	line-height: 180%;
+}
+
+strong {
+}
+
+a {
+	color: #5C5539;
+	font-size: 8pt;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+img.border {
+}
+
+img.alignleft {
+	float: left;
+}
+
+img.alignright {
+	float: right;
+}
+
+img.aligncenter {
+	margin: 0px auto;
+}
+
+hr {
+	display: none;
+}
+
+
+
+table { margin: 5px; padding:2px; 
+        margin-top: 20px;
+          border-collapse: collapse; }
+td, th { padding: .1em; 
+         border-bottom: 1px #ccc solid; } 
+         
+         
+   .TableRow
+   {
+       margin:10px;
+   }

@@ -1,0 +1,358 @@
+﻿/********* Basic Structure - START ******************/
+/*
+.d-lv-c
+{
+    border: 1px solid #DDDDDD;
+    font-size: 10px;
+    color: #333333;    
+    width: auto;
+    height: auto;
+    overflow: auto;
+}
+
+.d-lv-c .d-lv
+{
+    border: 0px solid;
+    font-size: 10px;
+    color: #333333;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;    
+    empty-cells: show;
+    table-layout: fixed;
+}
+
+.d-lv-c .d-lv .d-lv-container
+{
+    margin: 3px;    
+}
+
+/********* Basic Structure - END ******************/
+
+/********* Header - START ******************/
+
+.d-lv-c .d-lv .d-lv-header
+{
+    height: 20px;    
+    background-image: url('../Images/CustomListView/Default/ListView-Header.png');
+    background-repeat:repeat-x;
+    vertical-align:middle;
+    border-bottom: 1px solid #DDDDDD;
+    padding-left: 10px;
+    font-weight: bold;
+    padding-top: 3px;
+}
+
+/********* Header - END ******************/
+
+
+/********* Row - START ******************/
+.d-lv-c .d-lv .d-lv-row
+{
+    clear: both;    
+    min-height: 20px;
+    overflow: auto;
+    margin-bottom: 3px; 
+}
+
+/********* Row - END ******************/
+
+
+/********* Alternet Row - START ******************/
+.d-lv-c .d-lv .d-lv-alternet-row
+{
+    clear: both;    
+    min-height: 20px;    
+    overflow: auto;   
+    margin-bottom: 3px; 
+}
+
+/********* Alternet Row - END ******************/
+
+
+
+/********* Empty Data - START ******************/
+.d-lv-c .d-edr
+{
+    height: 20px;
+    background-color: #f2f2f2;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/********* Empty Data - END ******************/
+
+
+/********* Footer & Pager - START ******************/
+
+.d-lv-c .d-lv .d-lv-FooterContainer
+{
+    min-height: 32px;
+    background-color: #eeeeee;
+    border-top: 1px solid #DDDDDD;
+}
+
+.d-lv-c .d-lv .d-lv-FooterContainer .d-lv-Footer
+{    
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;     
+    padding-bottom: 5px;
+    vertical-align: top;  
+} 
+
+.d-lv-c .d-lv .d-lv-FooterContainer .d-lv-Footer .d-lv-PagerItem
+{
+    
+    width: 22px;
+    height: 22px;
+    
+	text-indent: -99999px;
+}
+
+.d-lv-c .d-lv .d-lv-FooterContainer .d-lv-Footer .d-lv-PagerItemNumeric
+{    
+    border: 0px solid;
+    background-color: transparent;
+    height: 22px;    
+    vertical-align:top;
+    font-size: 11px;    
+    padding-left: 2px;
+    padding-right: 1px;    
+}
+
+.d-lv-c .d-lv .d-lv-FooterContainer .d-lv-Footer .d-lv-PagerItemNumericCurrent
+{
+    height: 22px;   
+    vertical-align:super;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;  
+    padding-bottom: 2px;
+    background-image: url('../Images/CustomListView/Default/ListView-Pager-Num-Curr-Bg.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.d-lv-c .d-lv .d-lv-FooterContainer .d-lv-Footer .d-lv-PagerCount
+{    
+    padding-top: 4px;
+    font-size: 10px;
+    color: #8a8a8a;
+    float:right;
+}
+
+.d-lv-c .d-lv .d-lv-FooterContainer .d-lv-Footer .d-lv-PagerCount span
+{
+    color: #4c4e54;
+}
+
+
+
+/********* Footer & Pager - END ******************/
+
+
+/******************** Row Formating One - START *********************/
+
+.d-lv-c .d-lv .d-lv-row .lvTemplateOne
+{
+    width: 745px;
+    
+    margin: 0px;
+    border: 1px solid #DDDDDD; 
+    padding: 10px; 
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #ffffff; 
+}
+
+.d-lv-c .d-lv .d-lv-alternet-row .lvTemplateOne
+{
+    width: 745px;
+    
+    margin: 0px;
+    border: 1px solid #DDDDDD; 
+    padding: 10px; 
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #f2f2f2;
+}
+
+.lvTemplateOne .row-content
+{
+    float: left;
+}
+
+.lvTemplateOne .info1Label
+{
+  float:left; 
+  width: 185px;
+  height: 12px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.lvTemplateOne .info1
+{
+    float:left;
+    width: 150px;
+    height: 12px;
+}
+
+.lvTemplateOne .infoSeperator
+{
+    float:left;
+    width:15px;
+    height: 12px;
+}
+.lvTemplateOne .info2Label
+{
+  float:left; 
+  width: 185px;
+  height: 12px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.lvTemplateOne .info2
+{
+    float:left;
+    width: 150px;
+    height: 12px;
+}
+
+.lvTemplateOne .seperator
+{
+    float:left;
+    width:10px;
+    height: 12px;    
+}
+
+.lvTemplateOne .action
+{
+    width: 50px;
+    float:left;
+}
+
+/******************** Row Formating One - END *********************/
+
+
+/******************** Row Formating Two - START *********************/
+
+.d-lv-c .d-lv .d-lv-row .lvTemplateTwo
+{
+    width: 745px;
+    
+    margin: 0px;
+    border: 1px solid #DDDDDD; 
+    padding: 10px; 
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #ffffff; 
+}
+
+.d-lv-c .d-lv .d-lv-alternet-row .lvTemplateTwo
+{
+    width: 745px;
+    
+    margin: 0px;
+    border: 1px solid #DDDDDD; 
+    padding: 10px; 
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #f2f2f2;
+}
+
+.lvTemplateTwo .row-content
+{
+    float: left;
+}
+
+.lvTemplateTwo .info1Label
+{
+  float:left; 
+  width: 135px;
+  height: 12px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.lvTemplateTwo .info1
+{
+    float:left;
+    width: 165px;
+    height: 12px;
+    display: table;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.lvTemplateTwo .infoSeperator
+{
+    float:left;
+    width:15px;
+    height: 12px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.lvTemplateTwo .info2Label
+{
+  float:left; 
+  width: 130px;
+  height: 12px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.lvTemplateTwo .info2
+{
+    float:left;
+    width: 160px;
+    height: 12px;
+    display: table;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.lvTemplateTwo .seperator
+{
+    float:left;
+    width:10px;
+    height: 12px;    
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.lvTemplateTwo .action
+{
+    width: 130px;
+    float:left;
+}
+.lvTemplateTwo .action div
+{
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+*
+/******************** Row Formating Two - END *********************/

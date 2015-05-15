@@ -1,0 +1,48 @@
+﻿.ktiTextBox
+{    
+    border: 1px solid;
+    border-left-color: #8E8E8E;
+    border-top-color: #8E8E8E;
+    border-right-color: #B8B8B8;
+    border-bottom-color: #B8B8B8;
+    height: 14px;
+    color: Black;
+    font-size: 10px;
+}
+
+.ktiTextArea
+{
+    font-family: "Segoe UI", Verdana, "Helvetica Neue", "Lucida Grande", Arial, Helvetica, sans-serif;
+    border: 1px solid;
+    border-left-color: #8E8E8E;
+    border-top-color: #8E8E8E;
+    border-right-color: #B8B8B8;
+    border-bottom-color: #B8B8B8;    
+    color: Black;
+    font-size: 10px;
+}
+
+.ktiSelect
+{
+    font-family: "Segoe UI", Verdana, "Helvetica Neue", "Lucida Grande", Arial, Helvetica, sans-serif;
+    border: 1px solid;
+    border-left-color: #8E8E8E;
+    border-top-color: #8E8E8E;
+    border-right-color: #B8B8B8;
+    border-bottom-color: #B8B8B8;    
+    color: Black;
+    height: 18px;
+    font-size: 10px;
+}
+
+.ktiDateTextBox
+{
+    border: 1px solid;
+    border-left-color: #8E8E8E;
+    border-top-color: #8E8E8E;
+    border-right-color: #B8B8B8;
+    border-bottom-color: #B8B8B8;
+    height: 14px;
+    color: Black;
+    font-size: 10px;
+}

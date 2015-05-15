@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Home" title="Home"  description="">
+    <siteMapNode url="" title="Contractor"  description="Contractor">
+        <siteMapNode url="~/CM/CMContractorEditor.aspx" title="Contractor Info"  description="Contractor Info" />
+        <siteMapNode url="~/CM/CMContractorAddressInfo.aspx" title="Address Info"  description="Address Info" />
+        <siteMapNode url="~/CM/CMContractorMajorProjectExecuted.aspx" title="Major Projects"  description="Major Projects" />
+        <siteMapNode url="~/CM/CMContractorContactPerson.aspx" title="Contact Person"  description="Contact Person" />
+        <siteMapNode url="~/CM/CMContractorEquipmentList.aspx" title="Equipment List"  description="Equipment List" />
+        <siteMapNode url="~/CM/CMFinancialStrengthMajorWork.aspx" title="Financial Strength"  description="Financial Strength" />
+        <siteMapNode url="~/CM/CMContractorLicence.aspx" title="Licence No"  description="Licence No" />
+        <siteMapNode url="~/CM/CMCriterionStatusRemarks.aspx" title="Critierion Remarks"  description="Critierion Remarks" />
+    </siteMapNode>
+    </siteMapNode>
+</siteMap>

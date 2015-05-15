@@ -1,0 +1,122 @@
+﻿.ktiNumberTextBox
+{    
+   border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border-radius:5px;
+    height: 21px;
+	width: 230px;
+	padding: 2px 18px 0 6px;
+}
+
+.ktiNumberTextBoxHover
+{
+    padding: 2px 18px 0 6px;
+    border:1px solid;
+	height: 21px;
+	width: 230px;
+	border-color:rgba(82,168,236,0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,0 0 8px rgba(82,168,236,0.6);
+    outline:0 none;
+    border-radius:5px;
+}
+
+.ktiNumberTextBoxAlert
+{
+    background: url(../Images/KTI/form_inp_alert_236_20.gif) no-repeat;
+	color: Red;
+	height: 21px;
+	padding: 5px 20px 0 6px;
+	width: 236px;
+}
+
+
+/*.................Listview TextBox START ...........*/
+
+.ktiNumberTextBoxListview
+{
+    border: 1px solid;
+    border-left-color: #8E8E8E;
+    border-top-color: #8E8E8E;
+    border-right-color: #B8B8B8;
+    border-bottom-color: #B8B8B8;
+    height: 25px;
+    color: Black;
+    background-image:url('images/Alert1.png');
+    background-position:right;
+    background-repeat:no-repeat;
+    padding-right:20px;
+    font-size: 10px;
+    width:70px;
+}
+
+.ktiDecimalTextBoxListview
+{
+    border: 1px solid;
+    border-left-color: #8E8E8E;
+    border-top-color: #8E8E8E;
+    border-right-color: #B8B8B8;
+    border-bottom-color: #B8B8B8;
+    height: 25px;
+    color: Black;
+    background-image:url('images/Alert1.png');
+    background-position:right;
+    background-repeat:no-repeat;
+    padding-right:20px;
+    font-size: 10px;
+    width:70px;
+}
+
+
+.ktiTextBoxListview
+{    
+    border: 1px solid;
+    border-left-color: #8E8E8E;
+    border-top-color: #8E8E8E;
+    border-right-color: #B8B8B8;
+    border-bottom-color: #B8B8B8;
+    height: 25px;
+    color: Black;
+    font-size: 10px;
+    width:94px;
+}
+
+
+.ktiDateTextBoxListview
+{
+    border: 1px solid;
+    border-left-color: #8E8E8E;
+    border-top-color: #8E8E8E;
+    border-right-color: #B8B8B8;
+    border-bottom-color: #B8B8B8;
+    height: 25px;
+    color: Black;
+    font-size: 10px;
+    width:80px;
+    
+}
+/*.................Listview TextBox END ...........*/
+
+/*.................Number TextBox Small START ...........*/
+
+.ktiNumberTextBoxSmall
+{    
+    background: url(../Images/forms/form_inp_236_20_sm.gif) no-repeat;
+	border: none;
+	color: #393939;
+	height: 21px;
+	padding: 5px 20px 0 6px;
+	width: 236px;
+}
+
+.ktiNumberTextBoxSmallHover
+{
+    background: url(../Images/forms/form_inp_alert_236_20_sm_Hover.gif) no-repeat;
+	border: none;
+	color: #393939;
+	height: 21px;
+	padding: 5px 20px 0 6px;
+	width: 236px;
+}
+
+/*.................Number TextBox Small END ...........*/

@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="Home"  description="">
+        <siteMapNode title="ERP Configuration" url="~/MD/Default.aspx" description="ERP Configuration">
+            <siteMapNode title="Project" url="~/Default.aspx?#2" description="Project">
+                <siteMapNode title="Templates" url="~/Default.aspx?#3" description="Templates">
+                    <siteMapNode url="~/CM/CMProjectScheduleTemplate.aspx" title="Modify Schedule Template"
+                        description=""></siteMapNode>
+                    <siteMapNode url="~/BD/BDProjectDocumentTemplate.aspx" title="Modify Document Template"
+                        description="Document Template"></siteMapNode>
+                    <siteMapNode url="~/PRM/PRMPreBOQTemplate.aspx" title="Modify BOQ Template" description="Modify BOQ Template">
+                    </siteMapNode>
+                    <siteMapNode url="~/PRM/PRMBOQTemplate.aspx" title="Modify Project Cost Template" description="Modify Project Cost Template">
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode url="~/BD/BDProject.aspx" title="Create or Update Project" description="">
+                </siteMapNode>
+                <siteMapNode url="~/MD/MDFloorCategory.aspx" title="Floor Category Lookup" description="Floor Category Lookup">
+                </siteMapNode>
+                <siteMapNode url="~/MD/MDFloor.aspx" title="Floor Lookup" description="Floor Lookup">
+                </siteMapNode>
+                <siteMapNode url="~/MD/MDProjectScheduleItem.aspx" title="Add / Modify Schedule Item"
+                      description=""></siteMapNode>
+                <siteMapNode url="~/MD/MDProjectStatus.aspx" title="Project Status Lookup" description="Project Status Lookup">
+                </siteMapNode>
+                <siteMapNode url="~/MD/MDPreBOQStatus.aspx" title="BOQ Status Lookup" description="BOQ Status Lookup">
+                </siteMapNode>
+                <siteMapNode url="~/MD/MDProjectCategory.aspx" title="Project Category Lookup" description="Project Category Lookup">
+                </siteMapNode>
+
+                <siteMapNode url="~/MD/MDProjectAssignedPersonTeamRole.aspx" title="Team Role Lookup"
+                    description="Team Role Lookup"></siteMapNode>
+                <siteMapNode url="~/MD/MDAddressType.aspx" title="Address Type Lookup"
+                    description="Address Type Lookup"></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Document" description="Document" url="~/Default.aspx?#4">
+                <siteMapNode url="~/MD/MDProjectDocumentCategory.aspx" title="Add / Modify Document Category"
+                    description="Add / Modify Document Category"></siteMapNode>
+                <siteMapNode url="~/MD/MDProjectDocument.aspx" title="Add / Modify Document"
+                    description="Add / Modify Document"></siteMapNode>
+                <siteMapNode url="~/MD/MDProjectCollectedDocumentStatus.aspx" title="Document Status Lookup"
+                    description="Document Status Lookup"></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Asset" description="Asset" url="~/Default.aspx?#5">
+                <siteMapNode url="~/CM/CMConstructionTool.aspx" title="Add / Modify Construction Tool"
+                                    description="Add / Modify Construction Tool"></siteMapNode>
+                <siteMapNode url="#" title="Add / Modify Vehicle"
+                                    description="Add / Modify Vehicle"></siteMapNode>
+            </siteMapNode>
+            
+            <siteMapNode title="Common" description="Common" url="~/Default.aspx?#7">
+                <siteMapNode url="~/MD/MDRegion.aspx" title="Region Lookup" description="Region Lookup"></siteMapNode>
+                <siteMapNode url="~/MD/MDCountry.aspx" title="Country Lookup" description="Country Lookup"></siteMapNode>
+                <siteMapNode url="~/MD/MDCity.aspx" title="City Lookup" description="City Lookup"></siteMapNode>
+               
+                <siteMapNode url="~/MD/MDStandardTimeUnit.aspx" title="Standard Time Unit Lookup"
+                    description="Standard Time Unit Lookup"></siteMapNode>
+                <siteMapNode url="~/MD/MDUnit.aspx" title="Unit Lookup" description="Unit Lookup"></siteMapNode>
+                <siteMapNode url="~/Common/CMNDashboardItem.aspx" title="Dashboard Item"
+                        description="Dashboard Item"></siteMapNode>
+                <siteMapNode url="~/Common/CMNDashboardItemQuicklink.aspx" title="Dashboard Item QuickLink"
+                    description="Dashboard Item"></siteMapNode>
+                <siteMapNode url="~/Common/CMNDashboardItemView.aspx" title="Dashboard Item View"
+                    description="Dashboard Item View"></siteMapNode>
+              <siteMapNode url="~/Common/CMNDashboardSchedule.aspx" title="Dashboard Schedule"
+                    description="Dashboard Schedule"></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Item" description="Item" url="~/Default.aspx?#8">
+                <siteMapNode title="Add / Modify Brand" description="Add / Modify Brand" url="~/MD/MDBrand.aspx"></siteMapNode>
+                <siteMapNode title="Add / Modify Item Category" description="Unit" url="~/MD/MDItemCategory.aspx">
+                </siteMapNode>
+                <siteMapNode title="Add / Modify Item" description="Add / Modify Item" url="~/MD/MDItem.aspx">
+                </siteMapNode>
+                <siteMapNode title="Add / Modify Item Group" description="Add / Modify Item Group" url="~/MD/MDItemGroup.aspx">
+                </siteMapNode>
+                <siteMapNode title="Add / Modify Item Category Map" description="Add / Modify Item Category Map" url="~/MD/MDItemGroupItemCategoryMap.aspx">
+                </siteMapNode>
+                <siteMapNode url="~/PRM/PRMItemBrandMap.aspx" title="Add / Modify Item Brand Map" description="Add / Modify Item Brand Map"></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Issue" description="Issue" url="~/Default.aspx?#9">
+                <siteMapNode title="Issue Category Lookup" description="IssueCategory Lookup" url="~/MD/MDIssueCategory.aspx">
+                </siteMapNode>
+                <siteMapNode title="Issue Priority Lookup" description="IssuePriority Lookup" url="~/MD/MDIssuePriority.aspx">
+                </siteMapNode>
+                <siteMapNode title="Issue Status Lookup" description="IssueStatus Lookup" url="~/MD/MDIssueStatus.aspx">
+                </siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="HR" description="Human Resource" url="~/Default.aspx?#10">
+                <siteMapNode url="~/MD/MDDepartment.aspx" title="Department Lookup" description="Department Lookup">
+                </siteMapNode>
+                <siteMapNode url="~/MD/MDDesignation.aspx" title="Designation Lookup" description="Designation Lookup">
+                </siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="DMS" description="Document Management System" url="~/Default.aspx?#55">
+                <siteMapNode url="~/MD/MDReferenceLibraryCategory.aspx" title="Reference Library Category" description="Reference Library Category">
+                </siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Construction" description="Construction" url="~/Default.aspx?#11">
+                <siteMapNode url="~/MD/MDConstructionToolCategory.aspx" title="Add / Modify Tool Category"
+                    description="ConstructionToolCategory"></siteMapNode>
+                <siteMapNode url="~/MD/MDConstructionToolWorkingCondition.aspx?#1" title="Add / Modify Tool Working Condition"
+                    description="ConstructionToolWorkingCondition"></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Consultant" description="Consultant" url="~/Default.aspx?#12">
+                <siteMapNode url="~/CM/CMConsultantWorkArea.aspx" title="Consultant WorkArea Lookup"
+                    description="Consultant WorkArea Lookup"></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Vendor" description="Vendor" url="~/Default.aspx?#13">
+                <siteMapNode url="~/MD/MDSupplierAddressType.aspx" title="Vendor Address Type Lookup"
+                          description="Address Type"></siteMapNode>
+                <siteMapNode url="~/MD/MDSupplierItemCategory.aspx" title="Vendor Item Category Lookup"
+                             description="Vendor Item Category"></siteMapNode>
+                <siteMapNode url="~/MD/MDSupplierType.aspx" title="Vendor Type Lookup"
+                             description="Vendor Type Lookup"></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Work Order" description="Work Order" url="~/Default.aspx?#14">
+                <siteMapNode url="~/MD/MDWorkOrderStatus.aspx" title="Work Order Status Lookup"
+                          description="Work Order Status Lookup"></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Roles and Permission" description="Roles and Permission" url="~/Default.aspx?#15">
+                <siteMapNode url="~/Security/ASCreateNewRole.aspx" title="Add Role"
+                             description="Add Role"></siteMapNode>
+                <siteMapNode url="~/Security/ASRoleList.aspx" title="Role List"
+                             description="Role List"></siteMapNode>
+                <siteMapNode url="~/Security/UserList.aspx" title="User List"
+                             description="User List"></siteMapNode>
+                <siteMapNode url="~/Security/AddUser.aspx" title="Add User"
+                             description="Add User"></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="WorkFlow Design" description="WorkFlow Design" url="~/Default.aspx?#16">
+            </siteMapNode>
+            <siteMapNode title="Approval" description="Approval" url="~/Default.aspx?#17">
+                <siteMapNode url="~/MD/MDApprovalRule.aspx" title="Add / Modify Approval Rule"
+                             description="Approval Rule Lookup"></siteMapNode>
+                <siteMapNode url="~/MD/MDApprovalPanelStatus.aspx" title="Approval Panel Status Lookup"
+                          description="Approval Panel Status Lookup"></siteMapNode>
+                <siteMapNode url="~/MD/MDApprovalProcessPriority.aspx" title="Approval Process Priority Lookup"
+                             description="Approval Process Priority Lookup"></siteMapNode>
+                <siteMapNode url="~/MD/MDApprovalProcessStatus.aspx" title="Approval Process Status Lookup"
+                             description="Approval Process Status Lookup"></siteMapNode>
+                <siteMapNode url="~/MD/MDApprovalProcessType.aspx" title="Approval Process Type Lookup"
+                             description="Approval Process Type Lookup"></siteMapNode>
+            </siteMapNode>
+
+            <siteMapNode title="Demo" description="Demo" url="~/Default.aspx?#18">
+                <siteMapNode title="New Design" description="New Design">
+                    <siteMapNode url="~/form.html" Target="_blank" title="Form" description="Form">
+                    </siteMapNode>
+                    <siteMapNode url="~/login.html" Target="_blank" title="Login" description="New Item">
+                    </siteMapNode>
+                    <siteMapNode url="~/table.html" Target="_blank" title="Grid Data" description="New Item">
+                    </siteMapNode>
+                    <siteMapNode url="~/text.html" Target="_blank" title="Text" description="New Item">
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode title="Schedule" description="New Item" url="~/Default.aspx?#19">
+                    <siteMapNode url="~/demos/theme.html" Target="_blank" title="Monthly Calender"
+                        description="Monthly Calender"></siteMapNode>
+                    <siteMapNode url="~/weekcalendar.html" Target="_blank" title="Weekly Calender" 
+                        description="New Item"></siteMapNode>
+                    <siteMapNode url="~/gs/index.htm" Target="_blank" title="Gantt Chart View"
+                        description="New Item"></siteMapNode>
+                </siteMapNode>
+            </siteMapNode>
+
+          <siteMapNode title="Site Map" description="SiteMap" url="~/SiteMap.aspx">
+          </siteMapNode>
+        </siteMapNode>
+      
+      
+      
+        
+        <siteMapNode title="Site" url="~/Site/Default.aspx" description="Site Management">
+            <siteMapNode url="~/Site/REQRequisition.aspx" title="Create Requisition" description="Create Requisition">
+            </siteMapNode>
+            <siteMapNode url="~/Site/REQRequisitionList.aspx" title="Requisition List"
+                description="Requisition List"></siteMapNode>
+            
+            <siteMapNode title="Material Receive" description="Material Receive" url="~/Default.aspx?#33">
+                <siteMapNode url="~/PRM/PRMMaterialReceive.aspx?#1" title="Add / Modify Material Receive" description="Add / Modify Material Receive"></siteMapNode>
+              <siteMapNode url="~/PRM/PRMMaterialReceiveLight.aspx?#1" title="Material Receive Light" description="Material Receive Light"></siteMapNode>
+                <siteMapNode url="~/PRM/PRMMaterialReceiveList.aspx?#3" title="Material Receive List" description="Material Receive List"></siteMapNode>
+                <siteMapNode url="~/PRM/PRMMaterialReceiveList.aspx?#2" title="Material Receive Report" description="Material Receive Report"></siteMapNode>
+            </siteMapNode>
+        </siteMapNode>
+
+      
+        
+        <siteMapNode title="CM" url="~/CM/Default.aspx" description="Construction Management">
+            
+            <siteMapNode title="Projects" description="Projects" url="~/Default.aspx?#20">
+                <siteMapNode url="~/BD/BDProject.aspx?#3" title="Add / Modify Project" description="Add/ Modify Project">
+                </siteMapNode>
+                <siteMapNode url="~/CM/CMConsultant.aspx" title="Add / Modify Project Consultant" description="Add/ Modify Project Consultant">
+                </siteMapNode>
+                <siteMapNode url="~/CM/CMContractor.aspx" title="Add / Modify Project Contractor" description="Add/ Modify Project Contractor">
+                </siteMapNode>
+                <siteMapNode url="~/BD/BDProjectList.aspx" title="Project Overview" description="Project Overview">
+                </siteMapNode>
+              <siteMapNode url="~/CM/CMNSendMail.aspx" title="Send Mail" description="Send Mail">
+              </siteMapNode>
+            </siteMapNode>
+            
+            <siteMapNode title="Project History" description="Project History" url="~/Default.aspx?#21">
+                <siteMapNode url="~/BD/BDProjectHistoryStandalone.aspx" title="Add / Modify Project History"
+                      description=""></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Project Issue and Task" description="Project Adhoc Issue" url="~/Default.aspx?#22">
+                <siteMapNode url="~/OT/OTProjectAdhocIssue.aspx?#1" title="Add / Modify"
+                    description="Add/ Modify"></siteMapNode>
+                <siteMapNode url="~/OT/OTIssueList.aspx?#1" title="List of Issues"
+                    description="List of Issues"></siteMapNode>
+                <siteMapNode url="~/BD/BDProjectMilestoneIssueView.aspx" title="List of Milestones"
+                    description="List of Milestones"></siteMapNode>
+                <siteMapNode url="~/CM/CMConsultantAssignedWorkAreaStandalone.aspx" title="Assign work to Consultant"
+                    description="Assign work to Consultant"></siteMapNode>
+                <siteMapNode url="~/CM/CMContractorAssignedWorkArea.aspx" title="Assign work to Conractor"
+                    description="Assign work to Conractor"></siteMapNode>
+                <siteMapNode url="~/OT/OTProjectAdhocIssueList.aspx?#96" title="Assign Tools to Project"
+                   description="Assign Tools to Project"></siteMapNode>
+            </siteMapNode>
+       
+            <!--<siteMapNode title="Project BOQ" description="Project BOQ" url="~/Default.aspx?#23">
+                <siteMapNode url="#?8" title="BOQ Posting" description="BOQ Posting"></siteMapNode>
+                <siteMapNode url="~/REQ/REQRequisition.aspx" title="Create Requisition" description="Create Requisition"></siteMapNode>
+                <siteMapNode url="#?9" title="Approve Requisition" description="Approve Requisition"></siteMapNode>
+            </siteMapNode>-->
+                <!--<siteMapNode url="~/REQ/REQRequisitionList.aspx?#1" title="List of Requisition"
+                       description="List of Requisition"></siteMapNode>
+                <siteMapNode url="~/REQ/REQRequisitionMaster.aspx?#2" title="Create Master Requisition" description="Create Master Requisition"></siteMapNode>
+                <siteMapNode url="~/REQ/REQRequisitionListMaster.aspx?#2" title="List of Master Requisition"
+                             description="List of MasterRequisition"></siteMapNode>--><!--
+            </siteMapNode>-->
+            <siteMapNode title="Requisition" description="Requisition" url="~/Default.aspx?#99">
+                <siteMapNode url="~/REQ/REQRequisition.aspx?#5" title="Create Requisition" description="Create Requisition">
+                </siteMapNode>
+                <siteMapNode url="~/REQ/REQRequisitionList.aspx?#99" title="Requisition List"
+                    description="Requisition List"></siteMapNode>
+                <siteMapNode url="~/REQ/REQRequisitionListCancellation.aspx?#2" title="Requisition Cancellation"
+                description="Requisition Cancellation"></siteMapNode>
+            </siteMapNode>
+          <siteMapNode title="Measurement Book" description="Measurement Book" url="~/Default.aspx?#97">
+            <siteMapNode url="~/CM/CMMeasurementBook.aspx" title="Add / Modify Measurement" description="Add/ Modify Measurement">
+            </siteMapNode>
+            <siteMapNode url="~/CM/CMAbstractMeasurementBook.aspx?#98" title="Abstract" description="Abstract">
+            </siteMapNode>
+          </siteMapNode>
+          <siteMapNode title="Material Receive" description="Material Receive" url="~/Default.aspx?#96">
+            <siteMapNode url="~/Site/PRMMaterialReceive.aspx?#1" title="Add / Modify Material Receive" description="Add / Modify Material Receive"></siteMapNode>
+            <siteMapNode url="~/Site/PRMMaterialReceiveList.aspx?#3" title="Material Receive List" description="Material Receive List"></siteMapNode>
+            <siteMapNode url="~/Site/PRMMaterialReceiveList.aspx?#2" title="Material Receive Report" description="Material Receive Report"></siteMapNode>
+          </siteMapNode>
+          <siteMapNode title="Bill" description="Bill" url="~/Default.aspx?#95">
+            <siteMapNode url="~/CM/CMBill.aspx" title="Add / Modify Bill" description="Add / Modify Bill"></siteMapNode>
+            <siteMapNode url="~/CM/CMBillList.aspx" title="Bill List" description="Bill List"></siteMapNode>
+          </siteMapNode>
+            <!--<siteMapNode title="Work Order CM" description="Work Order CM" url="~/Default.aspx?#89">
+                --><!--<siteMapNode url="~/CM/CMWorkOrder.aspx?#98" title="Add / Modify Work Order" description="Add / Modify Work Order"></siteMapNode>
+                <siteMapNode url="~/CM/CMWorkOrderList.aspx?#98" title="Work Order List" description="Work Order List"></siteMapNode>--><!--
+            </siteMapNode>-->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <siteMapNode title="Project Issue and Task Calendar" url="~/OT/OTProjectAdhocIssueSchedule.aspx" description="Project Issue and Task Calendar">
+          </siteMapNode>
+
+            <siteMapNode title="Report" description="Report" url="~/Default.aspx?#24">
+                <siteMapNode url="~/BD/BDProjectCategoryStatusReport.aspx" title="Project List by Category" description="Project List by Category"></siteMapNode>
+                <siteMapNode url="#?11" title="Project Consultant Report" description="Project Consultant Report"></siteMapNode>
+                <siteMapNode url="#?12" title="Project Contractor Report" description="Project Contractor Report"></siteMapNode>
+                <siteMapNode url="~/BD/BDProjectList.aspx?#1" title="Project Information" description="Project Information"></siteMapNode>
+                <siteMapNode url="~/BD/BDProjectList.aspx?#2" title="Project History" description="Project History"></siteMapNode>
+                <siteMapNode url="#?14" title="Project Milestone" description="Project Milestone"></siteMapNode>
+                <siteMapNode url="#?15" title="Project Gantt Chart" description="Project Gantt Chart"></siteMapNode>
+                <siteMapNode url="#?16" title="Missed Milestones" description="Missed Milestones"></siteMapNode>
+                <siteMapNode url="~/OT/OTMissedIssueReport.aspx" title="Missed Issues" description="Missed Issues"></siteMapNode>
+                <siteMapNode url="~/OT/OTUpcomingIssueReport.aspx" title="Upcomming Issues by Date" description="Upcomming Issues by Date"></siteMapNode>
+                <siteMapNode url="#?19" title="Project BOQ" description="Project BOQ"></siteMapNode>
+                <siteMapNode url="#?20" title="Project Project Cost History" description="Project Project Cost History"></siteMapNode>
+                <siteMapNode url="~/REQ/REQRequisitionPrintListMaster.aspx?#1" title="Master Requisition Print" description="Master Requisition Print"></siteMapNode>
+                <siteMapNode url="~/REQ/REQRequisitionPrintList.aspx?#2" title="Requsition Print" description="Requsition Print"></siteMapNode>
+                <siteMapNode url="#?23" title="Summery Report" description="Summery Report"></siteMapNode>
+            </siteMapNode>
+
+        </siteMapNode>
+        
+        
+        <siteMapNode title="PRM" description="Procurement Management" url="~/PRM/Default.aspx">
+            <siteMapNode title="Requisition" description="Requisition" url="~/Default.aspx?#26">
+                <siteMapNode url="~/REQ/REQRequisition.aspx?#1" title="Create Requisition" description="Create Requisition">
+                </siteMapNode>
+                <siteMapNode url="~/REQ/REQRequisitionList.aspx" title="Requisition List"
+                    description="Requisition List"></siteMapNode>
+                <siteMapNode url="~/REQ/REQRequisitionListCancellation.aspx" title="Requisition Cancellation"
+                description="Requisition Cancellation"></siteMapNode>
+            </siteMapNode>
+            <!--<siteMapNode title="Requisition Corporate" description="Requisition Corporate" url="~/Default.aspx?#27">
+                <siteMapNode url="~/REQ/REQRequisitionCorporate.aspx" title="Create Requisition Corporate" description="Create Requisition Corporate">
+                </siteMapNode>
+                <siteMapNode url="~/REQ/REQRequisitionCorporateList.aspx" title="Requisition List Corporate"
+                    description="Requisition List Corporate"></siteMapNode>
+            </siteMapNode>-->
+            <!--<siteMapNode title="Master Requisition" description="Master Requisition" url="~/Default.aspx?#28">
+                <siteMapNode url="~/REQ/REQRequisitionMaster.aspx?#1" title="Create Requisition" description="Create Requisition">
+                </siteMapNode>
+                <siteMapNode url="~/REQ/REQRequisitionListMaster.aspx" title="Requisition List"
+                    description="Requisition List"></siteMapNode>
+            </siteMapNode>-->
+            <siteMapNode title="Vendor" description="Vendor" url="~/Default.aspx?#29">
+                <siteMapNode url="~/PRM/PRMSupplier.aspx" title="Create Vendor" description="Vendor">
+                </siteMapNode>
+                <siteMapNode url="~/PRM/PRMSupplierList.aspx" title="Vendor List" description="Vendor List">
+                </siteMapNode>
+                <siteMapNode url="~/PRM/PRMSupplierView.aspx" title="Find Vendor" description="Find Vendor">
+                </siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Price" description="Price" url="~/Default.aspx?#30">
+                <siteMapNode url="~/PRM/PRMSupplierItemMap.aspx" title="Update Price" description="Update Price">
+                </siteMapNode>
+                <siteMapNode url="~/PRM/PRMSupplierItemMapHistory.aspx" title="Price History" description="Price History">
+                </siteMapNode>
+                <siteMapNode url="~/PRM/PRMSupplierItemMapHistoryReport.aspx" title="Price History Report" description="Price History Report">
+                </siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Work Order" description="Work Order" url="~/Default.aspx?#31">
+                <siteMapNode url="~/PRM/PRMWorkOrder.aspx" title="Add / Modify Work Order" description="Add / Modify Work Order"></siteMapNode>
+                <siteMapNode url="~/PRM/PRMWorkOrderList.aspx" title="Work Order List" description="Work Order List"></siteMapNode>            
+            </siteMapNode>
+            <siteMapNode title="Material Receive" description="Material Receive" url="~/Default.aspx?#32">
+                <siteMapNode url="~/PRM/PRMMaterialReceive.aspx" title="Add / Modify Material Receive" description="Add / Modify Material Receive"></siteMapNode>
+                <siteMapNode url="~/PRM/PRMMaterialReceiveList.aspx" title="Material Receive List" description="Material Receive List"></siteMapNode>
+                <siteMapNode url="~/PRM/PRMMaterialReceiveList.aspx?#1" title="Material Receive Report" description="Material Receive Report"></siteMapNode>
+            </siteMapNode>
+          <siteMapNode title="Bill" description="Bill" url="~/Default.aspx?#94">
+            <siteMapNode url="~/CM/CMBill.aspx?#1" title="Add / Modify Bill" description="Add / Modify Bill"></siteMapNode>
+            <siteMapNode url="~/CM/CMBillList.aspx?#2" title="Bill Report" description="Bill List"></siteMapNode>
+            <siteMapNode url="~/SandBox/MDTest.aspx" title="Bill Summary" description="Bill Summary"></siteMapNode>
+          </siteMapNode>
+        </siteMapNode>
+        
+        
+        <siteMapNode title="ITT" description="Issues and Task Tracker" url="~/OT/Default.aspx">
+            <siteMapNode title="Project Adhoc Issue" description="Project Adhoc Issue" url="~/Default.aspx?#34">
+                <siteMapNode url="~/OT/OTProjectAdhocIssue.aspx" title="Add Project Adhoc Issue" description="Add Project Adhoc Issue"></siteMapNode>
+                <siteMapNode url="~/OT/OTProjectAdhocIssueList.aspx" title="Project Adhoc Issue List" description="Project Adhoc Issue List"></siteMapNode>
+                <siteMapNode title="Project Adhoc Issue Report" description="Project Adhoc Issue List"></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Adhoc Issue" description="Adhoc Issue" url="~/Default.aspx?#35">
+            <siteMapNode url="~/OT/OTAdhocIssue.aspx" title="Add Adhoc Issue" description="Add Adhoc Issue"></siteMapNode>
+            <siteMapNode url="~/OT/OTAdhocIssueList.aspx" title="Adhoc Issue List" description="Adhoc Issue List"></siteMapNode>
+             <siteMapNode title="Adhoc Issue Report" description="Adhoc Issue List"></siteMapNode>
+             <siteMapNode title="Adhoc Issue Schedule" url="~/OT/OTAdhocIssueSchedule.aspx" description="Adhoc Issue Schedule"></siteMapNode>
+            </siteMapNode>
+            
+            
+            <siteMapNode url="~/OT/OTSchedule.aspx" title="Create Schedule" description="Create Schedule">
+            </siteMapNode>
+            <siteMapNode title="Schedule" description="Schedule" url="~/Default.aspx?#36">
+                <siteMapNode url="~/OT/OTContractorIssueSchedule.aspx" title="Contractor Issue Schedule" description="Contractor Issue Schedule">
+                </siteMapNode>
+                <siteMapNode url="~/OT/OTConsultantIssueSchedule.aspx" title="Consultant Issue Schedule" description="Consultant Issue Schedule">
+                </siteMapNode>
+                <siteMapNode url="~/OT/OTConstructionToolIssueSchedule.aspx" title="Construction Tool Schedule" description="Construction Tool Schedule">
+                </siteMapNode>
+            </siteMapNode>
+        </siteMapNode>
+        
+        
+        <siteMapNode title="HR" description="Human Resources" url="~/HR/Default.aspx">
+            <siteMapNode url="~/HR/HREmployee.aspx" title="Add Employee" description="Add Employee" />
+            <siteMapNode url="~/OT/OTEmployeeIssueSchedule.aspx" title="Employee Issue Schedule" description="Employee Issue Schedule" />
+            <siteMapNode url="~/HR/HRMember.aspx" title="Member" description="Member" />
+        </siteMapNode>
+        <siteMapNode title="CRM" description="Customer Relation Manager" url="~/HR/Default.aspx?#1"></siteMapNode>
+        <siteMapNode title="AFM" description="Accounts Financial Management" url="~/HR/Default.aspx?#2">
+          <siteMapNode url="~/AFM/AFMRequisitionList.aspx" title="Approved Requisition List" description="Approved Requisition List">
+          </siteMapNode>
+          <siteMapNode url="~/AFM/AFMWorkOrderList.aspx" title="Approved Work Order List" description="Approved Work Order List">
+          </siteMapNode>
+          <siteMapNode url="~/Reports/WorkOrder/AFMAdvancePayment.aspx" title="Advance Payment For WO" description="Advance Payment For WO">
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="DMS" description="Document Management System" url="~/DMS/Default.aspx">
+            <siteMapNode url="~/DMS/DMSDocumentNode.aspx" title="Bay's Drive" description="Bay's Drive">
+            </siteMapNode>
+            <siteMapNode url="~/DMS/DMSFileTracking.aspx" title="File Tracking" description="File Tracking">
+            </siteMapNode>
+            <siteMapNode url="~/DMS/DMSFileMovementRegister.aspx" title="File Movement Register" description="File Movement Register">
+            </siteMapNode>
+            <siteMapNode url="~/DMS/DMSReferenceLibrary.aspx" title="Reference Library" description="Reference Library">
+            </siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="KB" description="Knowledge Base" url="~/HR/Default.aspx?#4"></siteMapNode>
+        <siteMapNode title="IS" description="IS Management" url="~/HR/Default.aspx?#5"></siteMapNode>
+        <siteMapNode title="FM" description="Facility Management" url="~/HR/Default.aspx?#6"></siteMapNode>
+        <siteMapNode title="AP" description="Approval Process" url="~/AP/Default.aspx?#1">
+            <siteMapNode title="Configuration" description="" url="~/AP/Default.aspx?#2">
+                <siteMapNode url="~/AP/APType.aspx" title="Approval Process Types" description="">
+                </siteMapNode>
+                <siteMapNode url="~/AP/APStatus.aspx" title="Approval Process Status" description="">
+                </siteMapNode>
+                <siteMapNode url="~/AP/APPanel.aspx" title="Approval Process Panel" description="">
+                </siteMapNode>
+                <siteMapNode url="~/AP/APPanelMember.aspx" title="Panel Members" description="">
+                </siteMapNode>
+                <siteMapNode url="~/AP/APPanelForwardMember.aspx" title="Panel Forward Members">
+                </siteMapNode>
+                <siteMapNode url="~/AP/APPanelItemCategoryMap.aspx" title="REQ Panel - Item Category Map" description="">
+                </siteMapNode>                
+                <siteMapNode url="~/AP/APWOPanelItemCategoryMap.aspx" title="WO Panel - Item Category Map" description="">
+                </siteMapNode>
+                <siteMapNode url="~/AP/APFeedback.aspx" title="Member Feedback Types" description="">
+                </siteMapNode>
+            </siteMapNode>
+            <siteMapNode url="~/AP/APApprovalProcess.aspx" title="Approval Process List" description=""></siteMapNode>
+            <siteMapNode url="~/AP/APMemberFeedback.aspx" title="Member Feedback" description=""></siteMapNode>
+            <siteMapNode url="~/AP/Default.aspx" title="All Approval Requestes" description=""></siteMapNode>
+            <siteMapNode url="~/AP/APPendingList.aspx" title="Pending Approval Requestes" description=""></siteMapNode>
+            <siteMapNode url="~/AP/APApprovedList.aspx" title="Approved Approval Requestes" description=""></siteMapNode>
+            <siteMapNode url="~/AP/APRejectedList.aspx" title="Rejected Approval Requestes" description=""></siteMapNode>
+            <siteMapNode url="~/AP/APPendingForwardList.aspx" title="Pending Forward Appr. Req." description=""></siteMapNode>
+            <siteMapNode url="~/AP/APProxyApprovalRequest.aspx" title="Proxy Approval Request" description=""></siteMapNode>
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>

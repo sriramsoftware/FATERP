@@ -1,0 +1,31 @@
+﻿.ktiDecimalTextBox
+{ 
+	border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border-radius:5px;
+    height: 21px;
+	width: 230px;
+	padding: 2px 18px 0 6px;
+}
+
+.ktiDecimalTextBoxHover
+{   
+    padding: 2px 18px 0 6px;
+    border:1px solid;
+	height: 21px;
+	width: 230px;
+	border-color:rgba(82,168,236,0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,0 0 8px rgba(82,168,236,0.6);
+    outline:0 none;
+    border-radius:5px;
+}
+
+.ktiDecimalTextBoxAlert
+{
+    background: url(../Images/KTI/form_inp_alert_236_20.gif) no-repeat;
+	color: Red;
+	height: 21px;
+	padding: 5px 20px 0 6px;
+	width: 236px;
+}

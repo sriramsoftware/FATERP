@@ -1,0 +1,15 @@
+﻿.ktiDecimalTextBox
+{
+    border: 1px solid;
+    border-left-color: #8E8E8E;
+    border-top-color: #8E8E8E;
+    border-right-color: #B8B8B8;
+    border-bottom-color: #B8B8B8;
+    height: 14px;
+    color: Black;
+    background-image:url('images/Alert1.png');
+    background-position:right;
+    background-repeat:no-repeat;
+    padding-right:20px;
+    font-size: 10px;
+}

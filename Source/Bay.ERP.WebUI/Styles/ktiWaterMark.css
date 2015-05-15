@@ -1,0 +1,21 @@
+﻿div.waterMarkContainer
+{
+    position:relative;
+}
+
+label.watermarkLabel  
+{ 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    padding-left: 4px;
+    padding-top: 4px; 
+    font-size: 10px; 
+    color: Gray;
+}
+
+/* remember to define focus styles! */
+:focus 
+{
+    outline: 0;
+}

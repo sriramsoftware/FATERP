@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{1AD1F504-38CB-461D-881E-3C8F827D46CC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Bay.ERP.WebUI", "Source\Bay.ERP.WebUI", "{D7AA8AE6-B141-4AE2-B690-3957B1635CDA}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{CD8CD3EB-C70C-48EA-A7AB-1F36DE1249AC}|Bay.ERP.Common.dll;{43DB698B-A3C7-4B86-BD27-C965907257EB}|Bay.ERP.FacadeCreator.dll;{E0919973-51EE-468E-A7E2-C0D76F559643}|Bay.ERP.BusinessFacade.dll;{F22457CF-ADDF-4784-AF74-6F0CA4253E23}|Bay.ERP.IBusinessFacade.dll;{881393FF-FA7A-4FB1-BDF7-FF25E58AB11D}|Bay.ERP.IDataAccess.dll;{6719E739-89DC-4B0C-9BBB-18B181E89413}|Bay.ERP.DataAccess.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Bay.ERP.WebUI"
+		Debug.AspNetCompiler.PhysicalPath = "Source\Bay.ERP.WebUI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Bay.ERP.WebUI\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Bay.ERP.WebUI"
+		Release.AspNetCompiler.PhysicalPath = "Source\Bay.ERP.WebUI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Bay.ERP.WebUI\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "7777"
+		VWDDynamicPort = "false"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bay.ERP.BusinessFacade", "Source\Bay.ERP.BusinessFacade\Bay.ERP.BusinessFacade.csproj", "{E0919973-51EE-468E-A7E2-C0D76F559643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bay.ERP.Common", "Source\Bay.ERP.Common\Bay.ERP.Common.csproj", "{CD8CD3EB-C70C-48EA-A7AB-1F36DE1249AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bay.ERP.DataAccess", "Source\Bay.ERP.DataAccess\Bay.ERP.DataAccess.csproj", "{6719E739-89DC-4B0C-9BBB-18B181E89413}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bay.ERP.FacadeCreator", "Source\Bay.ERP.FacadeCreator\Bay.ERP.FacadeCreator.csproj", "{43DB698B-A3C7-4B86-BD27-C965907257EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bay.ERP.IBusinessFacade", "Source\Bay.ERP.IBusinessFacade\Bay.ERP.IBusinessFacade.csproj", "{F22457CF-ADDF-4784-AF74-6F0CA4253E23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bay.ERP.IDataAccess", "Source\Bay.ERP.IDataAccess\Bay.ERP.IDataAccess.csproj", "{881393FF-FA7A-4FB1-BDF7-FF25E58AB11D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7AA8AE6-B141-4AE2-B690-3957B1635CDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7AA8AE6-B141-4AE2-B690-3957B1635CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7AA8AE6-B141-4AE2-B690-3957B1635CDA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7AA8AE6-B141-4AE2-B690-3957B1635CDA}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{E0919973-51EE-468E-A7E2-C0D76F559643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0919973-51EE-468E-A7E2-C0D76F559643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0919973-51EE-468E-A7E2-C0D76F559643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0919973-51EE-468E-A7E2-C0D76F559643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD8CD3EB-C70C-48EA-A7AB-1F36DE1249AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD8CD3EB-C70C-48EA-A7AB-1F36DE1249AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD8CD3EB-C70C-48EA-A7AB-1F36DE1249AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD8CD3EB-C70C-48EA-A7AB-1F36DE1249AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6719E739-89DC-4B0C-9BBB-18B181E89413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6719E739-89DC-4B0C-9BBB-18B181E89413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6719E739-89DC-4B0C-9BBB-18B181E89413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6719E739-89DC-4B0C-9BBB-18B181E89413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43DB698B-A3C7-4B86-BD27-C965907257EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43DB698B-A3C7-4B86-BD27-C965907257EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43DB698B-A3C7-4B86-BD27-C965907257EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43DB698B-A3C7-4B86-BD27-C965907257EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F22457CF-ADDF-4784-AF74-6F0CA4253E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22457CF-ADDF-4784-AF74-6F0CA4253E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22457CF-ADDF-4784-AF74-6F0CA4253E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22457CF-ADDF-4784-AF74-6F0CA4253E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{881393FF-FA7A-4FB1-BDF7-FF25E58AB11D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881393FF-FA7A-4FB1-BDF7-FF25E58AB11D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881393FF-FA7A-4FB1-BDF7-FF25E58AB11D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881393FF-FA7A-4FB1-BDF7-FF25E58AB11D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D7AA8AE6-B141-4AE2-B690-3957B1635CDA} = {1AD1F504-38CB-461D-881E-3C8F827D46CC}
+		{E0919973-51EE-468E-A7E2-C0D76F559643} = {1AD1F504-38CB-461D-881E-3C8F827D46CC}
+		{CD8CD3EB-C70C-48EA-A7AB-1F36DE1249AC} = {1AD1F504-38CB-461D-881E-3C8F827D46CC}
+		{6719E739-89DC-4B0C-9BBB-18B181E89413} = {1AD1F504-38CB-461D-881E-3C8F827D46CC}
+		{43DB698B-A3C7-4B86-BD27-C965907257EB} = {1AD1F504-38CB-461D-881E-3C8F827D46CC}
+		{F22457CF-ADDF-4784-AF74-6F0CA4253E23} = {1AD1F504-38CB-461D-881E-3C8F827D46CC}
+		{881393FF-FA7A-4FB1-BDF7-FF25E58AB11D} = {1AD1F504-38CB-461D-881E-3C8F827D46CC}
+	EndGlobalSection
+EndGlobal

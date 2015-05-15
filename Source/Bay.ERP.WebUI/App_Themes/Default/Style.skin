@@ -1,0 +1,187 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+
+<kti:BayItemTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller">
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayItemTreeView>
+
+<kti:BayItemCategoryTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayItemCategoryTreeView>
+
+<kti:BayProjectDocumentCategoryTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayProjectDocumentCategoryTreeView>
+
+<kti:BayProjectDocumentTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayProjectDocumentTreeView>
+
+<kti:BayProjectScheduleItemTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayProjectScheduleItemTreeView>
+
+<kti:BayProjectIssueTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayProjectIssueTreeView>
+
+<kti:BayConstructionToolTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller">
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayConstructionToolTreeView>
+
+<kti:BayBrandItemMapTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" SupplierID="104">
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayBrandItemMapTreeView>
+
+<kti:BayProjectCategoryStatusTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayProjectCategoryStatusTreeView>
+
+<kti:BayEmployeeTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller">
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayEmployeeTreeView>
+
+<kti:BayHRDepartmentTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayHRDepartmentTreeView>
+
+<kti:BayHRDesignationTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayHRDesignationTreeView>
+
+<kti:BayHREmployeeTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayHREmployeeTreeView>
+
+<kti:BayDMSDocumentTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayDMSDocumentTreeView>
+
+<kti:BayRequistionItemTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller">
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayRequistionItemTreeView>
+
+<kti:BayTaskCategoryTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayTaskCategoryTreeView>
+
+<kti:BayTaskTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayTaskTreeView>
+
+<kti:BayAssetCategoryTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller" ShowCheckBoxesInAllNodes="false" >
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayAssetCategoryTreeView>
+
+<kti:BayAssetTreeView runat="server" ImageSet="Arrows" Font-Size="Smaller">
+    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+        NodeSpacing="0px" VerticalPadding="0px" />
+    <ParentNodeStyle Font-Bold="False" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="2px"
+        VerticalPadding="2px" BackColor="#66FF66" BorderColor="#009933" BorderWidth="1px" />
+</kti:BayAssetTreeView>

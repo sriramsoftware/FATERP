@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="Home"  description="">
+        
+        
+        <siteMapNode title="Site" url="~/Site/Default.aspx" description="Site Management">
+            <siteMapNode title="Requisition" description="Requisition" url="~/Default.aspx?#26">
+                <siteMapNode url="~/Site/REQRequisition.aspx?#1" title="Create Requisition" description="Create Requisition">
+                </siteMapNode>
+                <siteMapNode url="~/Site/REQRequisitionList.aspx" title="Requisition List"
+                    description="Requisition List"></siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Material Receive" description="Material Receive" url="~/Default.aspx?#33">
+                <siteMapNode url="~/Site/PRMMaterialReceive.aspx?#1" title="Add / Modify Material Receive" description="Add / Modify Material Receive"></siteMapNode>
+                <siteMapNode url="~/Site/PRMMaterialReceiveList.aspx?#3" title="Material Receive List" description="Material Receive List"></siteMapNode>
+            </siteMapNode>
+          <siteMapNode title="Measurement Book" description="Measurement Book" url="~/Default.aspx?#97">
+            <siteMapNode url="~/Site/SiteCMMeasurementBook.aspx" title="Add / Modify Measurement" description="Add/ Modify Measurement">
+            </siteMapNode>
+            <siteMapNode url="~/Site/SiteCMAbstractMeasurementBook.aspx?#98" title="Abstract" description="Abstract">
+            </siteMapNode>
+          </siteMapNode>
+        </siteMapNode>
+      
+      
+
+        <!--<siteMapNode title="DMS" description="Document Management System" url="~/DMS/Default.aspx">
+            <siteMapNode url="~/DMS/DMSDocumentNode.aspx" title="Bay's Drive" description="Bay's Drive">
+            </siteMapNode>
+            <siteMapNode url="~/DMS/DMSFileTracking.aspx" title="File Tracking" description="File Tracking">
+            </siteMapNode>
+            <siteMapNode url="~/DMS/DMSFileMovementRegister.aspx" title="File Movement Register" description="File Movement Register">
+            </siteMapNode>
+            <siteMapNode url="~/DMS/DMSReferenceLibrary.aspx" title="Reference Library" description="Reference Library">
+            </siteMapNode>
+        </siteMapNode>-->
+        
+        
+        
+        
+        
+        
+        
+        <siteMapNode title="PRM" description="Procurement Management" url="~/PRM/Default.aspx">            
+            <siteMapNode title="Vendor" description="Vendor" url="~/Default.aspx?#29">
+                <siteMapNode url="~/PRM/PRMSupplier.aspx" title="Create Vendor" description="Vendor">
+                </siteMapNode>
+                <siteMapNode url="~/PRM/PRMSupplierList.aspx" title="Vendor List" description="Vendor List">
+                </siteMapNode>
+                <siteMapNode url="~/PRM/PRMSupplierView.aspx" title="Vendor View" description="Vendor View">
+                </siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Price" description="Price" url="~/Default.aspx?#30">
+                <siteMapNode url="~/PRM/PRMSupplierItemMap.aspx" title="Update Price" description="Update Price">
+                </siteMapNode>
+                <siteMapNode url="~/PRM/PRMSupplierItemMapHistory.aspx" title="Price History" description="Price History">
+                </siteMapNode>
+                <siteMapNode url="~/PRM/PRMSupplierItemMapHistoryReport.aspx" title="Price History Report" description="Price History Report">
+                </siteMapNode>
+            </siteMapNode>
+            <siteMapNode title="Work Order" description="Work Order" url="~/Default.aspx?#31">
+                <siteMapNode url="~/PRM/PRMWorkOrder.aspx" title="Add / Modify Work Order" description="Add / Modify Work Order"></siteMapNode>
+                <siteMapNode url="~/PRM/PRMWorkOrderList.aspx" title="Work Order List" description="Work Order List"></siteMapNode>            
+            </siteMapNode>
+            <siteMapNode title="Material Receive" description="Material Receive" url="~/Default.aspx?#32">
+                <siteMapNode url="~/PRM/PRMMaterialReceive.aspx" title="Add / Modify Material Receive" description="Add / Modify Material Receive"></siteMapNode>
+                <siteMapNode url="~/PRM/PRMMaterialReceiveList.aspx" title="Material Receive List" description="Material Receive List"></siteMapNode>
+                <siteMapNode url="~/PRM/PRMMaterialReceiveList.aspx?#1" title="Material Receive Report" description="Material Receive Report"></siteMapNode>
+            </siteMapNode>
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>

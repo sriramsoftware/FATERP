@@ -1,0 +1,407 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NewTryDefault.master.cs"
+    Inherits="Bay.ERP.Web.UI.NewTryDefault" EnableTheming="true" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Bay's - ERP - New Master</title>
+    <link href="~/Styles/NewTryDefault.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ktiWaterMarkNew.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ktiListViewNew.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ktiDetailedListView.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ktiCommonNew.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ktiDecimalTextBoxNew.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ktiNumberTextBoxNew.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/DatePicker.css" rel="stylesheet" type="text/css" />
+    <%--<link href="~/css/screen.css" rel="stylesheet" type="text/css" />--%>
+    <asp:ContentPlaceHolder ID="cphHeader" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="smDefault" runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="~/Scripts/jquery-1.7.1.min.js" />
+            <asp:ScriptReference Path="~/Scripts/common.js" />
+            <asp:ScriptReference Path="~/Scripts/datePicker.js" />
+            <asp:ScriptReference Path="~/Scripts/ktiWaterMark.js" />
+            <asp:ScriptReference Path="~/Scripts/ktiListView.js" />
+            <asp:ScriptReference Path="~/Scripts/ktiDetailedListView.js" />
+            <asp:ScriptReference Path="~/Scripts/ktiDecimalTextBox.js" />
+            <asp:ScriptReference Path="~/Scripts/ktiNumberTextBox.js" />
+            <asp:ScriptReference Path="~/Scripts/ktiCommon.js" />
+        </Scripts>
+    </asp:ScriptManager>
+    <script type="text/javascript">
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        prm.add_endRequest(function () {
+            reRegisterjQueryFunctions();
+        });
+    </script>
+    <div id="page-header-b">
+        <div class="container">
+            <!-- start logo -->
+            <div id="logo">
+                <a href="">
+                    <asp:Image ID="imgLogo" runat="server" ImageUrl="~/Images/logo.png" Height="40" alt=""
+                        BorderWidth="0" /></a>
+            </div>
+            <!-- end logo -->
+            <!--  start top-search -->
+            <div id="top-search">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <input type="text" value="Search" onblur="if (this.value=='') { this.value='Search'; }"
+                                onfocus="if (this.value=='Search') { this.value=''; }" class="top-search-inp" />
+                        </td>
+                        <td>
+                            <select class="styledselect">
+                                <option value="">All</option>
+                                <option value="">Products</option>
+                                <option value="">Categories</option>
+                                <option value="">Clients</option>
+                                <option value="">News</option>
+                            </select>
+                        </td>
+                        <td>
+                            <asp:ImageButton ID="btnSearch" runat="server" ImageUrl="~/Images/shared/top_search_btn.gif" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--  end top-search -->
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    <div class="nav-b">
+        <div class="container">
+            <div class="nav-content-b">
+                <asp:Menu ID="mnuMain" Width="1200px" Orientation="Horizontal" runat="server" StaticEnableDefaultPopOutImage="false">
+                    <DynamicHoverStyle BackColor="#3A3A3A" ForeColor="#94b52c" Font-Size="11px" />
+                    <DynamicMenuItemStyle Height="16" Font-Bold="true" ForeColor="White" HorizontalPadding="4"
+                        VerticalPadding="6px" ItemSpacing="10" Font-Size="11px" />
+                    <DynamicMenuStyle BackColor="#575757" Width="200px" />
+                    <Items>
+                        <asp:MenuItem Text="Construction Management" Value="CM" NavigateUrl="~/Common/CMNDashboardItemView.aspx">
+                            <asp:MenuItem Text="Project" Value="Project">
+                                <asp:MenuItem NavigateUrl="~/BD/BDProject.aspx" Text="Create Project" Value="Create Project">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CM/CMProjectScheduleTemplate.aspx" Text="Project Schedule Template"
+                                    Value="Project Schedule Template"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectStatus.aspx" Text="Project Status" Value="Project Status">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectScheduleItem.aspx" Text="Project Schedule Item"
+                                    Value="Project Schedule Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/BD/BDProject.aspx" Text="Print Project Information"
+                                    Value="Print Project Information"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/BD/BDProject.aspx" Text="Print Project History" Value="Print Project History">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/BD/BDProjectList.aspx" Text="Project List" Value="Project List">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="BOQ" Value="BOQ">
+                                <asp:MenuItem NavigateUrl="~/PRM/PRMPreBOQTemplate.aspx" Text="PreBOQ Template" Value="PreBOQ Template">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDPreBOQStatus.aspx" Text="PreBOQ Status" Value="PreBOQ Status">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Requisition" Value="Requisition">
+                                <asp:MenuItem NavigateUrl="~/MD/MDRequisitionStatus.aspx" Text="Requisition Status"
+                                    Value="Requisition Status"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/REQ/REQRequisition.aspx" Text="Create Requisition" Value="Create Requisition">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/REQ/REQRequisitionList.aspx" Text="Requisition List"
+                                    Value="Requisition List"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/REQ/REQRequisitionList.aspx" Text="Print Requisition"
+                                    Value="Print Requisition"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Item" Value="Item">
+                                <asp:MenuItem NavigateUrl="~/MD/MDUnit.aspx" Text="Unit" Value="Unit"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDItemCategory.aspx" Text="Item Category" Value="Item Category">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDItem.aspx" Text="Modify Item Tree" Value="Modify Item Tree">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDBrand.aspx" Text="Brand" Value="Brand"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Document" Value="Document">
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectDocumentCategory.aspx" Text="Document Category"
+                                    Value="Document Category"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectCollectedDocumentStatus.aspx" Text="Document Status"
+                                    Value="Document Status"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectDocument.aspx" Text="Modify Document Tree"
+                                    Value="Modify Document Tree"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/BD/BDProjectDocumentTemplate.aspx" Text="Document Template"
+                                    Value="Document Template"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Construction" Value="Construction">
+                                <asp:MenuItem NavigateUrl="~/MD/MDConstructionToolCategory.aspx" Text="CM Tool Category"
+                                    Value="ConstructionToolCategory"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDConstructionToolWorkingCondition.aspx" Text="CM Tool Working Condition"
+                                    Value="ConstructionToolWorkingCondition"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CM/CMConstructionTool.aspx" Text="Construction Tool"
+                                    Value="Construction Tool"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Common" Value="Common">
+                                <asp:MenuItem NavigateUrl="~/MD/MDRegion.aspx" Text="Region" Value="Region"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDCountry.aspx" Text="Country" Value="Country"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDCity.aspx" Text="City" Value="City"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Common/CMNDashboardItem.aspx" Text="Dashboard Item"
+                                    Value="Dashboard Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Common/CMNDashboardItemView.aspx" Text="Dashboard Item View"
+                                    Value="Dashboard Item View"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CM/CMContractor.aspx" Text="Contractor" Value="Contractor">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CM/CMConsultant.aspx" Text="Consultant" Value="Consultant">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Procurement Mangement" Value="PRM">
+                            <asp:MenuItem NavigateUrl="~/REQ/REQRequisition.aspx" Text="Create Requisition" Value="Create Requisition">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/REQ/REQRequisitionList.aspx" Text="Requisition List"
+                                Value="Requisition List"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/PRM/PRMSupplier.aspx" Text="Vendor" Value="Vendor">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/PRM/PRMSupplierList.aspx" Text="Vendor List" Value="Vendor List">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Issue &amp; Task" Value="ITT">
+                            <asp:MenuItem NavigateUrl="~/OT/OTIssue.aspx" Text="Add New Issue" Value="Add New Issue">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/OT/OTIssueList.aspx" Text="Issue List" Value="Issue List">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/OT/OTSchedule.aspx" Text="Create Schedule" Value="Create Schedule">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MD/MDIssueCategory.aspx" Text="Issue Category" Value="Issue Category">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MD/MDIssuePriority.aspx" Text="Issue Priority" Value="Issue Priority">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MD/MDIssueStatus.aspx" Text="Issue Status" Value="Issue Status">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="HR" Value="HR">
+                            <asp:MenuItem NavigateUrl="~/HR/HREmployee.aspx" Text="Add Employee" Value="Add Employee" />
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="CRM" Value="CRM"></asp:MenuItem>
+                        <asp:MenuItem Text="FM" Value="FM"></asp:MenuItem>
+                        <asp:MenuItem Text="DMS" Value="DMS"></asp:MenuItem>
+                        <asp:MenuItem Text="KB" Value="KB"></asp:MenuItem>
+                        <asp:MenuItem Text="IS" Value="IS"></asp:MenuItem>
+                        <asp:MenuItem Text="FM" Value="FM"></asp:MenuItem>
+                        <asp:MenuItem Text="Master Data" Value="New Item">
+                            <asp:MenuItem Text="Project" Value="Project">
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectStatus.aspx" Text="Project Status" Value="Project Status">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectDocumentCategory.aspx" Text="Document Category"
+                                    Value="Document Category"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectDocument.aspx" Text="Modify Document Tree"
+                                    Value="Modify Document Tree"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectCollectedDocumentStatus.aspx" Text="Document Status"
+                                    Value="Document Status"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/BD/BDProjectDocumentTemplate.aspx" Text="Document Template"
+                                    Value="Document Template"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectScheduleItem.aspx" Text="Project Schedule Item"
+                                    Value="Project Schedule Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectType.aspx" Text="Project Type" Value="Project Type">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDDesignation.aspx" Text="Designation" Value="Designation">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDProjectAssignedPersonTeamRole.aspx" Text="Project Team Role"
+                                    Value="Project Team Role"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Item" Value="Unit">
+                                <asp:MenuItem Text="Brand" Value="Brand" NavigateUrl="~/MD/MDBrand.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Item Category" Value="Unit" NavigateUrl="~/MD/MDItemCategory.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Modify Item Tree" Value="Modify Item Tree" NavigateUrl="~/MD/MDItem.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Pre-BOQ" Value="PreBOQ">
+                                <asp:MenuItem NavigateUrl="~/MD/MDPreBOQStatus.aspx" Text="PreBOQ Status" Value="PreBOQ Status">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/PRM/PRMPreBOQTemplate.aspx" Text="PreBOQTemplate" Value="PreBOQTemplate">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Issue" Value="Issue">
+                                <asp:MenuItem Text="Issue Category" Value="IssueCategory" NavigateUrl="~/MD/MDIssueCategory.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Issue Priority" Value="IssuePriority" NavigateUrl="~/MD/MDIssuePriority.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Issue Status" Value="IssueStatus" NavigateUrl="~/MD/MDIssueStatus.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Common" Value="Common">
+                                <asp:MenuItem NavigateUrl="~/MD/MDUnit.aspx" Text="Unit" Value="Unit"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDRegion.aspx" Text="Region" Value="Region"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDCountry.aspx" Text="Country" Value="Country"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDCity.aspx" Text="City" Value="City"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDStandardTimeUnit.aspx" Text="Standard Time Unit"
+                                    Value="Standard Time Unit"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="CM" Value="CM">
+                                <asp:MenuItem NavigateUrl="~/MD/MDConstructionToolCategory.aspx" Text="CM Tool Category"
+                                    Value="ConstructionToolCategory"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MD/MDConstructionToolWorkingCondition.aspx" Text="CM Tool Working Condition"
+                                    Value="ConstructionToolWorkingCondition"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Requisition" Value="Requisition">
+                                <asp:MenuItem NavigateUrl="~/MD/MDRequisitionStatus.aspx" Text="Requisition Status"
+                                    Value="Requisition Status"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Demo" Value="Demo">
+                            <asp:MenuItem Text="New Design" Value="New Design">
+                                <asp:MenuItem NavigateUrl="~/form.html" Target="_blank" Text="Form" Value="Form">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/login.html" Target="_blank" Text="Login" Value="New Item">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/table.html" Target="_blank" Text="Grid Data" Value="New Item">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/text.html" Target="_blank" Text="Text" Value="New Item">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Schedule" Value="New Item">
+                                <asp:MenuItem NavigateUrl="~/demos/theme.html" Target="_blank" Text="Monthly Calender"
+                                    Value="Monthly Calender"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/weekcalendar.html" Target="_blank" Text="Weekly Calender"
+                                    Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/gs/index.htm" Target="_blank" Text="Gantt Chart View"
+                                    Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#3A3A3A" ForeColor="#94b52c" />
+                    <StaticMenuItemStyle Height="24" Font-Bold="true" ForeColor="White" HorizontalPadding="10"
+                        VerticalPadding="6px" ItemSpacing="30" />
+                </asp:Menu>
+            </div>
+        </div>
+    </div>
+    <!-- start content-outer ........................................................................................................................START -->
+    <div id="content-outer-b">
+        <div class="container">
+            <!-- start content -->
+            <div style="height: 35px; width: auto; padding-left: 275px;">
+                &nbsp;
+            </div>
+            <div id="content-b">
+                <div style="float: left; width: 275px;">
+                    <div>
+                        
+                        <!--  start related-activities -->
+                        <div id="related-activities">
+                            <!--  start related-act-top -->
+                            <div id="related-act-top">
+                                <asp:Image ID="imgHead" runat="server" ImageUrl="~/Images/forms/header_related_act.gif"
+                                    Width="271" Height="43" AlternateText="" BorderWidth="0" />
+                            </div>
+                            <!-- end related-act-top -->
+                            <!--  start related-act-bottom -->
+                            <div id="related-act-bottom">
+                                <!--  start related-act-inner -->
+                                <div id="related-act-inner">
+                                    <table>
+                                        <tr>
+                                            <td valign="top">
+                                                <div class="left">
+                                                    <a href="">
+                                                        <asp:Image ID="imgEdit" runat="server" ImageAlign="Top" ImageUrl="~/Images/forms/icon_edit.gif"
+                                                            Width="21" Height="21" AlternateText="" BorderColor="0" /></a></div>
+                                            </td>
+                                            <td valign="top">
+                                                <div class="right">
+                                                    <h5>
+                                                        Delete products</h5>
+                                                    <ul class="greyarrow">
+                                                        <li><a href="">Click here to visit</a></li>
+                                                        <li><a href="">Click here to visit</a> </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- end related-act-inner -->
+                                <div class="clear">
+                                </div>
+                            </div>
+                            <!-- end related-act-bottom -->
+                        </div>
+                        <!-- end related-activities -->
+                    </div>
+                </div>
+                <div style="float: left; width: 925px;">
+                    <!--  start page-heading -->
+                    <div id="page-heading">                    
+                        <asp:ContentPlaceHolder ID="cphPageTitle" runat="server">
+                        </asp:ContentPlaceHolder>                        
+                    </div>
+                    <!-- end page-heading -->
+                    <table border="0" width="900px" cellpadding="0" cellspacing="0" id="content-table">
+                        <tr>
+                            <th rowspan="3" class="sized">
+                                <asp:Image ID="imgSideShadowLeft" runat="server" ImageUrl="~/Images/Gray/Box/side_shadowleft.jpg"
+                                    Width="20" Height="300" AlternateText="" />
+                            </th>
+                            <th class="topleft">
+                            </th>
+                            <td id="tbl-border-top">
+                                &nbsp;
+                            </td>
+                            <th class="topright">
+                            </th>
+                            <th rowspan="3" class="sized">
+                                <asp:Image ID="imgSideShadowRight" runat="server" ImageUrl="~/Images/Gray/Box/side_shadowright.jpg"
+                                    Width="20" Height="300" AlternateText="" />
+                            </th>
+                        </tr>
+                        <tr>
+                            <td id="tbl-border-left">
+                            </td>
+                            <td>
+                            afafasdf
+                                <asp:ContentPlaceHolder ID="cphContent" runat="server">
+                                </asp:ContentPlaceHolder>
+                                asdfasdfasdfasd
+                            </td>
+                            <td id="tbl-border-right">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="sized bottomleft">
+                            </th>
+                            <td id="tbl-border-bottom">
+                                &nbsp;
+                            </td>
+                            <th class="sized bottomright">
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <!--  end content -->
+    </div>
+    </div>
+    <!--  end content-outer........................................................END -->
+    <div class="clear">
+        &nbsp;</div>
+    <!-- start footer -->
+    <div id="footer">
+        <div class="container">
+            <!--  start footer-left -->
+            <div id="footer-left">
+                Admin Skin &copy; Copyright Internet Dreams Ltd. <span id="spanYear"></span><a href="">
+                    www.netdreams.co.uk</a>. All rights reserved.</div>
+            <!--  end footer-left -->
+            <div class="clear">
+                &nbsp;</div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

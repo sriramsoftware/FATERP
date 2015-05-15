@@ -1,0 +1,195 @@
+﻿.ktiTextBox
+{
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border-radius:5px;
+    height: 21px;
+	width: 230px;
+	padding: 1px;
+
+}
+
+.ktiTextArea
+{ 
+    font-family: "Segoe UI", Verdana, "Helvetica Neue", "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 97px;
+	overflow: auto;
+	width: 385px;
+	border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border-radius:5px;
+	padding: 2px 5px 0 6px;
+	
+	
+/*  font-family: "Segoe UI", Verdana, "Helvetica Neue", "Lucida Grande", Arial, Helvetica, sans-serif;
+    border: 1px solid;
+    border-left-color: #8E8E8E;
+    border-top-color: #8E8E8E;
+    border-right-color: #B8B8B8;
+    border-bottom-color: #B8B8B8;    
+    color: Black;
+    font-size: 10px;*/
+}
+
+.ktiTextAreaHover
+{   
+    font-family: "Segoe UI", Verdana, "Helvetica Neue", "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 97px;
+	overflow: auto;
+	padding: 6px 6px 0 6px;
+	width: 385px;
+	padding: 2px 5px 0 6px;
+    border:1px solid;
+	border-color:rgba(82,168,236,0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,0 0 8px rgba(82,168,236,0.6);
+    outline:0 none;
+    border-radius:5px;
+}
+
+
+.ktiSelect
+{  
+	border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border-radius:5px;
+   	height: 26px; 
+	width: 230px;
+	padding: 1px 5px 1px 1px;
+}
+
+.ktiSelectHover
+{
+	padding: 1px 5px 1px 1px;
+    border:1px solid;
+	height: 26px;
+	border-color:rgba(82,168,236,0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,0 0 8px rgba(82,168,236,0.6);
+    outline:0 none;
+    border-radius:5px;
+}
+
+.ktiDateTextBox
+{
+	border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border-radius:5px;
+    height: 21px;
+	width: 230px;
+	padding: 1px 1px 1px 5px;
+}
+
+.ktiDateTextBoxHover
+{   
+	padding: 1px 1px 1px 5px;
+    border:1px solid;
+	height: 21px;
+	border-color:rgba(82,168,236,0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,0 0 8px rgba(82,168,236,0.6);
+    outline:0 none;
+    border-radius:5px;
+}
+
+.ktiCommonNormal
+{
+  /*  background: url(../Images/forms/form_inp_236_20.gif) no-repeat;*/
+}
+
+.ktiCommonHover
+{   
+    padding: 1px;
+    border:1px solid;
+	height: 21px;
+	border-color:rgba(82,168,236,0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,0 0 8px rgba(82,168,236,0.6);
+    outline:0 none;border-radius:5px;
+    
+}
+
+/*------------------- ListBox START--------------------------------------------------------------- */	
+.ktiListBox
+{ 
+  vertical-align:baseline;
+  text-align: left;
+  vertical-align: top;
+  padding: 2px 0px 2px 0px;
+  overflow: auto;
+  max-height: 300px;
+  width: 250px;
+  border: 1px solid #8E8E8E;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 20px;
+  border-radius: 3px;    
+}
+
+.ktiListViewHeaderText
+{
+    color:White;
+    text-decoration:none;
+}
+
+.ktiListViewHeaderText:Hover
+{
+    color:White;
+    text-decoration:underline;
+}
+/*------------------- ListBox END--------------------------------------------------------------- */	
+
+/*------------------- Modal Popup START--------------------------------------------------------------- */	
+
+.modalBackground
+{   
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    background-color: #000;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+}
+
+
+.modalPanelBackground
+{
+    background-image: url("../Images/Gray/content_repeat.jpg");
+    background-position: top left;
+    background-repeat: repeat-x;
+    
+    background-color: White;
+    
+    border: 0 solid;
+    width: auto;
+    height: inherit;
+}
+
+.linkButton
+{
+    margin:1px;
+    border:1px solid #898989;
+    padding:3px;
+    border-radius:3px;
+    text-decoration:none;
+    background-color:#efefef;
+}
+
+.linkButton:Hover
+{
+    margin:1px;
+    border:1px solid #94DBcc;
+    padding:3px;
+    border-radius:3px;
+    text-decoration:none;
+    background-color:#94DBFF;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+/*------------------- Modal Popup END--------------------------------------------------------------- */	
