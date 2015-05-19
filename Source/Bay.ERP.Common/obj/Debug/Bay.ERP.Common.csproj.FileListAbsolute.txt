@@ -47,3 +47,13 @@ E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.Common\bin\Debug\Microsoft.Practices.
 E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.Common\obj\Debug\ResolveAssemblyReference.cache
 E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.Common\obj\Debug\Bay.ERP.Common.dll
 E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.Common\obj\Debug\Bay.ERP.Common.pdb
+D:\Project\FATERP\Source\Bay.ERP.Common\bin\Debug\Bay.ERP.Common.dll
+D:\Project\FATERP\Source\Bay.ERP.Common\bin\Debug\Bay.ERP.Common.pdb
+D:\Project\FATERP\Source\Bay.ERP.Common\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+D:\Project\FATERP\Source\Bay.ERP.Common\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\Project\FATERP\Source\Bay.ERP.Common\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Project\FATERP\Source\Bay.ERP.Common\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Project\FATERP\Source\Bay.ERP.Common\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\Project\FATERP\Source\Bay.ERP.Common\obj\Debug\Bay.ERP.Common.csprojResolveAssemblyReference.cache
+D:\Project\FATERP\Source\Bay.ERP.Common\obj\Debug\Bay.ERP.Common.dll
+D:\Project\FATERP\Source\Bay.ERP.Common\obj\Debug\Bay.ERP.Common.pdb

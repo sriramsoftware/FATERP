@@ -58,3 +58,15 @@ E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.
 E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\ResolveAssemblyReference.cache
 E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.dll
 E:\Raju-\FAT-ERP\Source\ERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.pdb
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.dll
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.IDataAccess.pdb
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.dll
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\bin\Debug\Bay.ERP.Common.pdb
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.csprojResolveAssemblyReference.cache
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.dll
+D:\Project\FATERP\Source\Bay.ERP.IDataAccess\obj\Debug\Bay.ERP.IDataAccess.pdb
