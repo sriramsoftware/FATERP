@@ -633,6 +633,10 @@ namespace Bay.ERP.Web.UI
                     rEQRequisitionItemEntity.ItemID = ItemID;
                     rEQRequisitionItemEntity.Rate = 0;// 
                     rEQRequisitionItemEntity.TotalRequiredQty = 0;//
+                    rEQRequisitionItemEntity.SupplierID = MasterDataConstants.ItemDefaults.DEFAULT_SUPPLIER;
+                    rEQRequisitionItemEntity.BrandID = MasterDataConstants.ItemDefaults.DEFAULT_BRAD;
+                    rEQRequisitionItemEntity.CountryID = MasterDataConstants.ItemDefaults.DEFAULT_COUNTRY;
+                    rEQRequisitionItemEntity.RegionID = MasterDataConstants.ItemDefaults.DEFAULT_REGION;
 
                     if (ItemID > 0)
                     {
@@ -862,25 +866,25 @@ namespace Bay.ERP.Web.UI
 
                     #region Addvertisement Requisition Discount
                     Boolean IsAdvertisementRequisition = false;
-                    MDItemEntity entity = FCCMDItem.GetFacadeCreate().GetByID(rEQRequisitionItemEntity.ItemID);
+                   // MDItemEntity entity = FCCMDItem.GetFacadeCreate().GetByID(rEQRequisitionItemEntity.ItemID);
 
-                    if (entity.ItemCategoryID == MasterDataConstants.ItemDefaults.DEFAULT_ADVERTIESMENT_ITEM_CATEGORY)
-                    {
-                        IsAdvertisementRequisition = true;
-                    }
+                    //if (entity.ItemCategoryID == MasterDataConstants.ItemDefaults.DEFAULT_ADVERTIESMENT_ITEM_CATEGORY)
+                    //{
+                    //    IsAdvertisementRequisition = true;
+                    //}
 
-                    if (IsAdvertisementRequisition)
-                    {
-                        String fe3 = SqlExpressionBuilder.PrepareFilterExpression(PRMSupplierItemMapEntity.FLD_NAME_ItemID, rEQRequisitionItemEntity.ItemID.ToString(), SQLMatchType.Equal);
-                        String fe4 = SqlExpressionBuilder.PrepareFilterExpression(PRMSupplierItemMapEntity.FLD_NAME_SupplierID, rEQRequisitionItemEntity.SupplierID.ToString(), SQLMatchType.Equal);
-                        String fe5 = SqlExpressionBuilder.PrepareFilterExpression(PRMSupplierItemMapEntity.FLD_NAME_BrandID, rEQRequisitionItemEntity.BrandID.ToString(), SQLMatchType.Equal);
-                        String fe6 = SqlExpressionBuilder.PrepareFilterExpression(fe4, SQLJoinType.AND, fe5);
-                        String fe7 = SqlExpressionBuilder.PrepareFilterExpression(fe3, SQLJoinType.AND, fe6);
+                    //if (IsAdvertisementRequisition)
+                    //{
+                    //    String fe3 = SqlExpressionBuilder.PrepareFilterExpression(PRMSupplierItemMapEntity.FLD_NAME_ItemID, rEQRequisitionItemEntity.ItemID.ToString(), SQLMatchType.Equal);
+                    //    String fe4 = SqlExpressionBuilder.PrepareFilterExpression(PRMSupplierItemMapEntity.FLD_NAME_SupplierID, rEQRequisitionItemEntity.SupplierID.ToString(), SQLMatchType.Equal);
+                    //    String fe5 = SqlExpressionBuilder.PrepareFilterExpression(PRMSupplierItemMapEntity.FLD_NAME_BrandID, rEQRequisitionItemEntity.BrandID.ToString(), SQLMatchType.Equal);
+                    //    String fe6 = SqlExpressionBuilder.PrepareFilterExpression(fe4, SQLJoinType.AND, fe5);
+                    //    String fe7 = SqlExpressionBuilder.PrepareFilterExpression(fe3, SQLJoinType.AND, fe6);
 
-                        IList<PRMSupplierItemMapEntity> list = FCCPRMSupplierItemMap.GetFacadeCreate().GetIL(null, null, String.Empty, fe7, DatabaseOperationType.LoadWithFilterExpression);
-                        PRMSupplierItemMapEntity ent = list.Where(x => x.ItemID == rEQRequisitionItemEntity.ItemID).Single();
-                        rEQRequisitionItemEntity.TotalRequiredQty = ent.DiscountPercentage;
-                    }
+                    //    IList<PRMSupplierItemMapEntity> list = FCCPRMSupplierItemMap.GetFacadeCreate().GetIL(null, null, String.Empty, fe7, DatabaseOperationType.LoadWithFilterExpression);
+                    //    PRMSupplierItemMapEntity ent = list.Where(x => x.ItemID == rEQRequisitionItemEntity.ItemID).Single();
+                    //    rEQRequisitionItemEntity.TotalRequiredQty = ent.DiscountPercentage;
+                    //}
 
                     #endregion 
 
