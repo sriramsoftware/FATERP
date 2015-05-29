@@ -7,7 +7,7 @@
 // Faisal Alam, faisal@talentPlusSoft.con
 // ©2006 – 2010.
 //
-// Code Generate Time - 22-Jun-2013, 02:07:00
+// Code Generate Time - 25-May-2015, 10:52:28
 
 
 
@@ -30,6 +30,8 @@ namespace Bay.ERP.Common.BusinessEntities
 
 
         private Int64 _ProjectID;
+        private Int64 _OperatorID;
+        private Int64 _ZoneID;
         private String _ProjectCode;
         private String _ProjectName;
         private Decimal? _LandAreaKatha;
@@ -39,6 +41,7 @@ namespace Bay.ERP.Common.BusinessEntities
         private Int32? _NoOfStoried;
         private Int32? _NoOfBasement;
         private String _Description;
+        private String _BSC;
         private Decimal? _ClientPercentage;
         private Decimal? _CompanyPercentage;
         private Int64 _ProjectCategoryID;
@@ -51,6 +54,20 @@ namespace Bay.ERP.Common.BusinessEntities
         {
             get { return _ProjectID; }
             set { _ProjectID = value; }
+        }
+
+        [DataMember]
+        public Int64 OperatorID
+        {
+            get { return _OperatorID; }
+            set { _OperatorID = value; }
+        }
+
+        [DataMember]
+        public Int64 ZoneID
+        {
+            get { return _ZoneID; }
+            set { _ZoneID = value; }
         }
 
         [DataMember]
@@ -117,6 +134,13 @@ namespace Bay.ERP.Common.BusinessEntities
         }
 
         [DataMember]
+        public String BSC
+        {
+            get { return _BSC; }
+            set { _BSC = value; }
+        }
+
+        [DataMember]
         public Decimal? ClientPercentage
         {
             get { return _ClientPercentage; }
@@ -175,6 +199,8 @@ namespace Bay.ERP.Common.BusinessEntities
         #region Constant
 
         public const String FLD_NAME_ProjectID = "ProjectID";
+        public const String FLD_NAME_OperatorID = "OperatorID";
+        public const String FLD_NAME_ZoneID = "ZoneID";
         public const String FLD_NAME_ProjectCode = "ProjectCode";
         public const String FLD_NAME_ProjectName = "ProjectName";
         public const String FLD_NAME_LandAreaKatha = "LandAreaKatha";
@@ -184,6 +210,7 @@ namespace Bay.ERP.Common.BusinessEntities
         public const String FLD_NAME_NoOfStoried = "NoOfStoried";
         public const String FLD_NAME_NoOfBasement = "NoOfBasement";
         public const String FLD_NAME_Description = "Description";
+        public const String FLD_NAME_BSC = "BSC";
         public const String FLD_NAME_ClientPercentage = "ClientPercentage";
         public const String FLD_NAME_CompanyPercentage = "CompanyPercentage";
         public const String FLD_NAME_ProjectCategoryID = "ProjectCategoryID";

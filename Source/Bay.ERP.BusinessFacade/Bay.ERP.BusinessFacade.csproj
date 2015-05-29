@@ -176,6 +176,9 @@
     <Compile Include="BDMDTaskCategoryFacade.cs" />
     <Compile Include="BDMDTaskFacade.cs" />
     <Compile Include="BDMDTaskRepeatFacade.cs" />
+    <Compile Include="BDOperatorAddressInfoFacade.cs" />
+    <Compile Include="BDOperatorContactPersonFacade.cs" />
+    <Compile Include="BDOperatorFacade.cs" />
     <Compile Include="BDProcessAssignedResourceFacade.cs" />
     <Compile Include="BDProcessAssignedResourceMapFacade.cs" />
     <Compile Include="BDProcessAssignedResourceMap_RPTFacade.cs" />
@@ -296,6 +299,9 @@
     <Compile Include="BDProjectWaterReserviorFacade.cs" />
     <Compile Include="BDProjectFloorUnit_RPTFacade.cs" />
     <Compile Include="HREmployeeMonthlyTimeSheet_DetailedFacade.cs" />
+    <Compile Include="MDOperatorAddressTypeFacade.cs" />
+    <Compile Include="MDOperatorStatusFacade.cs" />
+    <Compile Include="MDZoneDesignationFacade.cs" />
     <Compile Include="OTIssue_CustomFacade.cs" />
     <Compile Include="HRSalaryAdjustment_DetailedFacade.cs" />
     <Compile Include="HREmployeeSalaryDeducationInfo_DetailedFacade.cs" />

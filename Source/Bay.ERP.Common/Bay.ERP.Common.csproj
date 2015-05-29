@@ -354,6 +354,9 @@
     <Compile Include="DatabaseEntity\BDMDTaskCategoryEntity.cs" />
     <Compile Include="DatabaseEntity\BDMDTaskEntity.cs" />
     <Compile Include="DatabaseEntity\BDMDTaskRepeatEntity.cs" />
+    <Compile Include="DatabaseEntity\BDOperatorAddressInfoEntity.cs" />
+    <Compile Include="DatabaseEntity\BDOperatorContactPersonEntity.cs" />
+    <Compile Include="DatabaseEntity\BDOperatorEntity.cs" />
     <Compile Include="DatabaseEntity\BDProcessAssignedResourceEntity.cs" />
     <Compile Include="DatabaseEntity\BDProcessAssignedResourceMapEntity.cs" />
     <Compile Include="DatabaseEntity\BDProjectAdditionalInfoEntity.cs" />
@@ -616,6 +619,8 @@
     <Compile Include="DatabaseEntity\MDMaritalStatusEntity.cs" />
     <Compile Include="DatabaseEntity\MDMaterialReceiveApprovalStatusEntity.cs" />
     <Compile Include="DatabaseEntity\MDMemberTypeEntity.cs" />
+    <Compile Include="DatabaseEntity\MDOperatorAddressTypeEntity.cs" />
+    <Compile Include="DatabaseEntity\MDOperatorStatusEntity.cs" />
     <Compile Include="DatabaseEntity\MDOutsourceCategoryEntity.cs" />
     <Compile Include="DatabaseEntity\MDPayableClassificationEntity.cs" />
     <Compile Include="DatabaseEntity\MDPayCycleEntity.cs" />
@@ -659,6 +664,7 @@
     <Compile Include="DatabaseEntity\MDVendorCategoryEntity.cs" />
     <Compile Include="DatabaseEntity\MDVisaStatusEntity.cs" />
     <Compile Include="DatabaseEntity\MDWorkOrderStatusEntity.cs" />
+    <Compile Include="DatabaseEntity\MDZoneDesignationEntity.cs" />
     <Compile Include="DatabaseEntity\OTIssueAssignedResourceEntity.cs" />
     <Compile Include="DatabaseEntity\OTIssueEntity.cs" />
     <Compile Include="DatabaseEntity\OTIssueUploadInfoEntity.cs" />
