@@ -59,6 +59,7 @@
     <Compile Include="IHREmployeeMonthlyTimeSheet_DetailedDataAccess.cs" />
     <Compile Include="IMDOperatorAddressTypeDataAccess.cs" />
     <Compile Include="IMDOperatorStatusDataAccess.cs" />
+    <Compile Include="IMDZoneDataAccess.cs" />
     <Compile Include="IMDZoneDesignationDataAccess.cs" />
     <Compile Include="IOTIssue_CustomDataAccess.cs" />
     <Compile Include="IHRSalaryAdjustment_DetailedDataAccess.cs" />

@@ -46,7 +46,7 @@ namespace Bay.ERP.Web.UI
             dropDownList.Items.Clear();
             dropDownList.DataTextField = "ZoneName";
             dropDownList.DataValueField = "ZoneID";
-            dropDownList.DataSource = FCCMDProjectStatus.GetFacadeCreate().GetIL(null, null, null, null, DatabaseOperationType.Load);
+            dropDownList.DataSource = FCCMDZone.GetFacadeCreate().GetIL(null, null, null, null, DatabaseOperationType.Load);
             dropDownList.DataBind();
 
             if (addPleaseSelectOption == true)
@@ -103,7 +103,7 @@ namespace Bay.ERP.Web.UI
             dropDownList.Items.Clear();
             dropDownList.DataTextField = "Name";
             dropDownList.DataValueField = "OperatorStatusID";
-            dropDownList.DataSource = FCCBDOperator.GetFacadeCreate().GetIL(null, null, null, null, DatabaseOperationType.Load);
+            dropDownList.DataSource = FCCMDOperatorStatus.GetFacadeCreate().GetIL(null, null, null, null, DatabaseOperationType.Load);
             dropDownList.DataBind();
 
             if (addPleaseSelectOption == true)
@@ -6381,6 +6381,8 @@ namespace Bay.ERP.Web.UI
         }
 
         #endregion PopulateMDAllowanceCategory
+
+       
 
         #endregion DropDown Population Code
 

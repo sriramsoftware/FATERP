@@ -227,7 +227,7 @@
             </div>
             <div>
                 <div class="lv-c">
-                    <asp:ListView ID="lvBDOperator" runat="server" DataSourceID="odsBDOperator" OnItemCommand="lvBDOperator_ItemCommand">
+                    <asp:ListView ID="lvBDOperator" runat="server" DataSourceID="odsBDOperator" OnItemDataBound="lvBDOperator_ItemDataBound" OnItemCommand="lvBDOperator_ItemCommand">
                         <LayoutTemplate>
                             <table class="lv" cellpadding="0" cellspacing="0">
                                 <tr class="h">
@@ -331,7 +331,9 @@
                                     <%# Eval("OperatorCode")%>
                                 </td>
                                 <td class="i">
-                                    <%# Eval("OperatorName")%>
+                                       <asp:HyperLink ID="hypOperatorName" runat="server" ClientIDMode="Static" Text='<%# Eval("OperatorName")%>'
+                                    ToolTip="Please Click Here To Edit The Template Items!" CssClass="CommonLink"></asp:HyperLink>
+                                    <br />
                                 </td>
                                 <td class="i">
                                     <%# Eval("Relationship")%>
@@ -392,7 +394,9 @@
                                     <%# Eval("OperatorCode")%>
                                 </td>
                                 <td class="i">
-                                    <%# Eval("OperatorName")%>
+                                     <asp:HyperLink ID="hypOperatorName" runat="server" ClientIDMode="Static" Text='<%# Eval("OperatorName")%>'
+                                    ToolTip="Please Click Here To Edit The Template Items!" CssClass="CommonLink"></asp:HyperLink>
+                                    <br />
                                 </td>
                                 <td class="i">
                                     <%# Eval("Relationship")%>

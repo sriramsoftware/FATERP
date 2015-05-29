@@ -299,9 +299,11 @@
     <Compile Include="BDProjectWaterReserviorFacade.cs" />
     <Compile Include="BDProjectFloorUnit_RPTFacade.cs" />
     <Compile Include="HREmployeeMonthlyTimeSheet_DetailedFacade.cs" />
+    <Compile Include="IMDZoneFacade.cs" />
     <Compile Include="MDOperatorAddressTypeFacade.cs" />
     <Compile Include="MDOperatorStatusFacade.cs" />
     <Compile Include="MDZoneDesignationFacade.cs" />
+    <Compile Include="MDZoneFacade.cs" />
     <Compile Include="OTIssue_CustomFacade.cs" />
     <Compile Include="HRSalaryAdjustment_DetailedFacade.cs" />
     <Compile Include="HREmployeeSalaryDeducationInfo_DetailedFacade.cs" />

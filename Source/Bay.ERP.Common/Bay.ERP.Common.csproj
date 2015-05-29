@@ -665,6 +665,7 @@
     <Compile Include="DatabaseEntity\MDVisaStatusEntity.cs" />
     <Compile Include="DatabaseEntity\MDWorkOrderStatusEntity.cs" />
     <Compile Include="DatabaseEntity\MDZoneDesignationEntity.cs" />
+    <Compile Include="DatabaseEntity\MDZoneEntity.cs" />
     <Compile Include="DatabaseEntity\OTIssueAssignedResourceEntity.cs" />
     <Compile Include="DatabaseEntity\OTIssueEntity.cs" />
     <Compile Include="DatabaseEntity\OTIssueUploadInfoEntity.cs" />

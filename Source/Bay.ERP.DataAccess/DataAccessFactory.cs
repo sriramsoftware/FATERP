@@ -1875,6 +1875,25 @@ namespace Bay.ERP.DataAccess
 
         #region MasterData
 
+        #region MDZoneEntity
+
+        [DebuggerStepThrough()]
+        public override IMDZoneDataAccess CreateMDZoneDataAccess()
+        {
+            string type = typeof(MDZoneDataAccess).ToString();
+
+            if (!CurrentContext.Contains(type))
+            {
+                CurrentContext[type] = new MDZoneDataAccess(CurrentContext);
+            }
+
+            return (IMDZoneDataAccess)CurrentContext[type];
+        }
+
+        #endregion
+
+
+
         #region MDOperatorAddressTypeEntity
 
         [DebuggerStepThrough()]

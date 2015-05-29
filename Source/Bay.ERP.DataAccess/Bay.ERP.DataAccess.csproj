@@ -705,6 +705,8 @@
     <Compile Include="MasterData\MDVisaStatusDataAccess.cs" />
     <Compile Include="MasterData\MDWorkOrderStatusBuilder.cs" />
     <Compile Include="MasterData\MDWorkOrderStatusDataAccess.cs" />
+    <Compile Include="MasterData\MDZoneBuilder.cs" />
+    <Compile Include="MasterData\MDZoneDataAccess.cs" />
     <Compile Include="MasterData\MDZoneDesignationBuilder.cs" />
     <Compile Include="MasterData\MDZoneDesignationDataAccess.cs" />
     <Compile Include="PRM\PRMAvailableBOQQtyForRequisitionBuilder.cs" />

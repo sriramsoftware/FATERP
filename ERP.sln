@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{1AD1F504-38CB-461D-881E-3C8F827D46CC}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Bay.ERP.WebUI", "Source\Bay.ERP.WebUI", "{D7AA8AE6-B141-4AE2-B690-3957B1635CDA}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Bay.ERP.WebUI", "Source\Bay.ERP.WebUI\", "{D7AA8AE6-B141-4AE2-B690-3957B1635CDA}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = ""
 		SccAuxPath = ""
@@ -27,6 +27,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Bay.ERP.WebUI", "Source\Bay
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "7777"
 		VWDDynamicPort = "false"
+		VWDVirtualPath = "/FAT.ERP.WebUI"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject

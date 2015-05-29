@@ -130,16 +130,16 @@
                             &nbsp;
                         </td>
                         <td class="i">
-                        <asp:LinkButton ID="lnkBtnModifyQty" runat="server" CssClass="CommonButtonLink"
+                       <%-- <asp:LinkButton ID="lnkBtnModifyQty" runat="server" CssClass="CommonButtonLink"
                                     ToolTip="Please Click Here To Modify The Total Qty Floor Wise!" Text="Floor Wise Rate/Qty" OnClientClick="return confirm('This may divide Item Qty Floor wise; If doesn't exists!!!')"
                                     CommandName="ModifyQty" CommandArgument='<%#Eval("ItemID")%>'/>
-                                    <br />
+                                    <br />--%>
                             <kti:SecureLinkButton ID="lnkBtnModify" runat="server" CssClass="CommonButtonLink" ToolTip="Please Click Here To Modify The Price By Brand, Vendor, Origin Region, Origin Country!"
                                 Text="Modify" CommandName="ModifyPrice" CommandArgument='<%#Eval("ItemID")%>' />
-                                <br />
+                               <%-- <br />
                                     <asp:LinkButton ID="btnAdditionalQty" runat="server" CssClass="CommonButtonLink"
                                     ToolTip="Please Click Here To Modify The Total Qty Floor Wise!" Text="Add Qty"
-                                    CommandName="AdditionalQty" CommandArgument='<%#Eval("PreBOQDetailID")%>'/>
+                                    CommandName="AdditionalQty" CommandArgument='<%#Eval("PreBOQDetailID")%>'/>--%>
                         </td>
                         <td class="i">
                             <%# Eval("ParentCategoryName")%>
@@ -160,7 +160,7 @@
                             <asp:TextBox ID="txtRateLV" runat="server" Text='<%# Eval("Rate")%>' CssClass="ktiDecimalTextBoxListview"></asp:TextBox>
                         </td>
                         <td class="i">
-                            <asp:TextBox ID="txtTotalQtyLV" runat="server" Text='<%# Eval("TotalQty")%>' CssClass="ktiDecimalTextBoxListview" ReadOnly="true"></asp:TextBox>
+                            <asp:TextBox ID="txtTotalQtyLV" runat="server" Text='<%# Eval("TotalQty")%>' CssClass="ktiDecimalTextBoxListview"></asp:TextBox>
                         </td>
                         <td class="i">
                             <asp:Label ID="lblItemTotal" runat="server" Text='<%# Decimal.Round(((Decimal) Eval("TotalQty") * (Decimal) Eval("Rate")), 2) %>'></asp:Label>
@@ -198,16 +198,16 @@
                             &nbsp;
                         </td>
                         <td class="i">
-                        <asp:LinkButton ID="lnkBtnModifyQty" runat="server" CssClass="CommonButtonLink"
+                        <%--<asp:LinkButton ID="lnkBtnModifyQty" runat="server" CssClass="CommonButtonLink"
                                     ToolTip="Please Click Here To Modify The Total Qty Floor Wise!" Text="Floor Wise Rate/Qty" OnClientClick="return confirm('This may divide Item Qty Floor wise; If doesn't exists!!!')"
                                     CommandName="ModifyQty" CommandArgument='<%#Eval("ItemID")%>'/>
-                                    <br />
+                                    <br />--%>
                             <kti:SecureLinkButton ID="lnkBtnModify" runat="server" CssClass="CommonButtonLink" ToolTip="Please Click Here To Modify The Price By Brand, Vendor, Origin Region, Origin Country!"
                                 Text="Modify" CommandName="ModifyPrice" CommandArgument='<%#Eval("ItemID")%>' />
                                  <br />
-                                    <asp:LinkButton ID="btnAdditionalQty" runat="server" CssClass="CommonButtonLink"
+                                <%--    <asp:LinkButton ID="btnAdditionalQty" runat="server" CssClass="CommonButtonLink"
                                     ToolTip="Please Click Here To Modify The Total Qty Floor Wise!" Text="Add Qty"
-                                    CommandName="AdditionalQty" CommandArgument='<%#Eval("PreBOQDetailID")%>'/>
+                                    CommandName="AdditionalQty" CommandArgument='<%#Eval("PreBOQDetailID")%>'/>--%>
                         </td>
                         <td class="i">
                             <%# Eval("ParentCategoryName")%>
@@ -228,7 +228,7 @@
                             <asp:TextBox ID="txtRateLV" runat="server" Text='<%# Eval("Rate")%>' CssClass="ktiDecimalTextBoxListview"></asp:TextBox>
                         </td>
                         <td class="i">
-                            <asp:TextBox ID="txtTotalQtyLV" runat="server" Text='<%# Eval("TotalQty")%>' CssClass="ktiDecimalTextBoxListview" ReadOnly="true"></asp:TextBox>
+                            <asp:TextBox ID="txtTotalQtyLV" runat="server" Text='<%# Eval("TotalQty")%>' CssClass="ktiDecimalTextBoxListview"></asp:TextBox>
                         </td>
                         <td class="i">
                             <asp:Label ID="lblItemTotal" runat="server" Text='<%# Decimal.Round(((Decimal) Eval("TotalQty") * (Decimal) Eval("Rate")), 2) %>'></asp:Label>

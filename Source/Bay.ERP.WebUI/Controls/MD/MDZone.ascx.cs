@@ -7,7 +7,7 @@
 // Faisal Alam, faisal@talentPlusSoft.con
 // ©2006 – 2010.
 //
-// Code Generate Time - 26-May-2015, 10:29:49
+// Code Generate Time - 29-May-2015, 07:14:37
 
 
 
@@ -25,11 +25,11 @@ using Bay.ERP.Common.Shared;
 
 namespace Bay.ERP.Web.UI
 {
-    public partial class MDZoneDesignationControl : BaseControl
+    public partial class MDZoneControl : BaseControl
     {       
         #region Properties
 
-        public Int64 _ZoneDesignationID
+        public Int64 _ZoneID
         {
             get
             {
@@ -48,15 +48,15 @@ namespace Bay.ERP.Web.UI
             }
         }
 
-        public MDZoneDesignationEntity _MDZoneDesignationEntity
+        public MDZoneEntity _MDZoneEntity
         {
             get
             {
-                MDZoneDesignationEntity entity = new MDZoneDesignationEntity();
+                MDZoneEntity entity = new MDZoneEntity();
 
                 if (ViewState["CurrentEntity"] != null)
                 {
-                    entity = (MDZoneDesignationEntity)ViewState["CurrentEntity"];
+                    entity = (MDZoneEntity)ViewState["CurrentEntity"];
                 }
 
                 return entity;
@@ -67,23 +67,23 @@ namespace Bay.ERP.Web.UI
             }
         }
 
-        private MDZoneDesignationEntity CurrentMDZoneDesignationEntity
+        private MDZoneEntity CurrentMDZoneEntity
         {
             get
             {
-                if (_ZoneDesignationID > 0)
+                if (_ZoneID > 0)
                 {
-                    if (_MDZoneDesignationEntity.ZoneDesignationID != _ZoneDesignationID)
+                    if (_MDZoneEntity.ZoneID != _ZoneID)
                     {
-                        _MDZoneDesignationEntity = FCCMDZoneDesignation.GetFacadeCreate().GetByID(_ZoneDesignationID);
+                        _MDZoneEntity = FCCMDZone.GetFacadeCreate().GetByID(_ZoneID);
                     }
                 }
 
-                return _MDZoneDesignationEntity;
+                return _MDZoneEntity;
             }
             set
             {
-                _MDZoneDesignationEntity = value;
+                _MDZoneEntity = value;
             }
         }
 
@@ -103,8 +103,9 @@ namespace Bay.ERP.Web.UI
         {
             BuildDropDownList();
 
-            txtName.Text = String.Empty;
-            txtDesignation.Text = String.Empty;
+            txtZoneCode.Text = String.Empty;
+            txtZoneName.Text = String.Empty;
+            txtDescripton.Text = String.Empty;
             chkIsRemoved.Checked = false;
 
             btnSubmit.Text = "Add";
@@ -113,14 +114,15 @@ namespace Bay.ERP.Web.UI
 
         private void PrepareEditView()
         {
-            MDZoneDesignationEntity mDZoneDesignationEntity = CurrentMDZoneDesignationEntity;
+            MDZoneEntity mDZoneEntity = CurrentMDZoneEntity;
 
 
-            if (!mDZoneDesignationEntity.IsNew)
+            if (!mDZoneEntity.IsNew)
             {
-                txtName.Text = mDZoneDesignationEntity.Name.ToString();
-                txtDesignation.Text = mDZoneDesignationEntity.Designation.ToString();
-                chkIsRemoved.Checked = mDZoneDesignationEntity.IsRemoved;
+                txtZoneCode.Text = mDZoneEntity.ZoneCode.ToString();
+                txtZoneName.Text = mDZoneEntity.ZoneName.ToString();
+                txtDescripton.Text = mDZoneEntity.Descripton.ToString();
+                chkIsRemoved.Checked = mDZoneEntity.IsRemoved;
 
                 btnSubmit.Text = "Update";
                 btnAddNew.Visible = true;
@@ -129,71 +131,72 @@ namespace Bay.ERP.Web.UI
 
         private void BindList()
         {
-            BindMDZoneDesignationList();
+            BindMDZoneList();
         }
 
-        private void BindMDZoneDesignationList()
+        private void BindMDZoneList()
         {
-            lvMDZoneDesignation.DataBind();
+            lvMDZone.DataBind();
         }
 
-        private MDZoneDesignationEntity BuildMDZoneDesignationEntity()
+        private MDZoneEntity BuildMDZoneEntity()
         {
-            MDZoneDesignationEntity mDZoneDesignationEntity = CurrentMDZoneDesignationEntity;
+            MDZoneEntity mDZoneEntity = CurrentMDZoneEntity;
 
-            mDZoneDesignationEntity.Name = txtName.Text.Trim();
-            mDZoneDesignationEntity.Designation = txtDesignation.Text.Trim();
-            mDZoneDesignationEntity.IsRemoved = chkIsRemoved.Checked;
+            mDZoneEntity.ZoneCode = txtZoneCode.Text.Trim();
+            mDZoneEntity.ZoneName = txtZoneName.Text.Trim();
+            mDZoneEntity.Descripton = txtDescripton.Text.Trim();
+            mDZoneEntity.IsRemoved = chkIsRemoved.Checked;
 
 
-            return mDZoneDesignationEntity;
+            return mDZoneEntity;
         }
 
-        private void SaveMDZoneDesignationEntity()
+        private void SaveMDZoneEntity()
         {
             if (IsValid)
             {
                 try
                 {
-                    MDZoneDesignationEntity mDZoneDesignationEntity = BuildMDZoneDesignationEntity();
+                    MDZoneEntity mDZoneEntity = BuildMDZoneEntity();
 
                     Int64 result = -1;
 
-                    if (mDZoneDesignationEntity.IsNew)
+                    if (mDZoneEntity.IsNew)
                     {
-                        result = FCCMDZoneDesignation.GetFacadeCreate().Add(mDZoneDesignationEntity, DatabaseOperationType.Add, TransactionRequired.No);
+                        result = FCCMDZone.GetFacadeCreate().Add(mDZoneEntity, DatabaseOperationType.Add, TransactionRequired.No);
                     }
                     else
                     {
-                        String filterExpression = SqlExpressionBuilder.PrepareFilterExpression(MDZoneDesignationEntity.FLD_NAME_ZoneDesignationID, mDZoneDesignationEntity.ZoneDesignationID.ToString(), SQLMatchType.Equal);
-                        result = FCCMDZoneDesignation.GetFacadeCreate().Update(mDZoneDesignationEntity, filterExpression, DatabaseOperationType.Update, TransactionRequired.No);
+                        String filterExpression = SqlExpressionBuilder.PrepareFilterExpression(MDZoneEntity.FLD_NAME_ZoneID, mDZoneEntity.ZoneID.ToString(), SQLMatchType.Equal);
+                        result = FCCMDZone.GetFacadeCreate().Update(mDZoneEntity, filterExpression, DatabaseOperationType.Update, TransactionRequired.No);
                     }
 
                     if (result > 0)
                     {
-                        _ZoneDesignationID = 0;
-                        _MDZoneDesignationEntity = new MDZoneDesignationEntity();
+                        _ZoneID = 0;
+                        _MDZoneEntity = new MDZoneEntity();
                         PrepareInitialView();
-                        BindMDZoneDesignationList();
+                        BindMDZoneList();
 
-                        if (mDZoneDesignationEntity.IsNew)
+                        if (mDZoneEntity.IsNew)
                         {
-                            MiscUtil.ShowMessage(lblMessage, "Zone Designation Information has been added successfully.", false);
+                            MiscUtil.ShowMessage(lblMessage, "Zone Information has been added successfully.", false);
                         }
                         else
                         {
-                            MiscUtil.ShowMessage(lblMessage, "Zone Designation Information has been updated successfully.", false);
+                            MiscUtil.ShowMessage(lblMessage, "Zone Information has been updated successfully.", false);
                         }
                     }
                     else
                     {
-                        if (mDZoneDesignationEntity.IsNew)
+                        if (mDZoneEntity.IsNew)
                         {
-                            MiscUtil.ShowMessage(lblMessage, "Failed to add Zone Designation Information.", false);
+                            MiscUtil.ShowMessage(lblMessage, "Failed to add Zone Information.", false);
                         }
                         else
                         {
-                            MiscUtil.ShowMessage(lblMessage, "Failed to update Zone Designation Information.", false);
+                            MiscUtil.ShowMessage(lblMessage, "Failed to update Zone Information.", false);
                         }
                     }
                 }
@@ -224,17 +227,17 @@ namespace Bay.ERP.Web.UI
 
         #region List View Event
 
-        protected void lvMDZoneDesignation_ItemCommand(object sender, ListViewCommandEventArgs e)
+        protected void lvMDZone_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
-            Int64 ZoneDesignationID;
+            Int64 ZoneID;
 
-            Int64.TryParse(e.CommandArgument.ToString(), out ZoneDesignationID);
+            Int64.TryParse(e.CommandArgument.ToString(), out ZoneID);
 
-            if (ZoneDesignationID > 0)
+            if (ZoneID > 0)
             {
                 if (string.Equals(e.CommandName, "EditItem"))
                 {
-                    _ZoneDesignationID = ZoneDesignationID;
+                    _ZoneID = ZoneID;
 
                     PrepareEditView();
 
@@ -247,25 +250,25 @@ namespace Bay.ERP.Web.UI
                     {
                         Int64 result = -1;
 
-                        String fe = SqlExpressionBuilder.PrepareFilterExpression(MDZoneDesignationEntity.FLD_NAME_ZoneDesignationID, ZoneDesignationID.ToString(), SQLMatchType.Equal);
+                        String fe = SqlExpressionBuilder.PrepareFilterExpression(MDZoneEntity.FLD_NAME_ZoneID, ZoneID.ToString(), SQLMatchType.Equal);
 
-                        MDZoneDesignationEntity mDZoneDesignationEntity = new MDZoneDesignationEntity();
+                        MDZoneEntity mDZoneEntity = new MDZoneEntity();
 
 
-                        result = FCCMDZoneDesignation.GetFacadeCreate().Delete(mDZoneDesignationEntity, fe, DatabaseOperationType.Delete, TransactionRequired.No);
+                        result = FCCMDZone.GetFacadeCreate().Delete(mDZoneEntity, fe, DatabaseOperationType.Delete, TransactionRequired.No);
 
                         if (result == 0)
                         {
-                            _ZoneDesignationID = 0;
-                            _MDZoneDesignationEntity = new MDZoneDesignationEntity();
+                            _ZoneID = 0;
+                            _MDZoneEntity = new MDZoneEntity();
                             PrepareInitialView();
-                            BindMDZoneDesignationList();
+                            BindMDZoneList();
 
-                            MiscUtil.ShowMessage(lblMessage, "Zone Designation has been successfully deleted.", true);
+                            MiscUtil.ShowMessage(lblMessage, "Zone has been successfully deleted.", true);
                         }
                         else
                         {
-                            MiscUtil.ShowMessage(lblMessage, "Failed to delete Zone Designation.", true);
+                            MiscUtil.ShowMessage(lblMessage, "Failed to delete Zone.", true);
                         }
                     }
                     catch (Exception ex)
@@ -280,7 +283,7 @@ namespace Bay.ERP.Web.UI
 
         #region ObjectDataSource Event
 
-        protected void odsMDZoneDesignation_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
+        protected void odsMDZone_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
         {
             e.InputParameters["filterExpression"] = String.Empty;
         }
@@ -291,13 +294,13 @@ namespace Bay.ERP.Web.UI
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            SaveMDZoneDesignationEntity();
+            SaveMDZoneEntity();
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
         {
-            _ZoneDesignationID = 0;
-            _MDZoneDesignationEntity = new MDZoneDesignationEntity();
+            _ZoneID = 0;
+            _MDZoneEntity = new MDZoneEntity();
             PrepareInitialView();
         }
 

@@ -104,7 +104,7 @@
                 Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
                 </div>
-                <div class="TableRow" style="width: 100;">
+              <%--  <div class="TableRow" style="width: 100;">
                     <div class="TableFormLeble" style="text-align: right;">
                         Land Area Katha&nbsp;:
                     </div>
@@ -185,7 +185,7 @@
                             EnableViewState="False" ErrorMessage="Enter Number (Example: 2136)" MinimumValue="-2147483648" MaximumValue="2147483647"
                             Type="Integer" ValidationGroup="BDProjectEntity"></asp:RangeValidator>
                     </div>
-                </div>
+                </div>--%>
                 <div class="TableRow" style="width: 100;">
                     <div class="TableFormLeble" style="text-align: right;">
                         Description&nbsp;:
@@ -199,7 +199,7 @@
                 </div>
                 <div class="TableRow" style="width: 100;">
                     <div class="TableFormLeble" style="text-align: right;">
-                        B SC&nbsp;:
+                        BSC&nbsp;:
                     </div>
                     <div class="TableFormContent">
                         <asp:TextBox ID="txtBSC" ClientIDMode="Static" CssClass="ktiTextBox" runat="server"
@@ -208,7 +208,7 @@
                     <div class="TableFormValidatorContent">
                     </div>
                 </div>
-                <div class="TableRow" style="width: 100;">
+               <%-- <div class="TableRow" style="width: 100;">
                     <div class="TableFormLeble" style="text-align: right;">
                         Client Percentage&nbsp;:
                     </div>
@@ -221,13 +221,13 @@
                             EnableViewState="False" ErrorMessage="Enter Number (Example: 2136.36)" MinimumValue="-79228162514264337593543950335" MaximumValue="79228162514264337593543950335"
                             Type="Double" ValidationGroup="BDProjectEntity"></asp:RangeValidator>
                     </div>
-                </div>
-                <div class="TableRow" style="width: 100;">
+                </div>--%>
+                <div class="TableRow" style="width: 100; display:none;">
                     <div class="TableFormLeble" style="text-align: right;">
                         Company Percentage&nbsp;:
                     </div>
                     <div class="TableFormContent">
-                        <asp:TextBox ID="txtCompanyPercentage" CssClass="ktiDecimalTextBox" ClientIDMode="Static"
+                        <asp:TextBox ID="txtCompanyPercentage" CssClass="ktiDecimalTextBox" ClientIDMode="Static" Text="0"
                             runat="server" ValidationGroup="BDProjectEntity" Type="Number" Width="210" />
                     </div>
                     <div class="TableFormValidatorContent">
@@ -268,7 +268,7 @@
                             Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
                 </div>
-                <div class="TableRow" style="width: 100;">
+                <div class="TableRow" style="width: 100; display:none;">
                     <div class="TableFormLeble" style="text-align: right;">
                         Is Removed&nbsp;:
                     </div>
@@ -296,8 +296,10 @@
                 Project List
             </div>
             <div>
+                <div>
+            <div>
                 <div class="lv-c">
-                    <asp:ListView ID="lvBDProject" runat="server" DataSourceID="odsBDProject" OnItemCommand="lvBDProject_ItemCommand">
+                    <asp:ListView ID="lvBDProject" runat="server" DataSourceID="odsBDProject" OnItemDataBound="lvBDProject_ItemDataBound">
                         <LayoutTemplate>
                             <table class="lv" cellpadding="0" cellspacing="0">
                                 <tr class="h">
@@ -305,61 +307,57 @@
                                         &nbsp;
                                     </td>
                                     <td class="hi">
-                                        Operator
-                                    </td>
-                                    <td class="hi">
-                                        Zone
-                                    </td>
-                                    <td class="hi">
-                                        Project Code
-                                    </td>
-                                    <td class="hi">
-                                        Project Name
-                                    </td>
-                                    <td class="hi">
-                                        Land Area Katha
-                                    </td>
-                                    <td class="hi">
-                                        Land Area Sft
-                                    </td>
-                                    <td class="hi">
-                                        Road Width
-                                    </td>
-                                    <td class="hi">
-                                        Road Width Unit
-                                    </td>
-                                    <td class="hi">
-                                        No Of Storied
-                                    </td>
-                                    <td class="hi">
-                                        No Of Basement
-                                    </td>
-                                    <td class="hi">
-                                        Description
-                                    </td>
-                                    <td class="hi">
-                                        B SC
-                                    </td>
-                                    <td class="hi">
-                                        Client Percentage
-                                    </td>
-                                    <td class="hi">
-                                        Company Percentage
-                                    </td>
-                                    <td class="hi">
-                                        Project Category
-                                    </td>
-                                    <td class="hi">
-                                        Project Status
-                                    </td>
-                                    <td class="hi">
+                                            <asp:LinkButton CssClass="ktiListViewHeaderText" runat="server" ID="lnkSortByProjectCode"
+                                                CommandName="Sort" Text="Project Code" CommandArgument="BDProject.ProjectCode" />
+                                        </td>
+                                        <td class="hi" style="width: 200px;">
+                                            <asp:LinkButton CssClass="ktiListViewHeaderText" runat="server" ID="lnkSortByProjectName"
+                                                CommandName="Sort" Text="Project Name" CommandArgument="BDProject.ProjectName" />
+                                        </td>
+                                        <td class="hi">
+                                            <asp:LinkButton CssClass="ktiListViewHeaderText" runat="server" ID="lnkSortByBuildAreaKatha"
+                                                CommandName="Sort" Text="Build Area Katha" CommandArgument="BDProject.LandAreaKatha" />
+                                        </td>
+                                        <td class="hi" style="display: none;">
+                                            <asp:LinkButton CssClass="ktiListViewHeaderText" runat="server" ID="lnkSortByBuildAreaSft"
+                                                CommandName="Sort" Text="Build Area Sft" CommandArgument="BDProject.LandAreaSft" />
+                                        </td>
+                                        <td class="hi" style="display: none;">
+                                            <asp:LinkButton CssClass="ktiListViewHeaderText" runat="server" ID="lnkSortByNoOfStoried"
+                                                CommandName="Sort" Text="No Of Storied" CommandArgument="BDProject.NoOfStoried" />
+                                        </td>
+                                        <td class="hi" style="display: none;">
+                                            <asp:LinkButton CssClass="ktiListViewHeaderText" runat="server" ID="lnkSortByNoOfBasement"
+                                                CommandName="Sort" Text="No Of Basement" CommandArgument="BDProject.NoOfBasement" />
+                                        </td>
+                                        <td class="hi" style="display: none;">
+                                            <asp:LinkButton CssClass="ktiListViewHeaderText" runat="server" ID="lnkSortByDescription"
+                                                CommandName="Sort" Text="Description" CommandArgument="BDProject.Name" />
+                                        </td>
+                                        <td class="hi" style="display: none;">
+                                            <asp:LinkButton CssClass="ktiListViewHeaderText" runat="server" ID="lnkSortByClientPercentage"
+                                                CommandName="Sort" Text="Client Percentage" CommandArgument="BDProject.ClientPercentage" />
+                                        </td>
+                                        <td class="hi" style="display: none;">
+                                            <asp:LinkButton CssClass="ktiListViewHeaderText" runat="server" ID="lnkSortByCompanyPercentage"
+                                                CommandName="Sort" Text="Company Percentage" CommandArgument="BDProject.CompanyPercentage" />
+                                        </td>
+                                        <td class="hi">
+                                            <asp:LinkButton CssClass="ktiListViewHeaderText" runat="server" ID="lnkSortByProjectCategory"
+                                                CommandName="Sort" Text="Project Category" CommandArgument="MDProjectCategory.Name" />
+                                        </td>
+                                        <td class="hi">
+                                            <asp:LinkButton CssClass="ktiListViewHeaderText" runat="server" ID="lnkSortByProjectStatus"
+                                                CommandName="Sort" Text="Project Status" CommandArgument="MDProjectStatus.Name" />
+                                        </td>
+                                    <td class="hi" style="display: none;">
                                         Is Removed
                                     </td>
                                     <td class="his">
-                                        EDIT
+                                        Project Report
                                     </td>
-                                    <td class="his">
-                                        DELETE
+                                    <td class="his" style="width:200px;">
+                                        Project History Report
                                     </td>
                                     <td class="rp">
                                         &nbsp;
@@ -386,7 +384,7 @@
                                                             ShowPreviousPageButton="false" ShowNextPageButton="true" ShowLastPageButton="true"
                                                             RenderNonBreakingSpacesBetweenControls="true" />
                                                         <asp:TemplatePagerField>
-                                                    <PagerTemplate>
+                                                            <PagerTemplate>
                                                                 <div class="lv-PagerCount">
                                                                     Items <span>
                                                                         <%# Container.StartRowIndex +1%></span> to <span>
@@ -410,64 +408,49 @@
                                     &nbsp;
                                 </td>
                                 <td class="i">
-                                    <%# Eval("OperatorID")%>
-                                </td>
-                                <td class="i">
-                                    <%# Eval("ZoneID")%>
-                                </td>
-                                <td class="i">
                                     <%# Eval("ProjectCode")%>
                                 </td>
-                                <td class="i">
-                                    <%# Eval("ProjectName")%>
+                                <td class="i" style="width: 200px;">
+                                    <asp:HyperLink ID="hypProject" runat="server" Text='<%# Eval("ProjectName")%>' CssClass="CommonLink"
+                                            ToolTip="Please Click Here To See The Overview!"></asp:HyperLink>
                                 </td>
                                 <td class="i">
                                     <%# Eval("LandAreaKatha")%>
                                 </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("LandAreaSft")%>
                                 </td>
-                                <td class="i">
-                                    <%# Eval("RoadWidth")%>
-                                </td>
-                                <td class="i">
-                                    <%# Eval("RoadWidthUnitID")%>
-                                </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("NoOfStoried")%>
                                 </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("NoOfBasement")%>
                                 </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("Description")%>
                                 </td>
-                                <td class="i">
-                                    <%# Eval("BSC")%>
-                                </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("ClientPercentage")%>
                                 </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("CompanyPercentage")%>
                                 </td>
                                 <td class="i">
-                                    <%# Eval("ProjectCategoryID")%>
-                                </td>
+                                        <%# Eval("ProjectCategoryName")%>
+                                    </td>
                                 <td class="i">
-                                    <%# Eval("ProjectStatusID")%>
+                                    <%# Eval("ProjectStatusName")%>
                                 </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("IsRemoved") != null ? (((Boolean)Eval("IsRemoved")) ? "Yes" : "No") : ""%>
                                 </td>
                                 <td class="i">
-                                    <kti:SecureLinkButton ID="lnkBtnEdit" runat="server" CssClass="CommonButtonLink" Text="Edit"
-                                        CommandName="EditItem" CommandArgument='<%#Eval("ProjectID")%>' UniqueKey="BDProject_lvBDProject_Edit_key" />
+                                    <asp:HyperLink ID="hypProjectReport" runat="server" CssClass="CommonButtonLink" Text="Report"
+                                        CommandName="ProjectReport" CommandArgument='<%#Eval("ProjectID")%>' UniqueKey="BDProjectListControl_lvBDProject_ProjectReport_key"></asp:HyperLink>
                                 </td>
                                 <td class="i">
-                            <kti:SecureLinkButton ID="lnkBtnDelete" runat="server" CssClass="CommonButtonLink" Text="Delete"
-                                        CommandName="DeleteItem" OnClientClick="return confirm('Are you sure to delete Project?')"
-                                        CommandArgument='<%#Eval("ProjectID")%>' UniqueKey="BDProject_lvBDProject_Edit_key"/>
+                                    <asp:HyperLink ID="hypProjectHistoryReport" runat="server" CssClass="CommonButtonLink" Text="Project History Report"
+                                        CommandName="ProjectHistoryReport" CommandArgument='<%#Eval("ProjectID")%>' UniqueKey="BDProjectListControl_lvBDProject_ProjectHistoryReport_key"></asp:HyperLink>
                                 </td>
                                 <td class="rp">
                                     &nbsp;
@@ -483,64 +466,49 @@
                                     &nbsp;
                                 </td>
                                 <td class="i">
-                                    <%# Eval("OperatorID")%>
-                                </td>
-                                <td class="i">
-                                    <%# Eval("ZoneID")%>
-                                </td>
-                                <td class="i">
                                     <%# Eval("ProjectCode")%>
                                 </td>
-                                <td class="i">
-                                    <%# Eval("ProjectName")%>
+                                <td class="i" style="width: 200px;">
+                                    <asp:HyperLink ID="hypProject" runat="server" Text='<%# Eval("ProjectName")%>' CssClass="CommonLink"
+                                            ToolTip="Please Click Here To See The Overview!"></asp:HyperLink>
                                 </td>
                                 <td class="i">
                                     <%# Eval("LandAreaKatha")%>
                                 </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("LandAreaSft")%>
                                 </td>
-                                <td class="i">
-                                    <%# Eval("RoadWidth")%>
-                                </td>
-                                <td class="i">
-                                    <%# Eval("RoadWidthUnitID")%>
-                                </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("NoOfStoried")%>
                                 </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("NoOfBasement")%>
                                 </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("Description")%>
                                 </td>
-                                <td class="i">
-                                    <%# Eval("BSC")%>
-                                </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("ClientPercentage")%>
                                 </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("CompanyPercentage")%>
                                 </td>
                                 <td class="i">
-                                    <%# Eval("ProjectCategoryID")%>
-                                </td>
+                                        <%# Eval("ProjectCategoryName")%>
+                                    </td>
                                 <td class="i">
-                                    <%# Eval("ProjectStatusID")%>
+                                    <%# Eval("ProjectStatusName")%>
                                 </td>
-                                <td class="i">
+                                <td class="i" style="display: none;">
                                     <%# Eval("IsRemoved") != null ? (((Boolean)Eval("IsRemoved")) ? "Yes" : "No") : ""%>
                                 </td>
                                 <td class="i">
-                                    <kti:SecureLinkButton ID="lnkBtnEdit" runat="server" CssClass="CommonButtonLink" Text="Edit"
-                                        CommandName="EditItem" CommandArgument='<%#Eval("ProjectID")%>' UniqueKey="BDProject_lvBDProject_Edit_key" />
+                                    <asp:HyperLink ID="hypProjectReport" runat="server" CssClass="CommonButtonLink" Text="Report"
+                                        CommandName="ProjectReport" CommandArgument='<%#Eval("ProjectID")%>' UniqueKey="BDProjectListControl_lvBDProject_ProjectReport_key"></asp:HyperLink>
                                 </td>
                                 <td class="i">
-                                    <kti:SecureLinkButton ID="lnkBtnDelete" runat="server" CssClass="CommonButtonLink" Text="Delete"
-                                        CommandName="DeleteItem" OnClientClick="return confirm('Are you sure to delete Project?')"
-                                        CommandArgument='<%#Eval("ProjectID")%>' UniqueKey="BDProject_lvBDProject_Edit_key"/>
+                                    <asp:HyperLink ID="hypProjectHistoryReport" runat="server" CssClass="CommonButtonLink" Text="Project History Report"
+                                        CommandName="ProjectHistoryReport" CommandArgument='<%#Eval("ProjectID")%>' UniqueKey="BDProjectListControl_lvBDProject_ProjectHistoryReport_key"></asp:HyperLink>
                                 </td>
                                 <td class="rp">
                                     &nbsp;
@@ -559,7 +527,7 @@
                 </div>
                 <asp:ObjectDataSource ID="odsBDProject" runat="server" SelectMethod="GetPagedData"
                     SelectCountMethod="TotalRowCount" EnablePaging="true" MaximumRowsParameterName="pageSize"
-                    StartRowIndexParameterName="startRowIndex" TypeName="Bay.ERP.Web.UI.BDProjectDataSource"
+                    StartRowIndexParameterName="startRowIndex" TypeName="Bay.ERP.Web.UI.BDProject_DetailedDataSource"
                     SortParameterName="sortExpression" OnSelecting="odsBDProject_Selecting">
                     <SelectParameters>
                         <asp:Parameter Name="startRowIndex" Type="Int32" />
@@ -568,6 +536,8 @@
                         <asp:Parameter Name="filterExpression" Type="String" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
+            </div>
+        </div>
             </div>
         </div>
     </ContentTemplate>

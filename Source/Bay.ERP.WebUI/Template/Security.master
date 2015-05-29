@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Bay's - ERP</title>
+    <title>FAT - ERP</title>
     <link href="~/Styles/Default.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="~/Styles/ktiWaterMark.css" rel="stylesheet" type="text/css" />
     <link href="~/Styles/ktiListView.css" rel="stylesheet" type="text/css" />
@@ -105,7 +105,7 @@
         <div id="container-header">
             <div style="display: table; width: 100%;">
                 <div style="float: left; padding: 10px; color: White; font-weight: bold; font-size: 18px;">
-                    Bay's ERP
+                    FAT - ERP
                 </div>
                 <div style="float: right; padding: 10px; color: White;">
                     <div style="float: left; border-right: 1px White dotted; padding-right: 5px; margin-right: 5px;">

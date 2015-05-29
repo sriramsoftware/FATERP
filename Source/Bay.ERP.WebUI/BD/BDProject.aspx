@@ -17,9 +17,16 @@
 
 <asp:Content ID="cntHeader" ContentPlaceHolderID="cphHeader" runat="Server">
 </asp:Content>
+<asp:Content ID="cntPageTitle" ContentPlaceHolderID="cphPageTitle" runat="Server">
+    <h1>Create Project</h1>
+</asp:Content>
 <asp:Content ID="cntContent" ContentPlaceHolderID="cphContent" runat="Server">
-    <div class="contentTitle">
-        Create Project
-    </div>
+    <div style="width: 1100px;">
+    
     <uc:BDProjectEntity ID="ucBDProjectEntity" runat="server" />
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphQuickLinks" runat="Server">
+    <div style="width: 5px;">
+    </div>
 </asp:Content>

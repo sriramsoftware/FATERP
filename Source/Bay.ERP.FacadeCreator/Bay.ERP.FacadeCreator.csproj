@@ -752,6 +752,7 @@
     <Compile Include="FacadeContext\FCCUserList_Detailed.cs" />
     <Compile Include="FacadeContext\FCCHREmployeeEvaluationReportForAllEmployee_RPT.cs" />
     <Compile Include="FacadeContext\FCCHREmployee_Detailed.cs" />
+    <Compile Include="FCCMDZone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -12,7 +12,7 @@ namespace Bay.ERP.Web.UI
         public const string REQUISITION_ID = "OverviewRequisitionID";
         public const string OVERVIEW_EMPLOYEE_ID = "OverviewEmployeeID";
         public const string OVERVIEW_CONSTRUCTION_TOOL_ID = "OverviewConstructionToolID";
-        
+        public const string OVERVIEW_OPERATOR_ID= "OverviewOperatorID";
         
         public const string OVERVIEW_PROJECT_ID = "OverviewProjectID";
         public const string OVERVIEW_MEMBER_ID = "OverviewMemberID";

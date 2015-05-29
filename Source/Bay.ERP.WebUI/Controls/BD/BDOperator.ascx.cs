@@ -286,6 +286,23 @@ namespace Bay.ERP.Web.UI
 
         #region List View Event
 
+        protected void lvBDOperator_ItemDataBound(object sender, ListViewItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListViewItemType.DataItem)
+            {
+
+                ListViewDataItem dataItem = (ListViewDataItem)e.Item;
+
+                BDOperatorEntity ent = (BDOperatorEntity)dataItem.DataItem;
+
+                HyperLink hypOperatorName = (HyperLink)e.Item.FindControl("hypOperatorName");
+
+                hypOperatorName.NavigateUrl = UrlHelper.BuildSecureUrl("~/BD/BDProjectRequisitionItem.aspx", string.Empty, UrlConstants.OVERVIEW_OPERATOR_ID, ent.OperatorID.ToString()).ToString();
+                
+            }
+        }
+      
+
         protected void lvBDOperator_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
             Int64 OperatorID;

@@ -5,14 +5,14 @@
  Moshiur Rahman Reza, moshiur.rahman.reza@gmail.con
  ©2006 – 2010.
 
- Code Generate Time - 26-May-2015, 10:29:49
+ Code Generate Time - 29-May-2015, 07:14:37
 --%>
 
 
 
 
-<%@ Control Language="C#" AutoEventWireup="true" CodeFile="MDZoneDesignation.ascx.cs"
-    Inherits="Bay.ERP.Web.UI.MDZoneDesignationControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="MDZone.ascx.cs"
+    Inherits="Bay.ERP.Web.UI.MDZoneControl" %>
 
 <asp:UpdatePanel ID="upMauin" runat="server">
     <ContentTemplate>
@@ -27,7 +27,7 @@
                     <asp:Image ID="imgExpandCollaps" ImageUrl="~/Images/expand-plus.gif" runat="server" />
                 </div>
                 <div style="float: left; padding-left: 3px;">
-                    <asp:Label ID="lvlCollapsText" runat="server" Text="Add/Edit Zone Designation"></asp:Label>
+                    <asp:Label ID="lvlCollapsText" runat="server" Text="Add/Edit Zone"></asp:Label>
                 </div>
                 <div style="clear: both;">
                 </div>
@@ -40,28 +40,45 @@
                 </div>
                 <div class="TableRow" style="width: 100;">
                     <div class="TableFormLeble" style="text-align: right;">
-                        Name&nbsp;:
+                        Zone Code&nbsp;:
                     </div>
                     <div class="TableFormContent waterMarkContainer">
-                        <label class="watermarkLabel" for="txtName">
-                            Enter Name</label>
-                        <asp:TextBox ID="txtName" ClientIDMode="Static" CssClass="ktiTextBox" runat="server"
-                            ValidationGroup="MDZoneDesignationEntity" Width="230" />
+                        <label class="watermarkLabel" for="txtZoneCode">
+                            Enter Zone Code</label>
+                        <asp:TextBox ID="txtZoneCode" ClientIDMode="Static" CssClass="ktiTextBox" runat="server"
+                            ValidationGroup="MDZoneEntity" Width="230" />
                         <span class="RequiredField">*</span>
                     </div>
                     <div class="TableFormValidatorContent">
-                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName"
-                            ErrorMessage="Please Enter Name" ValidationGroup="MDZoneDesignationEntity" EnableViewState="False"
+                        <asp:RequiredFieldValidator ID="rfvZoneCode" runat="server" ControlToValidate="txtZoneCode"
+                            ErrorMessage="Please Enter Zone Code" ValidationGroup="MDZoneEntity" EnableViewState="False"
                 Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <div class="TableRow" style="width: 100;">
                     <div class="TableFormLeble" style="text-align: right;">
-                        Designation&nbsp;:
+                        Zone Name&nbsp;:
+                    </div>
+                    <div class="TableFormContent waterMarkContainer">
+                        <label class="watermarkLabel" for="txtZoneName">
+                            Enter Zone Name</label>
+                        <asp:TextBox ID="txtZoneName" ClientIDMode="Static" CssClass="ktiTextBox" runat="server"
+                            ValidationGroup="MDZoneEntity" Width="230" />
+                        <span class="RequiredField">*</span>
+                    </div>
+                    <div class="TableFormValidatorContent">
+                        <asp:RequiredFieldValidator ID="rfvZoneName" runat="server" ControlToValidate="txtZoneName"
+                            ErrorMessage="Please Enter Zone Name" ValidationGroup="MDZoneEntity" EnableViewState="False"
+                Display="Dynamic"></asp:RequiredFieldValidator>
+                    </div>
+                </div>
+                <div class="TableRow" style="width: 100;">
+                    <div class="TableFormLeble" style="text-align: right;">
+                        Descripton&nbsp;:
                     </div>
                     <div class="TableFormContent">
-                        <asp:TextBox ID="txtDesignation" ClientIDMode="Static" CssClass="ktiTextBox" runat="server"
-                            ValidationGroup="MDZoneDesignationEntity" Width="230" />
+                        <asp:TextBox ID="txtDescripton" ClientIDMode="Static" CssClass="ktiTextBox" runat="server"
+                            ValidationGroup="MDZoneEntity" Width="230" />
                     </div>
                     <div class="TableFormValidatorContent">
                     </div>
@@ -71,7 +88,7 @@
                         Is Removed&nbsp;:
                     </div>
                     <div class="TableFormContent">
-                        <asp:CheckBox ID="chkIsRemoved" runat="server" ClientIDMode="Static" ValidationGroup="MDZoneDesignationEntity" />
+                        <asp:CheckBox ID="chkIsRemoved" runat="server" ClientIDMode="Static" ValidationGroup="MDZoneEntity" />
                     </div>
                     <div class="TableFormValidatorContent">
                     </div>
@@ -80,22 +97,22 @@
                     <div class="TableFormLeble">
                         &nbsp;</div>
                     <div class="TableFormContent">
-                        <kti:SecureButton ID="btnSubmit" ValidationGroup="MDZoneDesignationEntity" OnClick="btnSave_Click"
-                            runat="server" Text="Add" UniqueKey="MDZoneDesignationControl_Submit_key" />
+                        <kti:SecureButton ID="btnSubmit" ValidationGroup="MDZoneEntity" OnClick="btnSave_Click"
+                            runat="server" Text="Add" UniqueKey="MDZoneControl_Submit_key" />
                         <kti:SecureButton ID="btnAddNew" Visible="false" OnClick="btnAddNew_Click"
-                            runat="server" Text="Add New" UniqueKey="MDZoneDesignationControl_AddNew_key" />
+                            runat="server" Text="Add New" UniqueKey="MDZoneControl_AddNew_key" />
                         <kti:SecureButton ID="btnClear" OnClick="btnClear_Click"
-                            runat="server" Text="Clear" UniqueKey="MDZoneDesignationControl_Clear_key" />
+                            runat="server" Text="Clear" UniqueKey="MDZoneControl_Clear_key" />
                     </div>
                 </div>
                 <br />
             </asp:Panel>
             <div class="listContentTitle">
-                Zone Designation List
+                Zone List
             </div>
             <div>
                 <div class="lv-c">
-                    <asp:ListView ID="lvMDZoneDesignation" runat="server" DataSourceID="odsMDZoneDesignation" OnItemCommand="lvMDZoneDesignation_ItemCommand">
+                    <asp:ListView ID="lvMDZone" runat="server" DataSourceID="odsMDZone" OnItemCommand="lvMDZone_ItemCommand">
                         <LayoutTemplate>
                             <table class="lv" cellpadding="0" cellspacing="0">
                                 <tr class="h">
@@ -103,10 +120,13 @@
                                         &nbsp;
                                     </td>
                                     <td class="hi">
-                                        Name
+                                        Zone Code
                                     </td>
                                     <td class="hi">
-                                        Designation
+                                        Zone Name
+                                    </td>
+                                    <td class="hi">
+                                        Descripton
                                     </td>
                                     <td class="hi">
                                         Is Removed
@@ -166,22 +186,25 @@
                                     &nbsp;
                                 </td>
                                 <td class="i">
-                                    <%# Eval("Name")%>
+                                    <%# Eval("ZoneCode")%>
                                 </td>
                                 <td class="i">
-                                    <%# Eval("Designation")%>
+                                    <%# Eval("ZoneName")%>
+                                </td>
+                                <td class="i">
+                                    <%# Eval("Descripton")%>
                                 </td>
                                 <td class="i">
                                     <%# Eval("IsRemoved") != null ? (((Boolean)Eval("IsRemoved")) ? "Yes" : "No") : ""%>
                                 </td>
                                 <td class="i">
                                     <kti:SecureLinkButton ID="lnkBtnEdit" runat="server" CssClass="CommonButtonLink" Text="Edit"
-                                        CommandName="EditItem" CommandArgument='<%#Eval("ZoneDesignationID")%>' UniqueKey="MDZoneDesignation_lvMDZoneDesignation_Edit_key" />
+                                        CommandName="EditItem" CommandArgument='<%#Eval("ZoneID")%>' UniqueKey="MDZone_lvMDZone_Edit_key" />
                                 </td>
                                 <td class="i">
                             <kti:SecureLinkButton ID="lnkBtnDelete" runat="server" CssClass="CommonButtonLink" Text="Delete"
-                                        CommandName="DeleteItem" OnClientClick="return confirm('Are you sure to delete Zone Designation?')"
-                                        CommandArgument='<%#Eval("ZoneDesignationID")%>' UniqueKey="MDZoneDesignation_lvMDZoneDesignation_Edit_key"/>
+                                        CommandName="DeleteItem" OnClientClick="return confirm('Are you sure to delete Zone?')"
+                                        CommandArgument='<%#Eval("ZoneID")%>' UniqueKey="MDZone_lvMDZone_Edit_key"/>
                                 </td>
                                 <td class="rp">
                                     &nbsp;
@@ -197,22 +220,25 @@
                                     &nbsp;
                                 </td>
                                 <td class="i">
-                                    <%# Eval("Name")%>
+                                    <%# Eval("ZoneCode")%>
                                 </td>
                                 <td class="i">
-                                    <%# Eval("Designation")%>
+                                    <%# Eval("ZoneName")%>
+                                </td>
+                                <td class="i">
+                                    <%# Eval("Descripton")%>
                                 </td>
                                 <td class="i">
                                     <%# Eval("IsRemoved") != null ? (((Boolean)Eval("IsRemoved")) ? "Yes" : "No") : ""%>
                                 </td>
                                 <td class="i">
                                     <kti:SecureLinkButton ID="lnkBtnEdit" runat="server" CssClass="CommonButtonLink" Text="Edit"
-                                        CommandName="EditItem" CommandArgument='<%#Eval("ZoneDesignationID")%>' UniqueKey="MDZoneDesignation_lvMDZoneDesignation_Edit_key" />
+                                        CommandName="EditItem" CommandArgument='<%#Eval("ZoneID")%>' UniqueKey="MDZone_lvMDZone_Edit_key" />
                                 </td>
                                 <td class="i">
                                     <kti:SecureLinkButton ID="lnkBtnDelete" runat="server" CssClass="CommonButtonLink" Text="Delete"
-                                        CommandName="DeleteItem" OnClientClick="return confirm('Are you sure to delete Zone Designation?')"
-                                        CommandArgument='<%#Eval("ZoneDesignationID")%>' UniqueKey="MDZoneDesignation_lvMDZoneDesignation_Edit_key"/>
+                                        CommandName="DeleteItem" OnClientClick="return confirm('Are you sure to delete Zone?')"
+                                        CommandArgument='<%#Eval("ZoneID")%>' UniqueKey="MDZone_lvMDZone_Edit_key"/>
                                 </td>
                                 <td class="rp">
                                     &nbsp;
@@ -229,10 +255,10 @@
                         </EmptyDataTemplate>
                     </asp:ListView>
                 </div>
-                <asp:ObjectDataSource ID="odsMDZoneDesignation" runat="server" SelectMethod="GetPagedData"
+                <asp:ObjectDataSource ID="odsMDZone" runat="server" SelectMethod="GetPagedData"
                     SelectCountMethod="TotalRowCount" EnablePaging="true" MaximumRowsParameterName="pageSize"
-                    StartRowIndexParameterName="startRowIndex" TypeName="Bay.ERP.Web.UI.MDZoneDesignationDataSource"
-                    SortParameterName="sortExpression" OnSelecting="odsMDZoneDesignation_Selecting">
+                    StartRowIndexParameterName="startRowIndex" TypeName="Bay.ERP.Web.UI.MDZoneDataSource"
+                    SortParameterName="sortExpression" OnSelecting="odsMDZone_Selecting">
                     <SelectParameters>
                         <asp:Parameter Name="startRowIndex" Type="Int32" />
                         <asp:Parameter Name="pageSize" Type="Int32" />

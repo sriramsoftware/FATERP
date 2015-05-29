@@ -98,7 +98,7 @@ form
         body
         {
             /*background: #DCDDDF url(http://180.234.210.114:8888/Upload/DMS/Document/182/15d68c67-b1b7-4a91-9d98-4a90b4bcab06.bay.png);*/
-            background: url('./bay.png'); 
+            background: url('./Images/bay.png'); 
             /*
             background: url('./bay.png'); 
             background: #DCDDDF url(http://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
@@ -544,7 +544,7 @@ form
 </script>
         <div id="container-footer">
             &nbsp;
-            <%--&copy Bay Developments Ltd.--%>
+            <%--&copy  Fair And Appropriate Technology Ltd.--%>
         </div>
     </div>
     </form>

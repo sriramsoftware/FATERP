@@ -308,6 +308,7 @@ namespace Bay.ERP.DataAccess
 
         #region MasterData
 
+        public abstract IMDZoneDataAccess CreateMDZoneDataAccess();
 
         public abstract IMDOperatorStatusDataAccess CreateMDOperatorStatusDataAccess();
 
