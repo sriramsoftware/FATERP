@@ -17,9 +17,15 @@
 
 <asp:Content ID="cntHeader" ContentPlaceHolderID="cphHeader" runat="Server">
 </asp:Content>
+<asp:Content ID="cntPageTitle" ContentPlaceHolderID="cphPageTitle" runat="Server">
+    <h1>Create Operator Contact Person</h1>
+</asp:Content>
 <asp:Content ID="cntContent" ContentPlaceHolderID="cphContent" runat="Server">
-    <div class="contentTitle">
-        Create Operator Contact Person
-    </div>
+    <div style="width: 1100px;">
     <uc:BDOperatorContactPersonEntity ID="ucBDOperatorContactPersonEntity" runat="server" />
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphQuickLinks" runat="Server">
+    <div style="width: 5px;">
+    </div>
 </asp:Content>
