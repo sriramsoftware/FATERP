@@ -243,6 +243,22 @@ namespace Bay.ERP.DataAccess
         #endregion
 
         #region BD
+        #region BDOperatorContactPersonEntity
+
+        [DebuggerStepThrough()]
+        public override IBDOperatorContactPersonDataAccess CreateBDOperatorContactPersonDataAccess()
+        {
+            string type = typeof(BDOperatorContactPersonDataAccess).ToString();
+
+            if (!CurrentContext.Contains(type))
+            {
+                CurrentContext[type] = new BDOperatorContactPersonDataAccess(CurrentContext);
+            }
+
+            return (IBDOperatorContactPersonDataAccess)CurrentContext[type];
+        }
+
+        #endregion
 
         #region BDProjectEntity
 
@@ -257,6 +273,41 @@ namespace Bay.ERP.DataAccess
             }
 
             return (IBDProjectDataAccess)CurrentContext[type];
+        }
+
+
+        #endregion
+
+        #region BDOperatorEntity
+
+        [DebuggerStepThrough()]
+        public override IBDOperatorDataAccess CreateBDOperatorDataAccess()
+        {
+            string type = typeof(BDOperatorDataAccess).ToString();
+
+            if (!CurrentContext.Contains(type))
+            {
+                CurrentContext[type] = new BDOperatorDataAccess(CurrentContext);
+            }
+
+            return (IBDOperatorDataAccess)CurrentContext[type];
+        }
+
+        #endregion
+
+        #region BDOperatorAddressInfoEntity
+
+        [DebuggerStepThrough()]
+        public override IBDOperatorAddressInfoDataAccess CreateBDOperatorAddressInfoDataAccess()
+        {
+            string type = typeof(BDOperatorAddressInfoDataAccess).ToString();
+
+            if (!CurrentContext.Contains(type))
+            {
+                CurrentContext[type] = new BDOperatorAddressInfoDataAccess(CurrentContext);
+            }
+
+            return (IBDOperatorAddressInfoDataAccess)CurrentContext[type];
         }
 
         #endregion
@@ -1823,6 +1874,57 @@ namespace Bay.ERP.DataAccess
         #endregion
 
         #region MasterData
+
+        #region MDOperatorAddressTypeEntity
+
+        [DebuggerStepThrough()]
+        public override IMDOperatorAddressTypeDataAccess CreateMDOperatorAddressTypeDataAccess()
+        {
+            string type = typeof(MDOperatorAddressTypeDataAccess).ToString();
+
+            if (!CurrentContext.Contains(type))
+            {
+                CurrentContext[type] = new MDOperatorAddressTypeDataAccess(CurrentContext);
+            }
+
+            return (IMDOperatorAddressTypeDataAccess)CurrentContext[type];
+        }
+
+        #endregion
+
+        #region MDOperatorStatusEntity
+
+        [DebuggerStepThrough()]
+        public override IMDOperatorStatusDataAccess CreateMDOperatorStatusDataAccess()
+        {
+            string type = typeof(MDOperatorStatusDataAccess).ToString();
+
+            if (!CurrentContext.Contains(type))
+            {
+                CurrentContext[type] = new MDOperatorStatusDataAccess(CurrentContext);
+            }
+
+            return (IMDOperatorStatusDataAccess)CurrentContext[type];
+        }
+
+        #endregion
+
+        #region MDZoneDesignationEntity
+
+        [DebuggerStepThrough()]
+        public override IMDZoneDesignationDataAccess CreateMDZoneDesignationDataAccess()
+        {
+            string type = typeof(MDZoneDesignationDataAccess).ToString();
+
+            if (!CurrentContext.Contains(type))
+            {
+                CurrentContext[type] = new MDZoneDesignationDataAccess(CurrentContext);
+            }
+
+            return (IMDZoneDesignationDataAccess)CurrentContext[type];
+        }
+
+        #endregion
 
         #region ICommonDA_SPDataAccess
 

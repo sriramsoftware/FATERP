@@ -7,7 +7,7 @@
 // Faisal Alam, faisal@talentPlusSoft.con
 // ©2006 – 2010.
 //
-// Code Generate Time - 30-Nov-2011, 02:49:46
+// Code Generate Time - 25-May-2015, 10:52:28
 
 
 
@@ -15,7 +15,6 @@
 using System;
 using System.Web.UI.WebControls;
 using System.Collections.Generic;
-using System.Linq;
 
 using Bay.ERP.Web.UI.Helper;
 using Bay.ERP.Common.BusinessEntities;
@@ -94,9 +93,11 @@ namespace Bay.ERP.Web.UI
 
         private void BuildDropDownList()
         {
-            MiscUtil.PopulateMDUnitIS(ddlRoadWidthUnitID, true);
-            MiscUtil.PopulateMDProjectStatus(ddlProjectStatusID, false);
+            // MiscUtil.PopulateBDOperator(ddlOperatorID, false);
+            // MiscUtil.PopulateMDZone(ddlZoneID, false);
+            MiscUtil.PopulateMDUnit(ddlRoadWidthUnitID, true);
             MiscUtil.PopulateMDProjectCategory(ddlProjectCategoryID, false);
+            MiscUtil.PopulateMDProjectStatus(ddlProjectStatusID, false);
         }
 
         private void PrepareValidator()
@@ -106,21 +107,8 @@ namespace Bay.ERP.Web.UI
         private void PrepareInitialView()
         {
             BuildDropDownList();
-            String se = SqlExpressionBuilder.PrepareSortExpression(BDProjectEntity.FLD_NAME_ProjectID, SQLSortOrderType.Decending);
-            IList<BDProjectEntity> ProjectList = FCCBDProject.GetFacadeCreate().GetIL(null, null, se, String.Empty, DatabaseOperationType.LoadWithSortExpression);
-            Int64 ProjectCode=0;
-            if (ProjectList != null && ProjectList.Count > 0)
-            {
-                ProjectCode = (from c in ProjectList
-                                select Convert.ToInt64(c.ProjectCode)).Max() + 10;
-               
-                txtProjectCode.Text = ProjectCode.ToString();
-            }
-            else
-            {
-                //Put The Start Project Code Here.
-                txtProjectCode.Text = "300";
-            }
+
+            txtProjectCode.Text = String.Empty;
             txtProjectName.Text = String.Empty;
             txtLandAreaKatha.Text = String.Empty;
             txtLandAreaSft.Text = String.Empty;
@@ -128,8 +116,9 @@ namespace Bay.ERP.Web.UI
             txtNoOfStoried.Text = String.Empty;
             txtNoOfBasement.Text = String.Empty;
             txtDescription.Text = String.Empty;
-            txtClientPercentage.Text = "0.00";
-            txtCompanyPercentage.Text = "0.00";
+            txtBSC.Text = String.Empty;
+            txtClientPercentage.Text = String.Empty;
+            txtCompanyPercentage.Text = String.Empty;
             chkIsRemoved.Checked = false;
 
             btnSubmit.Text = "Add";
@@ -143,21 +132,32 @@ namespace Bay.ERP.Web.UI
 
             if (!bDProjectEntity.IsNew)
             {
+                if (ddlOperatorID.Items.Count > 0 && bDProjectEntity.OperatorID != null)
+                {
+                    ddlOperatorID.SelectedValue = bDProjectEntity.OperatorID.ToString();
+                }
+
+                if (ddlZoneID.Items.Count > 0 && bDProjectEntity.ZoneID != null)
+                {
+                    ddlZoneID.SelectedValue = bDProjectEntity.ZoneID.ToString();
+                }
+
                 txtProjectCode.Text = bDProjectEntity.ProjectCode.ToString();
                 txtProjectName.Text = bDProjectEntity.ProjectName.ToString();
                 txtLandAreaKatha.Text = bDProjectEntity.LandAreaKatha.ToString();
                 txtLandAreaSft.Text = bDProjectEntity.LandAreaSft.ToString();
-                txtNoOfStoried.Text = bDProjectEntity.NoOfStoried.ToString();
-                txtNoOfBasement.Text = bDProjectEntity.NoOfBasement.ToString();
-                txtDescription.Text = bDProjectEntity.Description.ToString();
-                txtClientPercentage.Text = bDProjectEntity.ClientPercentage.ToString();
-                txtCompanyPercentage.Text = bDProjectEntity.CompanyPercentage.ToString();
                 txtRoadWidth.Text = bDProjectEntity.RoadWidth.ToString();
                 if (ddlRoadWidthUnitID.Items.Count > 0 && bDProjectEntity.RoadWidthUnitID != null)
                 {
                     ddlRoadWidthUnitID.SelectedValue = bDProjectEntity.RoadWidthUnitID.ToString();
                 }
 
+                txtNoOfStoried.Text = bDProjectEntity.NoOfStoried.ToString();
+                txtNoOfBasement.Text = bDProjectEntity.NoOfBasement.ToString();
+                txtDescription.Text = bDProjectEntity.Description.ToString();
+                txtBSC.Text = bDProjectEntity.BSC.ToString();
+                txtClientPercentage.Text = bDProjectEntity.ClientPercentage.ToString();
+                txtCompanyPercentage.Text = bDProjectEntity.CompanyPercentage.ToString();
                 if (ddlProjectCategoryID.Items.Count > 0 && bDProjectEntity.ProjectCategoryID != null)
                 {
                     ddlProjectCategoryID.SelectedValue = bDProjectEntity.ProjectCategoryID.ToString();
@@ -188,6 +188,28 @@ namespace Bay.ERP.Web.UI
         private BDProjectEntity BuildBDProjectEntity()
         {
             BDProjectEntity bDProjectEntity = CurrentBDProjectEntity;
+
+            if (ddlOperatorID.Items.Count > 0)
+            {
+                if (ddlOperatorID.SelectedValue == "0")
+                {
+                }
+                else
+                {
+                    bDProjectEntity.OperatorID = Int64.Parse(ddlOperatorID.SelectedValue);
+                }
+            }
+
+            if (ddlZoneID.Items.Count > 0)
+            {
+                if (ddlZoneID.SelectedValue == "0")
+                {
+                }
+                else
+                {
+                    bDProjectEntity.ZoneID = Int64.Parse(ddlZoneID.SelectedValue);
+                }
+            }
 
             bDProjectEntity.ProjectCode = txtProjectCode.Text.Trim();
             bDProjectEntity.ProjectName = txtProjectName.Text.Trim();
@@ -249,6 +271,7 @@ namespace Bay.ERP.Web.UI
             }
 
             bDProjectEntity.Description = txtDescription.Text.Trim();
+            bDProjectEntity.BSC = txtBSC.Text.Trim();
             if (!txtClientPercentage.Text.Trim().IsNullOrEmpty())
             {
                 bDProjectEntity.ClientPercentage = Decimal.Parse(txtClientPercentage.Text.Trim());
@@ -277,6 +300,7 @@ namespace Bay.ERP.Web.UI
                     bDProjectEntity.ProjectCategoryID = Int64.Parse(ddlProjectCategoryID.SelectedValue);
                 }
             }
+
             if (ddlProjectStatusID.Items.Count > 0)
             {
                 if (ddlProjectStatusID.SelectedValue == "0")
@@ -369,26 +393,6 @@ namespace Bay.ERP.Web.UI
 
         #region List View Event
 
-        protected void lvBDProject_ItemDataBound(object sender, ListViewItemEventArgs e)
-        {
-            if (e.Item.ItemType == ListViewItemType.DataItem)
-            {
-                ListViewDataItem dataItem = (ListViewDataItem)e.Item;
-
-                BDProject_DetailedEntity ent = (BDProject_DetailedEntity)dataItem.DataItem;
-
-                HyperLink hypProject = (HyperLink)e.Item.FindControl("hypProject");
-                HyperLink hypProjectReport = (HyperLink)e.Item.FindControl("hypProjectReport");
-                HyperLink hypProjectHistoryReport = (HyperLink)e.Item.FindControl("hypProjectHistoryReport");
-                hypProjectReport.NavigateUrl = UrlHelper.BuildSecureUrl("~/Reports/ReportViewer.aspx", string.Empty, "do", "ProjectReport", UrlConstants.OVERVIEW_PROJECT_ID, ent.ProjectID.ToString()).ToString();
-                hypProjectHistoryReport.NavigateUrl = UrlHelper.BuildSecureUrl("~/Reports/ReportViewer.aspx", string.Empty, "do", "ProjectHistoryReport", UrlConstants.OVERVIEW_PROJECT_ID, ent.ProjectID.ToString()).ToString();
-                hypProject.NavigateUrl = UrlHelper.BuildSecureUrl("~/BD/BDProjectEditor.aspx", string.Empty, UrlConstants.OVERVIEW_PROJECT_ID, ent.ProjectID.ToString()).ToString();
-                hypProject.Target = "_blank";
-                hypProjectReport.Target = "_blank";
-                hypProjectHistoryReport.Target = "_blank";
-            }
-        }
-
         protected void lvBDProject_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
             Int64 ProjectID;
@@ -446,10 +450,10 @@ namespace Bay.ERP.Web.UI
         #region ObjectDataSource Event
 
         protected void odsBDProject_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
-        { 
+        {
             e.InputParameters["filterExpression"] = String.Empty;
         }
-     
+
         #endregion
 
         #region Button Event

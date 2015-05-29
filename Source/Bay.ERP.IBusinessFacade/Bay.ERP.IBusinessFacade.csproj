@@ -49,7 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBDOperatorAddressInfoFacade.cs" />
+    <Compile Include="IBDOperatorContactPersonFacade.cs" />
+    <Compile Include="IBDOperatorFacade.cs" />
+    <Compile Include="IBDProjectFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="IHREmployeeMonthlyTimeSheet_DetailedFacade.cs" />
+    <Compile Include="IMDOperatorAddressTypeFacade.cs" />
+    <Compile Include="IMDOperatorStatusFacade.cs" />
+    <Compile Include="IMDZoneDesignationFacade.cs" />
     <Compile Include="IOTIssue_CustomFacade.cs" />
     <Compile Include="IHRSalaryAdjustment_DetailedFacade.cs" />
     <Compile Include="IHREmployeeSalaryDeducationInfo_DetailedFacade.cs" />
@@ -340,7 +349,6 @@
     <Compile Include="IBDProjectCollectedDocumentUploadInfoFacade.cs" />
     <Compile Include="IBDProjectDocumentTemplateFacade.cs" />
     <Compile Include="IBDProjectDocumentTemplateMapFacade.cs" />
-    <Compile Include="IBDProjectFacade.cs" />
     <Compile Include="IBDProjectFloorFacade.cs" />
     <Compile Include="IBDProjectHistoryFacade.cs" />
     <Compile Include="IBDProjectHistory_DetailedFacade.cs" />

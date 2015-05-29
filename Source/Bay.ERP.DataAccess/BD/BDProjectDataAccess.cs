@@ -7,7 +7,7 @@
 // Faisal Alam, faisal@talentPlusSoft.con
 // ©2006 – 2010.
 //
-// Code Generate Time - 22-Jun-2013, 02:07:00
+// Code Generate Time - 25-May-2015, 10:52:28
 
 
 
@@ -88,6 +88,8 @@ namespace Bay.ERP.DataAccess
                 AddOutputParameter(cmd);
                 AddNullPrimaryKeyParameter(cmd, "ProjectID");
 
+                Database.AddInParameter(cmd, "@OperatorID", DbType.Int64, bDProjectEntity.OperatorID);	
+                Database.AddInParameter(cmd, "@ZoneID", DbType.Int64, bDProjectEntity.ZoneID);	
                 Database.AddInParameter(cmd, "@ProjectCode", DbType.String, bDProjectEntity.ProjectCode);	
                 Database.AddInParameter(cmd, "@ProjectName", DbType.String, bDProjectEntity.ProjectName);	
                 Database.AddInParameter(cmd, "@LandAreaKatha", DbType.Decimal, bDProjectEntity.LandAreaKatha);	
@@ -97,6 +99,7 @@ namespace Bay.ERP.DataAccess
                 Database.AddInParameter(cmd, "@NoOfStoried", DbType.Int32, bDProjectEntity.NoOfStoried);	
                 Database.AddInParameter(cmd, "@NoOfBasement", DbType.Int32, bDProjectEntity.NoOfBasement);	
                 Database.AddInParameter(cmd, "@Description", DbType.String, bDProjectEntity.Description);	
+                Database.AddInParameter(cmd, "@BSC", DbType.String, bDProjectEntity.BSC);	
                 Database.AddInParameter(cmd, "@ClientPercentage", DbType.Decimal, bDProjectEntity.ClientPercentage);	
                 Database.AddInParameter(cmd, "@CompanyPercentage", DbType.Decimal, bDProjectEntity.CompanyPercentage);	
                 Database.AddInParameter(cmd, "@ProjectCategoryID", DbType.Int64, bDProjectEntity.ProjectCategoryID);	
@@ -141,6 +144,8 @@ namespace Bay.ERP.DataAccess
                 AddOutputParameter(cmd, db);
                 AddNullPrimaryKeyParameter(cmd, "ProjectID", db);
 
+                db.AddInParameter(cmd, "@OperatorID", DbType.Int64, bDProjectEntity.OperatorID);
+                db.AddInParameter(cmd, "@ZoneID", DbType.Int64, bDProjectEntity.ZoneID);
                 db.AddInParameter(cmd, "@ProjectCode", DbType.String, bDProjectEntity.ProjectCode);
                 db.AddInParameter(cmd, "@ProjectName", DbType.String, bDProjectEntity.ProjectName);
                 db.AddInParameter(cmd, "@LandAreaKatha", DbType.Decimal, bDProjectEntity.LandAreaKatha);
@@ -150,6 +155,7 @@ namespace Bay.ERP.DataAccess
                 db.AddInParameter(cmd, "@NoOfStoried", DbType.Int32, bDProjectEntity.NoOfStoried);
                 db.AddInParameter(cmd, "@NoOfBasement", DbType.Int32, bDProjectEntity.NoOfBasement);
                 db.AddInParameter(cmd, "@Description", DbType.String, bDProjectEntity.Description);
+                db.AddInParameter(cmd, "@BSC", DbType.String, bDProjectEntity.BSC);
                 db.AddInParameter(cmd, "@ClientPercentage", DbType.Decimal, bDProjectEntity.ClientPercentage);
                 db.AddInParameter(cmd, "@CompanyPercentage", DbType.Decimal, bDProjectEntity.CompanyPercentage);
                 db.AddInParameter(cmd, "@ProjectCategoryID", DbType.Int64, bDProjectEntity.ProjectCategoryID);
@@ -260,6 +266,8 @@ namespace Bay.ERP.DataAccess
                 AddFilterExpressionParameter(cmd, filterExpression);
 
                 Database.AddInParameter(cmd, "@ProjectID", DbType.Int64, bDProjectEntity.ProjectID);
+                Database.AddInParameter(cmd, "@OperatorID", DbType.Int64, bDProjectEntity.OperatorID);
+                Database.AddInParameter(cmd, "@ZoneID", DbType.Int64, bDProjectEntity.ZoneID);
                 Database.AddInParameter(cmd, "@ProjectCode", DbType.String, bDProjectEntity.ProjectCode);
                 Database.AddInParameter(cmd, "@ProjectName", DbType.String, bDProjectEntity.ProjectName);
                 Database.AddInParameter(cmd, "@LandAreaKatha", DbType.Decimal, bDProjectEntity.LandAreaKatha);
@@ -269,6 +277,7 @@ namespace Bay.ERP.DataAccess
                 Database.AddInParameter(cmd, "@NoOfStoried", DbType.Int32, bDProjectEntity.NoOfStoried);
                 Database.AddInParameter(cmd, "@NoOfBasement", DbType.Int32, bDProjectEntity.NoOfBasement);
                 Database.AddInParameter(cmd, "@Description", DbType.String, bDProjectEntity.Description);
+                Database.AddInParameter(cmd, "@BSC", DbType.String, bDProjectEntity.BSC);
                 Database.AddInParameter(cmd, "@ClientPercentage", DbType.Decimal, bDProjectEntity.ClientPercentage);
                 Database.AddInParameter(cmd, "@CompanyPercentage", DbType.Decimal, bDProjectEntity.CompanyPercentage);
                 Database.AddInParameter(cmd, "@ProjectCategoryID", DbType.Int64, bDProjectEntity.ProjectCategoryID);
@@ -314,6 +323,8 @@ namespace Bay.ERP.DataAccess
                 AddFilterExpressionParameter(cmd, filterExpression, db);
 
                 db.AddInParameter(cmd, "@ProjectID", DbType.Int64, bDProjectEntity.ProjectID);
+                db.AddInParameter(cmd, "@OperatorID", DbType.Int64, bDProjectEntity.OperatorID);
+                db.AddInParameter(cmd, "@ZoneID", DbType.Int64, bDProjectEntity.ZoneID);
                 db.AddInParameter(cmd, "@ProjectCode", DbType.String, bDProjectEntity.ProjectCode);
                 db.AddInParameter(cmd, "@ProjectName", DbType.String, bDProjectEntity.ProjectName);
                 db.AddInParameter(cmd, "@LandAreaKatha", DbType.Decimal, bDProjectEntity.LandAreaKatha);
@@ -323,6 +334,7 @@ namespace Bay.ERP.DataAccess
                 db.AddInParameter(cmd, "@NoOfStoried", DbType.Int32, bDProjectEntity.NoOfStoried);
                 db.AddInParameter(cmd, "@NoOfBasement", DbType.Int32, bDProjectEntity.NoOfBasement);
                 db.AddInParameter(cmd, "@Description", DbType.String, bDProjectEntity.Description);
+                db.AddInParameter(cmd, "@BSC", DbType.String, bDProjectEntity.BSC);
                 db.AddInParameter(cmd, "@ClientPercentage", DbType.Decimal, bDProjectEntity.ClientPercentage);
                 db.AddInParameter(cmd, "@CompanyPercentage", DbType.Decimal, bDProjectEntity.CompanyPercentage);
                 db.AddInParameter(cmd, "@ProjectCategoryID", DbType.Int64, bDProjectEntity.ProjectCategoryID);

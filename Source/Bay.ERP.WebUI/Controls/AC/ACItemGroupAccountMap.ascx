@@ -1,8 +1,9 @@
 <%--
  Copyright and All Rights Reserved by
-OSS Ltd
+B2B Solutions;
 
-Raju Dutta
+ B2B Solutions, info@b2b-erp.com.
+ ©2006 – 2010.
 
  Code Generate Time - 30-Jan-2013, 03:35:13
 --%>

@@ -53,7 +53,13 @@
     <Compile Include="Configuration\ConfigurationSectionHandler.cs" />
     <Compile Include="Configuration\Settings.cs" />
     <Compile Include="Configuration\TypeInfo.cs" />
+    <Compile Include="IBDOperatorAddressInfoDataAccess.cs" />
+    <Compile Include="IBDOperatorContactPersonDataAccess.cs" />
+    <Compile Include="IBDOperatorDataAccess.cs" />
     <Compile Include="IHREmployeeMonthlyTimeSheet_DetailedDataAccess.cs" />
+    <Compile Include="IMDOperatorAddressTypeDataAccess.cs" />
+    <Compile Include="IMDOperatorStatusDataAccess.cs" />
+    <Compile Include="IMDZoneDesignationDataAccess.cs" />
     <Compile Include="IOTIssue_CustomDataAccess.cs" />
     <Compile Include="IHRSalaryAdjustment_DetailedDataAccess.cs" />
     <Compile Include="IHREmployeeSalaryDeducationInfo_DetailedDataAccess.cs" />

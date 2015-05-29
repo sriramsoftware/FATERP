@@ -101,7 +101,14 @@ namespace Bay.ERP.DataAccess
 
         #region BD
 
+        public abstract IBDOperatorContactPersonDataAccess CreateBDOperatorContactPersonDataAccess();
+
+        public abstract IBDOperatorDataAccess CreateBDOperatorDataAccess();
+
         public abstract IBDProjectDataAccess CreateBDProjectDataAccess();
+
+        public abstract IBDOperatorAddressInfoDataAccess CreateBDOperatorAddressInfoDataAccess();
+
 
         public abstract IBDProjectAddressInfoDataAccess CreateBDProjectAddressInfoDataAccess();
 
@@ -300,6 +307,14 @@ namespace Bay.ERP.DataAccess
         #endregion
 
         #region MasterData
+
+
+        public abstract IMDOperatorStatusDataAccess CreateMDOperatorStatusDataAccess();
+
+        public abstract IMDOperatorAddressTypeDataAccess CreateMDOperatorAddressTypeDataAccess();
+
+
+        public abstract IMDZoneDesignationDataAccess CreateMDZoneDesignationDataAccess();
 
         public abstract ICommonDA_SPDataAccess CreateCommonDA_SPDataAccess();
 

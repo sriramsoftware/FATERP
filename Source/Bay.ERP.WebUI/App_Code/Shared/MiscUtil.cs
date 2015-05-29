@@ -37,6 +37,26 @@ namespace Bay.ERP.Web.UI
     public static class MiscUtil
     {
         #region DropDown Population Code
+
+     
+        #region PopulateMDPopulateMDZone
+
+        public static void PopulateMDZone(DropDownList dropDownList, Boolean addPleaseSelectOption)
+        {
+            dropDownList.Items.Clear();
+            dropDownList.DataTextField = "ZoneName";
+            dropDownList.DataValueField = "ZoneID";
+            dropDownList.DataSource = FCCMDProjectStatus.GetFacadeCreate().GetIL(null, null, null, null, DatabaseOperationType.Load);
+            dropDownList.DataBind();
+
+            if (addPleaseSelectOption == true)
+            {
+                ListItem pleaseSelectListItem = new ListItem("Please Select", "0");
+                dropDownList.Items.Insert(0, pleaseSelectListItem);
+            }
+        }
+
+        #endregion PopulateMDProjectStatus
         
         #region PopulateMDProjectStatus
 
@@ -56,6 +76,63 @@ namespace Bay.ERP.Web.UI
         }
 
         #endregion PopulateMDProjectStatus
+
+        #region PopulateBDOperator
+
+        public static void PopulateBDOperator(DropDownList dropDownList, Boolean addPleaseSelectOption)
+        {
+            dropDownList.Items.Clear();
+            dropDownList.DataTextField = "OperatorName";
+            dropDownList.DataValueField = "OperatorID";
+            dropDownList.DataSource = FCCBDOperator.GetFacadeCreate().GetIL(null, null, null, null, DatabaseOperationType.Load);
+            dropDownList.DataBind();
+
+            if (addPleaseSelectOption == true)
+            {
+                ListItem pleaseSelectListItem = new ListItem("Please Select", "0");
+                dropDownList.Items.Insert(0, pleaseSelectListItem);
+            }
+        }
+
+        #endregion PopulateBDOperator
+
+        #region PopulateMDOperatorStatus
+
+        public static void PopulateMDOperatorStatus(DropDownList dropDownList, Boolean addPleaseSelectOption)
+        {
+            dropDownList.Items.Clear();
+            dropDownList.DataTextField = "Name";
+            dropDownList.DataValueField = "OperatorStatusID";
+            dropDownList.DataSource = FCCBDOperator.GetFacadeCreate().GetIL(null, null, null, null, DatabaseOperationType.Load);
+            dropDownList.DataBind();
+
+            if (addPleaseSelectOption == true)
+            {
+                ListItem pleaseSelectListItem = new ListItem("Please Select", "0");
+                dropDownList.Items.Insert(0, pleaseSelectListItem);
+            }
+        }
+
+        #endregion PopulateBDOperator
+
+        #region PopulateMDOperatorAddressType
+
+        public static void PopulateMDOperatorAddressType(DropDownList dropDownList, Boolean addPleaseSelectOption)
+        {
+            dropDownList.Items.Clear();
+            dropDownList.DataTextField = "Name";
+            dropDownList.DataValueField = "OperatorAddressTypeID";
+            dropDownList.DataSource = FCCMDOperatorAddressType.GetFacadeCreate().GetIL(null, null, null, null, DatabaseOperationType.Load);
+            dropDownList.DataBind();
+
+            if (addPleaseSelectOption == true)
+            {
+                ListItem pleaseSelectListItem = new ListItem("Please Select", "0");
+                dropDownList.Items.Insert(0, pleaseSelectListItem);
+            }
+        }
+
+        #endregion PopulateMDOperatorAddressType
 
         #region PopulateMDProjectCategory
 
