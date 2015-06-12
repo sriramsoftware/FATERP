@@ -25,7 +25,7 @@ using Bay.ERP.Common.Shared;
 
 namespace Bay.ERP.Web.UI
 {
-    public partial class BDOperatorAddressInfoControl : BaseControl
+    public partial class BDOperatorAddressInfoControl : OperatorBaseControl
     {       
         #region Properties
 
@@ -93,8 +93,8 @@ namespace Bay.ERP.Web.UI
 
         private void BuildDropDownList()
         {
-           // MiscUtil.PopulateBDOperator(ddlOperatorID, false);
-          //  MiscUtil.PopulateMDOperatorAddressType(ddlOperatorAddressTypeID, false);
+           MiscUtil.PopulateBDOperator(ddlOperatorID, false);
+            MiscUtil.PopulateMDOperatorAddressType(ddlOperatorAddressTypeID, false);
         }
 
         private void PrepareValidator()
@@ -360,7 +360,8 @@ namespace Bay.ERP.Web.UI
 
         protected void odsBDOperatorAddressInfo_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
         {
-            e.InputParameters["filterExpression"] = String.Empty;
+            String fe = SqlExpressionBuilder.PrepareFilterExpression(BDOperatorAddressInfoEntity.FLD_NAME_OperatorID, this.OverviewOperatorID.ToString(), SQLMatchType.Equal);
+            e.InputParameters["filterExpression"] = fe;
         }
 
         #endregion

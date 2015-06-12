@@ -5,26 +5,25 @@
  Moshiur Rahman Reza, moshiur.rahman.reza@gmail.con
  ©2006 – 2010.
 
- Code Generate Time - 28-May-2015, 08:31:04
+ Code Generate Time - 28-May-2015, 11:33:13
 --%>
 
 
 
 
-<%@ Page Language="C#" MasterPageFile="~/Template/Operator.master" AutoEventWireup="true" CodeFile="BDOperatorAddressInfo.aspx.cs" Inherits="Bay.ERP.Web.UI.BDOperatorAddressInfoPage" Title="Bay's ERP" %>
+<%@ Page Language="C#" MasterPageFile="~/Template/Operator.master" AutoEventWireup="true" CodeFile="BDOperatorEditor.aspx.cs" Inherits="Bay.ERP.Web.UI.BDOperatorEditorPage" Title="Bay's ERP" %>
 
-<%@ Register Src="~/Controls/BD/BDOperatorAddressInfo.ascx" TagName="BDOperatorAddressInfoEntity" TagPrefix="uc" %>
+<%@ Register Src="~/Controls/BD/BDOperatorEditor.ascx" TagName="BDOperatorEditorEntity" TagPrefix="uc" %>
 
 <asp:Content ID="cntHeader" ContentPlaceHolderID="cphHeader" runat="Server">
 </asp:Content>
 <asp:Content ID="cntPageTitle" ContentPlaceHolderID="cphPageTitle" runat="Server">
-    <h1> Create Operator Address Info</h1>
+    <h1>Edit Operator</h1>
 </asp:Content>
 <asp:Content ID="cntContent" ContentPlaceHolderID="cphContent" runat="Server">
-    <div style="width: 1100px;">
-    <uc:BDOperatorAddressInfoEntity ID="ucBDOperatorAddressInfoEntity" runat="server" />   
+   <div style="width: 1100px;">
+    <uc:BDOperatorEditorEntity ID="ucBDOperatorEditorEntity" runat="server" />
     </div>
-    
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphQuickLinks" runat="Server">
     <div style="width: 5px;">

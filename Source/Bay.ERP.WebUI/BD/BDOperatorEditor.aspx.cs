@@ -7,7 +7,7 @@
 // Faisal Alam, faisal@talentPlusSoft.con
 // ©2006 – 2010.
 //
-// Code Generate Time - 28-May-2015, 08:31:04
+// Code Generate Time - 28-May-2015, 11:33:13
 
 
 
@@ -18,7 +18,7 @@ using Bay.ERP.Common.Shared;
 
 namespace Bay.ERP.Web.UI
 {
-    public partial class BDOperatorAddressInfoPage : OperatorBasePage
+    public partial class BDOperatorEditorPage : OperatorBasePage
     {
         #region Veriables
 
@@ -30,7 +30,7 @@ namespace Bay.ERP.Web.UI
         {
             get
             {
-                return "BDOperatorAddressInfoEntity_Page";
+                return "BDOperatorEditorEntity_Page";
             }
         }
 
@@ -38,7 +38,7 @@ namespace Bay.ERP.Web.UI
         {
             get
             {
-                return "~/Controls/BDOperatorAddressInfo.ascx;";
+                return "~/Controls/BD/BDOperatorEditor.ascx;";
             }
         }
 
@@ -54,9 +54,9 @@ namespace Bay.ERP.Web.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            base.Page.Title = String.Concat("Operator Address Info", " - ", base.Page.Title);
-            
-            ucBDOperatorAddressInfoEntity.ContentHolderPageUrl = "~BD/BDOperatorAddressInfo.aspx";
+            base.Page.Title = String.Concat("Operator", " - ", base.Page.Title);
+
+            ucBDOperatorEditorEntity.ContentHolderPageUrl = "~/BD/BDOperatorEditor.aspx";
 
             if (!IsPostBack)
             {

@@ -140,26 +140,7 @@
                             EnableViewState="False" ValidationGroup="BDOperatorEntity"></asp:RegularExpressionValidator>
                     </div>
                 </div>
-                <div class="TableRow" style="width: 100;">
-                    <div class="TableFormLeble" style="text-align: right;">
-                        Create Date&nbsp;:
-                    </div>
-                    <div class="TableFormContent waterMarkContainer">
-                        <label class="watermarkLabel" for="txtCreateDate">
-                            Enter Create Date</label>
-                        <asp:TextBox ID="txtCreateDate" runat="server" ClientIDMode="Static" CssClass="ktiDateTextBox"
-                            ValidationGroup="BDOperatorEntity" Width="230" />
-                        <span class="RequiredField">*</span>
-                    </div>
-                    <div class="TableFormValidatorContent">
-                        <asp:RequiredFieldValidator ID="rfvCreateDate" runat="server" ControlToValidate="txtCreateDate"
-                            ErrorMessage="Please Enter Create Date" ValidationGroup="BDOperatorEntity" EnableViewState="False"
-                            Display="Dynamic"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="revCreateDate" runat="server" ControlToValidate="txtCreateDate"
-                            Display="Dynamic" ErrorMessage="Invalide Format (Ex:07-25-2010)" ValidationExpression="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$"
-                            ValidationGroup="BDOperatorEntity"></asp:RegularExpressionValidator>
-                    </div>
-                </div>
+           
                 <div class="TableRow" style="width: 100;">
                     <div class="TableFormLeble" style="text-align: right;">
                         Remarks&nbsp;:

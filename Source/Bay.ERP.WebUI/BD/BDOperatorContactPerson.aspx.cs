@@ -18,7 +18,7 @@ using Bay.ERP.Common.Shared;
 
 namespace Bay.ERP.Web.UI
 {
-    public partial class BDOperatorContactPersonPage : BasePage
+    public partial class BDOperatorContactPersonPage : OperatorBasePage
     {
         #region Veriables
 

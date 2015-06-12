@@ -7,7 +7,7 @@
 // Faisal Alam, faisal@talentPlusSoft.con
 // ©2006 – 2010.
 //
-// Code Generate Time - 30-Nov-2011, 02:49:46
+// Code Generate Time - 25-May-2015, 10:52:28
 
 
 
@@ -73,7 +73,8 @@ namespace Bay.ERP.Web.UI
             {
                 if (this.OverviewProjectID > 0)
                 {
-                    _BDProjectEntity = FCCBDProject.GetFacadeCreate().GetByID(this.OverviewProjectID);                    
+                        _BDProjectEntity = FCCBDProject.GetFacadeCreate().GetByID(this.OverviewProjectID);
+                 
                 }
 
                 return _BDProjectEntity;
@@ -90,9 +91,10 @@ namespace Bay.ERP.Web.UI
 
         private void BuildDropDownList()
         {
-            MiscUtil.PopulateMDUnitIS(ddlRoadWidthUnitID, true);
-            MiscUtil.PopulateMDProjectStatus(ddlProjectStatusID, false);
+            MiscUtil.PopulateBDOperator(ddlOperatorID, false);
+             MiscUtil.PopulateMDZone(ddlZoneID, false);
             MiscUtil.PopulateMDProjectCategory(ddlProjectCategoryID, false);
+            MiscUtil.PopulateMDProjectStatus(ddlProjectStatusID, false);
         }
 
         private void PrepareValidator()
@@ -105,17 +107,13 @@ namespace Bay.ERP.Web.UI
 
             txtProjectCode.Text = String.Empty;
             txtProjectName.Text = String.Empty;
-            txtLandAreaKatha.Text = String.Empty;
-            txtLandAreaSft.Text = String.Empty;
-            txtRoadWidth.Text = String.Empty;
-            txtNoOfStoried.Text = String.Empty;
-            txtNoOfBasement.Text = String.Empty;
             txtDescription.Text = String.Empty;
-            txtClientPercentage.Text = "0.00";
-            txtCompanyPercentage.Text = "0.00";
+            txtBSC.Text = String.Empty;
+            txtCompanyPercentage.Text = String.Empty;
             chkIsRemoved.Checked = false;
 
             btnSubmit.Text = "Add";
+            btnAddNew.Visible = false;
         }
 
         private void PrepareEditView()
@@ -125,21 +123,26 @@ namespace Bay.ERP.Web.UI
 
             if (!bDProjectEntity.IsNew)
             {
-                txtProjectCode.Text = bDProjectEntity.ProjectCode.ToString();
-                txtProjectName.Text = bDProjectEntity.ProjectName.ToString();
-                txtLandAreaKatha.Text = bDProjectEntity.LandAreaKatha.ToString();
-                txtLandAreaSft.Text = bDProjectEntity.LandAreaSft.ToString();
-                txtRoadWidth.Text = bDProjectEntity.RoadWidth.ToString();
-                if (ddlRoadWidthUnitID.Items.Count > 0 && bDProjectEntity.RoadWidthUnitID != null)
+                if (ddlOperatorID.Items.Count > 0 && bDProjectEntity.OperatorID != null)
                 {
-                    ddlRoadWidthUnitID.SelectedValue = bDProjectEntity.RoadWidthUnitID.ToString();
+                    ddlOperatorID.SelectedValue = bDProjectEntity.OperatorID.ToString();
                 }
 
-                txtNoOfStoried.Text = bDProjectEntity.NoOfStoried.ToString();
-                txtNoOfBasement.Text = bDProjectEntity.NoOfBasement.ToString();
+                if (ddlZoneID.Items.Count > 0 && bDProjectEntity.ZoneID != null)
+                {
+                    ddlZoneID.SelectedValue = bDProjectEntity.ZoneID.ToString();
+                }
+
+                txtProjectCode.Text = bDProjectEntity.ProjectCode.ToString();
+                txtProjectName.Text = bDProjectEntity.ProjectName.ToString();
                 txtDescription.Text = bDProjectEntity.Description.ToString();
-                txtClientPercentage.Text = bDProjectEntity.ClientPercentage.ToString();
+                txtBSC.Text = bDProjectEntity.BSC.ToString();
                 txtCompanyPercentage.Text = bDProjectEntity.CompanyPercentage.ToString();
+                if (ddlProjectCategoryID.Items.Count > 0 && bDProjectEntity.ProjectCategoryID != null)
+                {
+                    ddlProjectCategoryID.SelectedValue = bDProjectEntity.ProjectCategoryID.ToString();
+                }
+
                 if (ddlProjectStatusID.Items.Count > 0 && bDProjectEntity.ProjectStatusID != null)
                 {
                     ddlProjectStatusID.SelectedValue = bDProjectEntity.ProjectStatusID.ToString();
@@ -151,78 +154,57 @@ namespace Bay.ERP.Web.UI
             }
         }
 
+        private void BindList()
+        {
+            BindBDProjectList();
+        }
+
+        private void BindBDProjectList()
+        {
+           
+        }
+
         private BDProjectEntity BuildBDProjectEntity()
         {
             BDProjectEntity bDProjectEntity = CurrentBDProjectEntity;
 
-            bDProjectEntity.ProjectCode = txtProjectCode.Text.Trim();
-            bDProjectEntity.ProjectName = txtProjectName.Text.Trim();
-            if (!txtLandAreaKatha.Text.Trim().IsNullOrEmpty())
+            if (ddlOperatorID.Items.Count > 0)
             {
-                bDProjectEntity.LandAreaKatha = Decimal.Parse(txtLandAreaKatha.Text.Trim());
-            }
-            else
-            {
-                bDProjectEntity.LandAreaKatha = null;
-            }
-
-            if (!txtLandAreaSft.Text.Trim().IsNullOrEmpty())
-            {
-                bDProjectEntity.LandAreaSft = Decimal.Parse(txtLandAreaSft.Text.Trim());
-            }
-            else
-            {
-                bDProjectEntity.LandAreaSft = null;
-            }
-
-            if (!txtRoadWidth.Text.Trim().IsNullOrEmpty())
-            {
-                bDProjectEntity.RoadWidth = Decimal.Parse(txtRoadWidth.Text.Trim());
-            }
-            else
-            {
-                bDProjectEntity.RoadWidth = null;
-            }
-
-            if (ddlRoadWidthUnitID.Items.Count > 0)
-            {
-                if (ddlRoadWidthUnitID.SelectedValue == "0")
+                if (ddlOperatorID.SelectedValue == "0")
                 {
-                    bDProjectEntity.RoadWidthUnitID = null;
                 }
                 else
                 {
-                    bDProjectEntity.RoadWidthUnitID = Int64.Parse(ddlRoadWidthUnitID.SelectedValue);
+                    bDProjectEntity.OperatorID = Int64.Parse(ddlOperatorID.SelectedValue);
                 }
             }
 
-            if (!txtNoOfStoried.Text.Trim().IsNullOrEmpty())
+            if (ddlZoneID.Items.Count > 0)
             {
-                bDProjectEntity.NoOfStoried = Int32.Parse(txtNoOfStoried.Text.Trim());
-            }
-            else
-            {
-                bDProjectEntity.NoOfStoried = null;
-            }
-
-            if (!txtNoOfBasement.Text.Trim().IsNullOrEmpty())
-            {
-                bDProjectEntity.NoOfBasement = Int32.Parse(txtNoOfBasement.Text.Trim());
-            }
-            else
-            {
-                bDProjectEntity.NoOfBasement = null;
+                if (ddlZoneID.SelectedValue == "0")
+                {
+                }
+                else
+                {
+                    bDProjectEntity.ZoneID = Int64.Parse(ddlZoneID.SelectedValue);
+                }
             }
 
+            bDProjectEntity.ProjectCode = txtProjectCode.Text.Trim();
+            bDProjectEntity.ProjectName = txtProjectName.Text.Trim();
+
+            bDProjectEntity.LandAreaKatha = null;
+            bDProjectEntity.LandAreaSft = null;
+            bDProjectEntity.RoadWidth = null;
+
+
+
+            bDProjectEntity.RoadWidthUnitID = null;
+            bDProjectEntity.NoOfStoried = null;
+            bDProjectEntity.NoOfBasement = null;
             bDProjectEntity.Description = txtDescription.Text.Trim();
-            if (!txtClientPercentage.Text.Trim().IsNullOrEmpty())
-            {
-                bDProjectEntity.ClientPercentage = Decimal.Parse(txtClientPercentage.Text.Trim());
-            }
-            else
-            {
-                bDProjectEntity.ClientPercentage = null;
-            }
+            bDProjectEntity.BSC = txtBSC.Text.Trim();
+            bDProjectEntity.ClientPercentage = null;
 
             if (!txtCompanyPercentage.Text.Trim().IsNullOrEmpty())
             {
@@ -286,7 +268,7 @@ namespace Bay.ERP.Web.UI
                         _ProjectID = 0;
                         _BDProjectEntity = new BDProjectEntity();
                         PrepareInitialView();
-                        
+                        BindBDProjectList();
 
                         if (bDProjectEntity.IsNew)
                         {
@@ -308,8 +290,6 @@ namespace Bay.ERP.Web.UI
                             MiscUtil.ShowMessage(lblMessage, "Failed to update Project Information.", false);
                         }
                     }
-
-                    PrepareEditView();
                 }
                 catch (Exception ex)
                 {
@@ -332,7 +312,6 @@ namespace Bay.ERP.Web.UI
                 PrepareInitialView();
                 PrepareEditView();
             }
-
         }
 
         #endregion
@@ -342,6 +321,13 @@ namespace Bay.ERP.Web.UI
         protected void btnSave_Click(object sender, EventArgs e)
         {
             SaveBDProjectEntity();
+        }
+
+        protected void btnAddNew_Click(object sender, EventArgs e)
+        {
+            _ProjectID = 0;
+            _BDProjectEntity = new BDProjectEntity();
+            PrepareInitialView();
         }
 
         protected void btnClear_Click(object sender, EventArgs e)

@@ -11,7 +11,7 @@
 
 
 
-<%@ Page Language="C#" MasterPageFile="~/Template/Default.master" AutoEventWireup="true" CodeFile="BDOperatorContactPerson.aspx.cs" Inherits="Bay.ERP.Web.UI.BDOperatorContactPersonPage" Title="Bay's ERP" %>
+<%@ Page Language="C#" MasterPageFile="~/Template/Operator.master" AutoEventWireup="true" CodeFile="BDOperatorContactPerson.aspx.cs" Inherits="Bay.ERP.Web.UI.BDOperatorContactPersonPage" Title="Bay's ERP" %>
 
 <%@ Register Src="~/Controls/BD/BDOperatorContactPerson.ascx" TagName="BDOperatorContactPersonEntity" TagPrefix="uc" %>
 

@@ -25,7 +25,7 @@ using Bay.ERP.Common.Shared;
 
 namespace Bay.ERP.Web.UI
 {
-    public partial class BDOperatorContactPersonControl : BaseControl
+    public partial class BDOperatorContactPersonControl : OperatorBaseControl
     {       
         #region Properties
 
@@ -71,13 +71,30 @@ namespace Bay.ERP.Web.UI
         {
             get
             {
-                if (_OperatorContactPersonID > 0)
+                if (OverviewOperatorID > 0)
                 {
-                    if (_BDOperatorContactPersonEntity.OperatorContactPersonID != _OperatorContactPersonID)
+                    String fe = SqlExpressionBuilder.PrepareFilterExpression(BDOperatorContactPersonEntity.FLD_NAME_OperatorID, this.OverviewOperatorID.ToString(), SQLMatchType.Equal);
+                    IList<BDOperatorContactPersonEntity> BDOperatorContactPersonList = FCCBDOperatorContactPerson.GetFacadeCreate().GetIL(null, null, String.Empty, fe, DatabaseOperationType.LoadWithFilterExpression);
+
+                    if (BDOperatorContactPersonList != null && BDOperatorContactPersonList.Count > 0)
                     {
-                        _BDOperatorContactPersonEntity = FCCBDOperatorContactPerson.GetFacadeCreate().GetByID(_OperatorContactPersonID);
+                        _BDOperatorContactPersonEntity = BDOperatorContactPersonList[0];
+                    }
+                    else
+                    {
+                        _BDOperatorContactPersonEntity = new BDOperatorContactPersonEntity();
                     }
                 }
+
+                //return _BDProjectAdditionalInfoEntity;
+
+
+                //if (OverviewOperatorID > 0)
+                //{
+
+                //    _BDOperatorContactPersonEntity = FCCBDOperatorContactPerson.GetFacadeCreate().GetByID(_OperatorContactPersonID);
+
+                //}
 
                 return _BDOperatorContactPersonEntity;
             }
@@ -359,7 +376,8 @@ namespace Bay.ERP.Web.UI
 
         protected void odsBDOperatorContactPerson_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
         {
-            e.InputParameters["filterExpression"] = String.Empty;
+            String fe = SqlExpressionBuilder.PrepareFilterExpression(BDOperatorContactPersonEntity.FLD_NAME_OperatorID, this.OverviewOperatorID.ToString(), SQLMatchType.Equal);
+            e.InputParameters["filterExpression"] = fe;
         }
 
         #endregion

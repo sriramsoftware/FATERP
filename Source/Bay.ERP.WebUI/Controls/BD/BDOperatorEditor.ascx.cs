@@ -25,7 +25,7 @@ using Bay.ERP.Common.Shared;
 
 namespace Bay.ERP.Web.UI
 {
-    public partial class BDOperatorControl : OperatorBaseControl
+    public partial class BDOperatorEditorControl : OperatorBaseControl
     {       
         #region Properties
 
@@ -71,12 +71,9 @@ namespace Bay.ERP.Web.UI
         {
             get
             {
-                if (_OperatorID > 0)
+                if (this.OverviewOperatorID > 0)
                 {
-                    if (_BDOperatorEntity.OperatorID != _OperatorID)
-                    {
-                        _BDOperatorEntity = FCCBDOperator.GetFacadeCreate().GetByID(_OperatorID);
-                    }
+                        _BDOperatorEntity = FCCBDOperator.GetFacadeCreate().GetByID(this.OverviewOperatorID);
                 }
 
                 return _BDOperatorEntity;
@@ -170,7 +167,7 @@ namespace Bay.ERP.Web.UI
 
         private void BindBDOperatorList()
         {
-            lvBDOperator.DataBind();
+          
         }
 
         private BDOperatorEntity BuildBDOperatorEntity()
@@ -185,7 +182,7 @@ namespace Bay.ERP.Web.UI
             bDOperatorEntity.Fax = txtFax.Text.Trim();
             bDOperatorEntity.Email = txtEmail.Text.Trim();
             bDOperatorEntity.WebLink = txtWebLink.Text.Trim();
-            bDOperatorEntity.CreateDate = System.DateTime.Now;
+            bDOperatorEntity.CreateDate = System.DateTime.Now ;
 
             bDOperatorEntity.Remarks = txtRemarks.Text.Trim();
             bDOperatorEntity.Reason = txtReason.Text.Trim();
@@ -279,87 +276,9 @@ namespace Bay.ERP.Web.UI
 
         #endregion
 
-        #region List View Event
+        
 
-        protected void lvBDOperator_ItemDataBound(object sender, ListViewItemEventArgs e)
-        {
-            if (e.Item.ItemType == ListViewItemType.DataItem)
-            {
-
-                ListViewDataItem dataItem = (ListViewDataItem)e.Item;
-
-                BDOperatorEntity ent = (BDOperatorEntity)dataItem.DataItem;
-
-                HyperLink hypOperatorName = (HyperLink)e.Item.FindControl("hypOperatorName");
-
-                hypOperatorName.NavigateUrl = UrlHelper.BuildSecureUrl("~/BD/BDOperatorEditor.aspx", string.Empty, UrlConstants.OVERVIEW_OPERATOR_ID, ent.OperatorID.ToString()).ToString();
-                
-            }
-        }
-      
-
-        protected void lvBDOperator_ItemCommand(object sender, ListViewCommandEventArgs e)
-        {
-            Int64 OperatorID;
-
-            Int64.TryParse(e.CommandArgument.ToString(), out OperatorID);
-
-            if (OperatorID > 0)
-            {
-                if (string.Equals(e.CommandName, "EditItem"))
-                {
-                    _OperatorID = OperatorID;
-
-                    PrepareEditView();
-
-                    cpeEditor.Collapsed = false;
-                    cpeEditor.ClientState = "false";
-                }
-                else if (string.Equals(e.CommandName, "DeleteItem"))
-                {
-                    try
-                    {
-                        Int64 result = -1;
-
-                        String fe = SqlExpressionBuilder.PrepareFilterExpression(BDOperatorEntity.FLD_NAME_OperatorID, OperatorID.ToString(), SQLMatchType.Equal);
-
-                        BDOperatorEntity bDOperatorEntity = new BDOperatorEntity();
-
-
-                        result = FCCBDOperator.GetFacadeCreate().Delete(bDOperatorEntity, fe, DatabaseOperationType.Delete, TransactionRequired.No);
-
-                        if (result == 0)
-                        {
-                            _OperatorID = 0;
-                            _BDOperatorEntity = new BDOperatorEntity();
-                            PrepareInitialView();
-                            BindBDOperatorList();
-
-                            MiscUtil.ShowMessage(lblMessage, "Operator has been successfully deleted.", true);
-                        }
-                        else
-                        {
-                            MiscUtil.ShowMessage(lblMessage, "Failed to delete Operator.", true);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MiscUtil.ShowMessage(lblMessage, ex.Message, true);
-                    }
-                }
-            }
-        }
-
-        #endregion List View Event
-
-        #region ObjectDataSource Event
-
-        protected void odsBDOperator_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
-        {
-            e.InputParameters["filterExpression"] = String.Empty;
-        }
-
-        #endregion
+        
 
         #region Button Event
 
